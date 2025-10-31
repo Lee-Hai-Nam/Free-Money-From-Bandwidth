@@ -1,0 +1,1376 @@
+2025-10-27 16:27:29.049 NOTICE: running PID: 34
+2025-10-27 16:27:29.053 ERR: perr 05_svc_init {}
+2025-10-27 16:27:29.066 NOTICE: perr lum_sdk_node_05_svc_init proxy 
+2025-10-27 16:27:29.089 ERR: perr init {}
+2025-10-27 16:27:29.100 NOTICE: perr lum_sdk_node_init proxy 
+2025-10-27 16:27:29.102 NOTICE: idle_state_monitor run
+2025-10-27 16:27:29.113 NOTICE: run: E.start()
+2025-10-27 16:27:29.115 NOTICE: devs changed: found 1 devs
+2025-10-27 16:27:29.115 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-27 16:27:29.117 ERR: perr 10_show_dialog {}
+2025-10-27 16:27:29.129 NOTICE: perr lum_sdk_node_10_show_dialog proxy 
+2025-10-27 16:27:29.131 ERR: perr display {}
+2025-10-27 16:27:29.139 NOTICE: perr lum_sdk_node_display proxy 
+2025-10-27 16:27:29.142 NOTICE: run: E.update_consent(true)
+2025-10-27 16:27:29.142 ERR: perr 15_choose_peer {}
+2025-10-27 16:27:29.155 NOTICE: perr lum_sdk_node_15_choose_peer proxy 
+2025-10-27 16:27:29.157 ERR: perr opt_in 
+2025-10-27 16:27:29.157 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-27 16:27:29.981 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_05_svc_init&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:27:29.981 ERR: perr perr_direct_success {}
+2025-10-27 16:27:29.988 NOTICE: perr lum_sdk_node_perr_direct_success proxy 
+2025-10-27 16:27:30.004 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:27:30.006 NOTICE: ndt7 disabled
+2025-10-27 16:27:30.008 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_15_choose_peer&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:27:30.021 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_init&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:27:30.030 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_display&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:27:30.038 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_10_show_dialog&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:27:30.344 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-27 16:27:30.344 NOTICE: dev eth0 connected
+2025-10-27 16:27:30.345 NOTICE: device online: eth0, connecting...
+2025-10-27 16:27:30.345 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-27 16:27:30.387 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:27:30.388 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:27:30.396 NOTICE: perr lum_sdk_node_restricted_domain proxy 
+2025-10-27 16:27:30.398 ERR: restricted_domain: proxyjs.luminatinet.com failed 15.197.193.114
+2025-10-27 16:27:30.398 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:27:30.400 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-27 16:27:30.400 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-27 16:27:30.443 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:27:30.443 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:27:30.446 ERR: restricted_domain: proxyjs.lum-sdk.io failed 15.197.193.114
+2025-10-27 16:27:30.446 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:27:30.448 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-27 16:27:30.448 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-27 16:27:30.449 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-27 16:27:30.450 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-27 16:27:30.450 NOTICE: proxyjs_client_conn eth0 172.17.0.2 34.207.38.111:443(undefined) 
+2025-10-27 16:27:30.452 NOTICE: proxy_eth0 WS: connecting to wss://34.207.38.111:443
+2025-10-27 16:27:31.013 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 34.207.38.111 is not in the cert's list: 
+2025-10-27 16:27:31.014 NOTICE: proxy disconnected
+2025-10-27 16:27:31.034 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_perr_direct_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:27:31.685 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_restricted_domain&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:27:31.768 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:27:32.015 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-27 16:27:32.015 NOTICE: proxyjs_client_conn eth0 172.17.0.2 34.230.141.83:443(p.l-conn.net) 
+2025-10-27 16:27:32.015 NOTICE: proxy_eth0 WS: connecting to wss://34.230.141.83:443
+2025-10-27 16:27:32.839 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-27 16:27:32.842 NOTICE: proxy_eth0 WS (34.230.141.83): connected
+2025-10-27 16:27:32.842 NOTICE: proxy connected
+2025-10-27 16:27:32.842 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"34.230.141.83"}
+2025-10-27 16:27:32.843 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-27 16:27:32.846 ERR: perr 20_svc_connected {}
+2025-10-27 16:27:32.854 NOTICE: perr lum_sdk_node_20_svc_connected proxy 
+2025-10-27 16:27:32.855 ERR: perr connected {}
+2025-10-27 16:27:32.863 NOTICE: perr lum_sdk_node_connected proxy 
+2025-10-27 16:27:32.864 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-27 16:27:32.864 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-27 16:27:32.866 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":null,"dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-27 16:27:33.723 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_connected&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:27:33.759 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:27:33.828 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_20_svc_connected&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:28:30.105 NOTICE: idle_state_monitor run
+2025-10-27 16:28:32.846 ERR: perr heartbeat_proxy_js_conn_00_1min {}
+2025-10-27 16:28:32.846 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_00_1min proxy 
+2025-10-27 16:28:33.714 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_00_1min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:29:31.108 NOTICE: idle_state_monitor run
+2025-10-27 16:29:33.716 ERR: perr heartbeat_proxy_js_conn_01_2min {}
+2025-10-27 16:29:33.716 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_01_2min proxy 
+2025-10-27 16:29:34.729 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_01_2min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-wc33tqkfjx6einjz5c3nxvnevonnur8c res 200
+2025-10-27 16:30:32.111 NOTICE: idle_state_monitor run
+2025-10-27 16:35:44.623 NOTICE: running PID: 30
+2025-10-27 16:35:44.628 ERR: perr 05_svc_init {}
+2025-10-27 16:35:44.632 ERR: perr init {}
+2025-10-27 16:35:44.634 NOTICE: idle_state_monitor run
+2025-10-27 16:35:44.640 NOTICE: run: E.start()
+2025-10-27 16:35:44.641 NOTICE: devs changed: found 1 devs
+2025-10-27 16:35:44.641 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-27 16:35:44.647 ERR: perr 10_show_dialog {}
+2025-10-27 16:35:44.649 ERR: perr display {}
+2025-10-27 16:35:44.651 NOTICE: run: E.update_consent(true)
+2025-10-27 16:35:44.651 ERR: perr 15_choose_peer {}
+2025-10-27 16:35:44.653 ERR: perr opt_in 
+2025-10-27 16:35:44.654 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-27 16:35:45.476 NOTICE: ndt7 disabled
+2025-10-27 16:35:45.491 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-mmdx7tdyqlfwp1t8pu269c0bi673eue1 res 200
+2025-10-27 16:35:45.491 ERR: perr perr_direct_success {}
+2025-10-27 16:35:45.843 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-27 16:35:45.844 NOTICE: dev eth0 connected
+2025-10-27 16:35:45.844 NOTICE: device online: eth0, connecting...
+2025-10-27 16:35:45.844 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-27 16:35:45.887 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-27 16:35:45.887 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:35:45.888 ERR: restricted_domain: proxyjs.luminatinet.com failed 3.33.193.183
+2025-10-27 16:35:45.889 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:35:45.889 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-27 16:35:45.889 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-27 16:35:45.931 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-27 16:35:45.932 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:35:45.932 ERR: restricted_domain: proxyjs.lum-sdk.io failed 3.33.193.183
+2025-10-27 16:35:45.932 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:35:45.932 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-27 16:35:45.932 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-27 16:35:45.934 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-27 16:35:45.934 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-27 16:35:45.935 NOTICE: proxyjs_client_conn eth0 172.17.0.2 52.3.30.241:443(undefined) 
+2025-10-27 16:35:45.936 NOTICE: proxy_eth0 WS: connecting to wss://52.3.30.241:443
+2025-10-27 16:35:46.466 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 52.3.30.241 is not in the cert's list: 
+2025-10-27 16:35:46.467 NOTICE: proxy disconnected
+2025-10-27 16:35:46.994 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-mmdx7tdyqlfwp1t8pu269c0bi673eue1 res 200
+2025-10-27 16:35:47.468 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-27 16:35:47.468 NOTICE: proxyjs_client_conn eth0 172.17.0.2 3.84.65.241:443(p.l-conn.net) 
+2025-10-27 16:35:47.468 NOTICE: proxy_eth0 WS: connecting to wss://3.84.65.241:443
+2025-10-27 16:35:48.251 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-27 16:35:48.253 NOTICE: proxy_eth0 WS (3.84.65.241): connected
+2025-10-27 16:35:48.253 NOTICE: proxy connected
+2025-10-27 16:35:48.253 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"3.84.65.241"}
+2025-10-27 16:35:48.253 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-27 16:35:48.256 ERR: perr 20_svc_connected {}
+2025-10-27 16:35:48.258 ERR: perr connected {}
+2025-10-27 16:35:48.260 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-27 16:35:48.260 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-27 16:35:48.262 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":null,"dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-mmdx7tdyqlfwp1t8pu269c0bi673eue1","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-27 16:35:49.179 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-mmdx7tdyqlfwp1t8pu269c0bi673eue1 res 200
+2025-10-27 16:36:14.684 NOTICE: run: E.start()
+2025-10-27 16:36:18.823 NOTICE: running PID: 30
+2025-10-27 16:36:18.829 ERR: perr 05_svc_init {}
+2025-10-27 16:36:18.831 ERR: perr init {}
+2025-10-27 16:36:18.832 NOTICE: idle_state_monitor run
+2025-10-27 16:36:18.844 NOTICE: run: E.start()
+2025-10-27 16:36:18.845 NOTICE: devs changed: found 2 devs
+2025-10-27 16:36:18.845 NOTICE: interface detected: eth0 (192.168.144.2)
+2025-10-27 16:36:18.845 NOTICE: interface detected: tun0 (198.18.0.1)
+2025-10-27 16:36:18.848 ERR: perr 10_show_dialog {}
+2025-10-27 16:36:18.849 ERR: perr display {}
+2025-10-27 16:36:18.849 NOTICE: run: E.update_consent(true)
+2025-10-27 16:36:18.849 ERR: perr 15_choose_peer {}
+2025-10-27 16:36:18.849 ERR: perr opt_in 
+2025-10-27 16:36:18.850 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-27 16:36:20.754 NOTICE: ndt7 disabled
+2025-10-27 16:36:20.987 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0 res 200
+2025-10-27 16:36:20.988 ERR: perr perr_direct_success {}
+2025-10-27 16:36:21.776 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-27 16:36:21.777 NOTICE: dev eth0 connected
+2025-10-27 16:36:21.777 NOTICE: device online: eth0, connecting...
+2025-10-27 16:36:21.778 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-27 16:36:21.819 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:36:21.819 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:21.820 ERR: restricted_domain: proxyjs.luminatinet.com failed 15.197.193.114
+2025-10-27 16:36:21.820 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:21.820 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-27 16:36:21.820 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-27 16:36:21.872 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-27 16:36:21.872 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:21.872 ERR: restricted_domain: proxyjs.lum-sdk.io failed 3.33.193.183
+2025-10-27 16:36:21.872 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:21.873 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-27 16:36:21.873 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-27 16:36:21.874 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-27 16:36:21.874 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-27 16:36:21.875 NOTICE: proxyjs_client_conn eth0 192.168.144.2 3.225.162.142:443(undefined) 
+2025-10-27 16:36:21.876 NOTICE: proxy_eth0 WS: connecting to wss://3.225.162.142:443
+2025-10-27 16:36:22.756 NOTICE: tun0 matched http://www.google.com/blank.html
+2025-10-27 16:36:22.756 NOTICE: dev tun0 connected
+2025-10-27 16:36:22.756 NOTICE: device online: tun0, connecting...
+2025-10-27 16:36:22.756 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-27 16:36:22.798 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:36:22.798 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:22.798 ERR: restricted_domain: proxyjs.luminatinet.com failed 15.197.193.114
+2025-10-27 16:36:22.798 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:22.798 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-27 16:36:22.799 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-27 16:36:22.840 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-27 16:36:22.841 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:22.841 ERR: restricted_domain: proxyjs.lum-sdk.io failed 3.33.193.183
+2025-10-27 16:36:22.841 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:22.841 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-27 16:36:22.841 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-27 16:36:22.842 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-27 16:36:22.842 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-27 16:36:22.842 NOTICE: proxyjs_client_conn tun0 198.18.0.1 34.199.53.229:443(undefined) 
+2025-10-27 16:36:22.843 NOTICE: proxy_tun0 WS: connecting to wss://34.199.53.229:443
+2025-10-27 16:36:23.473 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 3.225.162.142 is not in the cert's list: 
+2025-10-27 16:36:23.474 NOTICE: proxy disconnected
+2025-10-27 16:36:23.842 NOTICE: run: E.start()
+2025-10-27 16:36:24.408 ERR: proxy_tun0 WS: Hostname/IP does not match certificate's altnames: IP: 34.199.53.229 is not in the cert's list: 
+2025-10-27 16:36:24.408 NOTICE: proxy disconnected
+2025-10-27 16:36:24.476 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-27 16:36:24.476 NOTICE: proxyjs_client_conn eth0 192.168.144.2 50.16.231.79:443(p.l-conn.net) 
+2025-10-27 16:36:24.476 NOTICE: proxy_eth0 WS: connecting to wss://50.16.231.79:443
+2025-10-27 16:36:24.701 NOTICE: run: E.start()
+2025-10-27 16:36:25.189 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0 res 200
+2025-10-27 16:36:25.411 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-27 16:36:25.411 NOTICE: proxyjs_client_conn tun0 198.18.0.1 34.205.222.157:443(p.l-conn.net) 
+2025-10-27 16:36:25.411 NOTICE: proxy_tun0 WS: connecting to wss://34.205.222.157:443
+2025-10-27 16:36:25.585 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0 res 200
+2025-10-27 16:36:26.291 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-27 16:36:26.292 NOTICE: proxy_eth0 WS (50.16.231.79): connected
+2025-10-27 16:36:26.292 NOTICE: proxy connected
+2025-10-27 16:36:26.292 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"50.16.231.79"}
+2025-10-27 16:36:26.293 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-27 16:36:26.295 ERR: perr 20_svc_connected {}
+2025-10-27 16:36:26.295 ERR: perr connected {}
+2025-10-27 16:36:26.295 NOTICE: detected interface eth0 for 192.168.144.2
+2025-10-27 16:36:26.295 NOTICE: js peer init from 192.168.144.2 eth0 unknown
+2025-10-27 16:36:26.298 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":null,"dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.144.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:26.558 NOTICE: eth0 cid_set 161.8.172.168-79078a00/ls5c8p443_161.8.172.168_1227604328
+            session_key undefined
+2025-10-27 16:36:26.558 ERR: perr register_client {"msg":"ls5c8p443_161.8.172.168_1227604328","body":"{\"type\":\"eth0\"}"}
+2025-10-27 16:36:26.558 NOTICE: perr lum_sdk_node_register_client proxy 
+2025-10-27 16:36:26.777 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.55,"mem_usage_ts":1761582978881,"cpu_usage":8.58,"cpu_usage_ts":1761582979834},"bw":{}}
+2025-10-27 16:36:26.764 NOTICE: running PID: 30
+2025-10-27 16:36:26.769 ERR: perr 05_svc_init {}
+2025-10-27 16:36:26.770 ERR: perr init {}
+2025-10-27 16:36:26.771 NOTICE: idle_state_monitor run
+2025-10-27 16:36:26.776 NOTICE: run: E.start()
+2025-10-27 16:36:26.778 NOTICE: devs changed: found 2 devs
+2025-10-27 16:36:26.778 NOTICE: interface detected: eth0 (192.168.160.2)
+2025-10-27 16:36:26.778 NOTICE: interface detected: tun0 (198.18.0.1)
+2025-10-27 16:36:26.781 ERR: perr 10_show_dialog {}
+2025-10-27 16:36:26.786 ERR: perr display {}
+2025-10-27 16:36:26.787 NOTICE: run: E.update_consent(true)
+2025-10-27 16:36:26.787 ERR: perr 15_choose_peer {}
+2025-10-27 16:36:26.788 ERR: perr opt_in 
+2025-10-27 16:36:26.789 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-27 16:36:27.033 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:36:27.042 NOTICE: perr lum_sdk_node_21_svc_tun_ready proxy 
+2025-10-27 16:36:27.044 ERR: perr tun_ready {}
+2025-10-27 16:36:27.052 NOTICE: perr lum_sdk_node_tun_ready proxy 
+2025-10-27 16:36:27.055 NOTICE: client_connect start [192.168.144.2]->198.199.75.52:443 (198-199-75-52.brdtnet.com)
+2025-10-27 16:36:27.055 NOTICE: agent WS: connecting to wss://198.199.75.52:443
+2025-10-27 16:36:27.056 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:36:27.058 ERR: perr tun_ready {}
+2025-10-27 16:36:27.060 NOTICE: client_connect start [192.168.144.2]->207.148.8.33:443 (207-148-8-33.brdtnet.com)
+2025-10-27 16:36:27.060 NOTICE: agent WS: connecting to wss://207.148.8.33:443
+2025-10-27 16:36:27.061 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:36:27.063 ERR: perr tun_ready {}
+2025-10-27 16:36:27.065 NOTICE: client_connect start [192.168.144.2]->45.77.116.69:443 (45-77-116-69.brdtnet.com)
+2025-10-27 16:36:27.065 NOTICE: agent WS: connecting to wss://45.77.116.69:443
+2025-10-27 16:36:27.080 NOTICE: proxy_tun0 WS: upgrade conn
+2025-10-27 16:36:27.080 NOTICE: proxy_tun0 WS (34.205.222.157): connected
+2025-10-27 16:36:27.080 NOTICE: proxy connected
+2025-10-27 16:36:27.080 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"34.205.222.157"}
+2025-10-27 16:36:27.081 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-27 16:36:27.082 ERR: perr 20_svc_connected {}
+2025-10-27 16:36:27.082 ERR: perr connected {}
+2025-10-27 16:36:27.082 NOTICE: detected interface tun0 for 198.18.0.1
+2025-10-27 16:36:27.082 NOTICE: js peer init from 198.18.0.1 tun0 unknown
+2025-10-27 16:36:27.088 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls5c8p443_161.8.172.168_1227604328","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0","ifname":"tun0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.144.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:27.337 NOTICE: tun0 cid_set 161.8.172.168-79078a00/ls11c6p443_161.8.172.168_1046674568
+            session_key undefined
+2025-10-27 16:36:27.337 ERR: perr register_client {"msg":"ls11c6p443_161.8.172.168_1046674568","body":"{\"type\":\"tun0\"}"}
+2025-10-27 16:36:27.337 NOTICE: perr lum_sdk_node_register_client proxy 
+2025-10-27 16:36:27.542 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.55,"mem_usage_ts":1761582978881,"cpu_usage":8.58,"cpu_usage_ts":1761582979834},"bw":{}}
+2025-10-27 16:36:27.790 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:36:27.793 ERR: perr tun_ready {}
+2025-10-27 16:36:27.796 NOTICE: client_connect start [198.18.0.1]->198.199.75.52:443 (198-199-75-52.brdtnet.com)
+2025-10-27 16:36:27.796 NOTICE: agent WS: connecting to wss://198.199.75.52:443
+2025-10-27 16:36:27.797 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:36:27.808 ERR: perr tun_ready {}
+2025-10-27 16:36:27.810 NOTICE: client_connect start [198.18.0.1]->207.148.8.33:443 (207-148-8-33.brdtnet.com)
+2025-10-27 16:36:27.811 NOTICE: agent WS: connecting to wss://207.148.8.33:443
+2025-10-27 16:36:27.811 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:36:27.813 ERR: perr tun_ready {}
+2025-10-27 16:36:27.814 NOTICE: client_connect start [198.18.0.1]->45.77.116.69:443 (45-77-116-69.brdtnet.com)
+2025-10-27 16:36:27.814 NOTICE: agent WS: connecting to wss://45.77.116.69:443
+2025-10-27 16:36:28.090 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0 res 200
+2025-10-27 16:36:28.761 NOTICE: ndt7 disabled
+2025-10-27 16:36:28.753 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_21_svc_tun_ready&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0 res 200
+2025-10-27 16:36:28.909 NOTICE: agent WS: upgrade conn
+2025-10-27 16:36:28.910 NOTICE: agent WS (45.77.116.69): connected
+2025-10-27 16:36:28.910 NOTICE: client_connect established [192.168.144.2]->45.77.116.69:443 (45-77-116-69.brdtnet.com)
+2025-10-27 16:36:28.910 ERR: perr tun_init_success {"servername":"45-77-116-69.brdtnet.com"}
+2025-10-27 16:36:28.916 NOTICE: perr lum_sdk_node_tun_init_success proxy 
+2025-10-27 16:36:28.918 NOTICE: detected interface eth0 for 192.168.144.2
+2025-10-27 16:36:28.918 NOTICE: js peer init from 192.168.144.2 eth0 unknown
+2025-10-27 16:36:28.922 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls5c8p443_161.8.172.168_1227604328","old_cid":"161.8.172.168-79078a00/ls11c6p443_161.8.172.168_1046674568","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.144.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:28.931 NOTICE: agent WS: upgrade conn
+2025-10-27 16:36:28.932 NOTICE: agent WS (198.199.75.52): connected
+2025-10-27 16:36:28.932 NOTICE: client_connect established [192.168.144.2]->198.199.75.52:443 (198-199-75-52.brdtnet.com)
+2025-10-27 16:36:28.932 ERR: perr tun_init_success {"servername":"198-199-75-52.brdtnet.com"}
+2025-10-27 16:36:28.934 NOTICE: detected interface eth0 for 192.168.144.2
+2025-10-27 16:36:28.934 NOTICE: js peer init from 192.168.144.2 eth0 unknown
+2025-10-27 16:36:28.935 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls5c8p443_161.8.172.168_1227604328","old_cid":"161.8.172.168-79078a00/ls11c6p443_161.8.172.168_1046674568","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.144.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:28.946 NOTICE: agent WS: upgrade conn
+2025-10-27 16:36:28.946 NOTICE: agent WS (207.148.8.33): connected
+2025-10-27 16:36:28.946 NOTICE: client_connect established [192.168.144.2]->207.148.8.33:443 (207-148-8-33.brdtnet.com)
+2025-10-27 16:36:28.946 ERR: perr tun_init_success {"servername":"207-148-8-33.brdtnet.com"}
+2025-10-27 16:36:28.948 NOTICE: detected interface eth0 for 192.168.144.2
+2025-10-27 16:36:28.948 NOTICE: js peer init from 192.168.144.2 eth0 unknown
+2025-10-27 16:36:28.950 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls5c8p443_161.8.172.168_1227604328","old_cid":"161.8.172.168-79078a00/ls11c6p443_161.8.172.168_1046674568","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.144.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:28.984 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w res 200
+2025-10-27 16:36:28.984 ERR: perr perr_direct_success {}
+2025-10-27 16:36:29.096 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0 res 200
+2025-10-27 16:36:29.200 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_register_client&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0 res 200
+2025-10-27 16:36:29.207 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.55,"mem_usage_ts":1761582978881,"cpu_usage":8.58,"cpu_usage_ts":1761582979834},"bw":{}}
+2025-10-27 16:36:29.242 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.55,"mem_usage_ts":1761582978881,"cpu_usage":8.58,"cpu_usage_ts":1761582979834},"bw":{}}
+2025-10-27 16:36:29.247 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_tun_ready&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0 res 200
+2025-10-27 16:36:29.433 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.55,"mem_usage_ts":1761582978881,"cpu_usage":8.58,"cpu_usage_ts":1761582979834},"bw":{}}
+2025-10-27 16:36:29.601 NOTICE: agent WS: upgrade conn
+2025-10-27 16:36:29.601 NOTICE: agent WS (198.199.75.52): connected
+2025-10-27 16:36:29.601 NOTICE: client_connect established [198.18.0.1]->198.199.75.52:443 (198-199-75-52.brdtnet.com)
+2025-10-27 16:36:29.601 ERR: perr tun_init_success {"servername":"198-199-75-52.brdtnet.com"}
+2025-10-27 16:36:29.603 NOTICE: detected interface tun0 for 198.18.0.1
+2025-10-27 16:36:29.603 NOTICE: js peer init from 198.18.0.1 tun0 unknown
+2025-10-27 16:36:29.605 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls11c6p443_161.8.172.168_1046674568","old_cid":"161.8.172.168-79078a00/ls11c6p443_161.8.172.168_1046674568","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0","ifname":"tun0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.144.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:29.641 NOTICE: agent WS: upgrade conn
+2025-10-27 16:36:29.641 NOTICE: agent WS (45.77.116.69): connected
+2025-10-27 16:36:29.642 NOTICE: client_connect established [198.18.0.1]->45.77.116.69:443 (45-77-116-69.brdtnet.com)
+2025-10-27 16:36:29.642 ERR: perr tun_init_success {"servername":"45-77-116-69.brdtnet.com"}
+2025-10-27 16:36:29.643 NOTICE: detected interface tun0 for 198.18.0.1
+2025-10-27 16:36:29.644 NOTICE: js peer init from 198.18.0.1 tun0 unknown
+2025-10-27 16:36:29.645 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls11c6p443_161.8.172.168_1046674568","old_cid":"161.8.172.168-79078a00/ls11c6p443_161.8.172.168_1046674568","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0","ifname":"tun0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.144.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:29.654 NOTICE: agent WS: upgrade conn
+2025-10-27 16:36:29.654 NOTICE: agent WS (207.148.8.33): connected
+2025-10-27 16:36:29.655 NOTICE: client_connect established [198.18.0.1]->207.148.8.33:443 (207-148-8-33.brdtnet.com)
+2025-10-27 16:36:29.655 ERR: perr tun_init_success {"servername":"207-148-8-33.brdtnet.com"}
+2025-10-27 16:36:29.656 NOTICE: detected interface tun0 for 198.18.0.1
+2025-10-27 16:36:29.656 NOTICE: js peer init from 198.18.0.1 tun0 unknown
+2025-10-27 16:36:29.657 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls11c6p443_161.8.172.168_1046674568","old_cid":"161.8.172.168-79078a00/ls11c6p443_161.8.172.168_1046674568","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0","ifname":"tun0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.144.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:29.673 NOTICE: tun0 matched http://www.google.com/blank.html
+2025-10-27 16:36:29.674 NOTICE: dev tun0 connected
+2025-10-27 16:36:29.674 NOTICE: device online: tun0, connecting...
+2025-10-27 16:36:29.674 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-27 16:36:29.713 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-27 16:36:29.713 NOTICE: dev eth0 connected
+2025-10-27 16:36:29.713 NOTICE: device online: eth0, connecting...
+2025-10-27 16:36:29.713 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-27 16:36:29.719 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-27 16:36:29.719 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:29.719 ERR: restricted_domain: proxyjs.luminatinet.com failed 3.33.193.183
+2025-10-27 16:36:29.719 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:29.719 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-27 16:36:29.719 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-27 16:36:29.756 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:36:29.756 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:29.757 ERR: restricted_domain: proxyjs.luminatinet.com failed 15.197.193.114
+2025-10-27 16:36:29.757 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:29.757 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-27 16:36:29.757 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-27 16:36:29.761 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-27 16:36:29.761 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:29.761 ERR: restricted_domain: proxyjs.lum-sdk.io failed 3.33.193.183
+2025-10-27 16:36:29.761 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:29.761 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-27 16:36:29.762 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-27 16:36:29.763 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-27 16:36:29.763 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-27 16:36:29.764 NOTICE: proxyjs_client_conn tun0 198.18.0.1 34.206.156.144:443(undefined) 
+2025-10-27 16:36:29.765 NOTICE: proxy_tun0 WS: connecting to wss://34.206.156.144:443
+2025-10-27 16:36:29.798 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-27 16:36:29.798 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:29.798 ERR: restricted_domain: proxyjs.lum-sdk.io failed 3.33.193.183
+2025-10-27 16:36:29.798 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:36:29.798 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-27 16:36:29.799 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-27 16:36:29.800 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-27 16:36:29.800 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-27 16:36:29.800 NOTICE: proxyjs_client_conn eth0 192.168.160.2 52.3.30.241:443(undefined) 
+2025-10-27 16:36:29.800 NOTICE: proxy_eth0 WS: connecting to wss://52.3.30.241:443
+2025-10-27 16:36:29.872 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.55,"mem_usage_ts":1761582978881,"cpu_usage":8.58,"cpu_usage_ts":1761582979834},"bw":{}}
+2025-10-27 16:36:29.929 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.55,"mem_usage_ts":1761582978881,"cpu_usage":8.58,"cpu_usage_ts":1761582979834},"bw":{}}
+2025-10-27 16:36:29.938 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.55,"mem_usage_ts":1761582978881,"cpu_usage":8.58,"cpu_usage_ts":1761582979834},"bw":{}}
+2025-10-27 16:36:30.136 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_register_client&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0 res 200
+2025-10-27 16:36:30.898 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_tun_init_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-b9wz3n4di7spp5ypwm57mr6tyf5gooh0 res 200
+2025-10-27 16:36:31.293 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 52.3.30.241 is not in the cert's list: 
+2025-10-27 16:36:31.294 NOTICE: proxy disconnected
+2025-10-27 16:36:31.324 ERR: proxy_tun0 WS: Hostname/IP does not match certificate's altnames: IP: 34.206.156.144 is not in the cert's list: 
+2025-10-27 16:36:31.325 NOTICE: proxy disconnected
+2025-10-27 16:36:31.790 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w res 200
+2025-10-27 16:36:31.973 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w res 200
+2025-10-27 16:36:32.295 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-27 16:36:32.295 NOTICE: proxyjs_client_conn eth0 192.168.160.2 50.17.201.48:443(p.l-conn.net) 
+2025-10-27 16:36:32.296 NOTICE: proxy_eth0 WS: connecting to wss://50.17.201.48:443
+2025-10-27 16:36:32.326 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-27 16:36:32.326 NOTICE: proxyjs_client_conn tun0 198.18.0.1 34.197.217.233:443(p.l-conn.net) 
+2025-10-27 16:36:32.326 NOTICE: proxy_tun0 WS: connecting to wss://34.197.217.233:443
+2025-10-27 16:36:34.119 NOTICE: proxy_tun0 WS: upgrade conn
+2025-10-27 16:36:34.120 NOTICE: proxy_tun0 WS (34.197.217.233): connected
+2025-10-27 16:36:34.121 NOTICE: proxy connected
+2025-10-27 16:36:34.121 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"34.197.217.233"}
+2025-10-27 16:36:34.121 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-27 16:36:34.123 ERR: perr 20_svc_connected {}
+2025-10-27 16:36:34.124 ERR: perr connected {}
+2025-10-27 16:36:34.124 NOTICE: detected interface tun0 for 198.18.0.1
+2025-10-27 16:36:34.124 NOTICE: js peer init from 198.18.0.1 tun0 unknown
+2025-10-27 16:36:34.126 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls11c6p443_161.8.172.168_1046674568","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w","ifname":"tun0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.160.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:34.156 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-27 16:36:34.157 NOTICE: proxy_eth0 WS (50.17.201.48): connected
+2025-10-27 16:36:34.157 NOTICE: proxy connected
+2025-10-27 16:36:34.157 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"50.17.201.48"}
+2025-10-27 16:36:34.157 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-27 16:36:34.158 ERR: perr 20_svc_connected {}
+2025-10-27 16:36:34.158 ERR: perr connected {}
+2025-10-27 16:36:34.158 NOTICE: detected interface eth0 for 192.168.160.2
+2025-10-27 16:36:34.158 NOTICE: js peer init from 192.168.160.2 eth0 unknown
+2025-10-27 16:36:34.160 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls11c6p443_161.8.172.168_1046674568","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.160.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:34.400 NOTICE: tun0 cid_set 161.8.172.168-79078a00/ls8c1p443_161.8.172.169_302779228
+            session_key undefined
+2025-10-27 16:36:34.400 ERR: perr register_client {"msg":"ls8c1p443_161.8.172.169_302779228","body":"{\"type\":\"tun0\"}"}
+2025-10-27 16:36:34.401 NOTICE: perr lum_sdk_node_register_client proxy 
+2025-10-27 16:36:34.455 NOTICE: eth0 cid_set 161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898
+            session_key undefined
+2025-10-27 16:36:34.455 ERR: perr register_client {"msg":"ls8c7p443_161.8.172.169_3555468898","body":"{\"type\":\"eth0\"}"}
+2025-10-27 16:36:34.455 NOTICE: perr lum_sdk_node_register_client proxy 
+2025-10-27 16:36:34.617 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":36.66,"mem_usage_ts":1761582986814,"cpu_usage":3.69,"cpu_usage_ts":1761582987773},"bw":{}}
+2025-10-27 16:36:34.672 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":36.66,"mem_usage_ts":1761582986814,"cpu_usage":3.69,"cpu_usage_ts":1761582987773},"bw":{}}
+2025-10-27 16:36:34.876 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:36:34.877 ERR: perr tun_ready {}
+2025-10-27 16:36:34.877 NOTICE: client_connect start [198.18.0.1]->192.241.154.26:443 (192-241-154-26.brdtnet.com)
+2025-10-27 16:36:34.878 NOTICE: agent WS: connecting to wss://192.241.154.26:443
+2025-10-27 16:36:34.879 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:36:34.879 ERR: perr tun_ready {}
+2025-10-27 16:36:34.879 NOTICE: client_connect start [198.18.0.1]->45.77.216.140:443 (45-77-216-140.brdtnet.com)
+2025-10-27 16:36:34.879 NOTICE: agent WS: connecting to wss://45.77.216.140:443
+2025-10-27 16:36:34.880 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:36:34.880 ERR: perr tun_ready {}
+2025-10-27 16:36:34.880 NOTICE: client_connect start [198.18.0.1]->155.138.227.27:443 (155-138-227-27.brdtnet.com)
+2025-10-27 16:36:34.880 NOTICE: agent WS: connecting to wss://155.138.227.27:443
+2025-10-27 16:36:34.962 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:36:34.963 ERR: perr tun_ready {}
+2025-10-27 16:36:34.963 NOTICE: client_connect start [192.168.160.2]->192.241.154.26:443 (192-241-154-26.brdtnet.com)
+2025-10-27 16:36:34.963 NOTICE: agent WS: connecting to wss://192.241.154.26:443
+2025-10-27 16:36:34.965 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:36:34.965 ERR: perr tun_ready {}
+2025-10-27 16:36:34.965 NOTICE: client_connect start [192.168.160.2]->45.77.216.140:443 (45-77-216-140.brdtnet.com)
+2025-10-27 16:36:34.965 NOTICE: agent WS: connecting to wss://45.77.216.140:443
+2025-10-27 16:36:34.966 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:36:34.966 ERR: perr tun_ready {}
+2025-10-27 16:36:34.966 NOTICE: client_connect start [192.168.160.2]->155.138.227.27:443 (155-138-227-27.brdtnet.com)
+2025-10-27 16:36:34.966 NOTICE: agent WS: connecting to wss://155.138.227.27:443
+2025-10-27 16:36:36.037 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w res 200
+2025-10-27 16:36:36.086 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w res 200
+2025-10-27 16:36:36.397 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_register_client&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w res 200
+2025-10-27 16:36:36.503 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_register_client&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w res 200
+2025-10-27 16:36:36.594 NOTICE: agent WS: upgrade conn
+2025-10-27 16:36:36.594 NOTICE: agent WS (45.77.216.140): connected
+2025-10-27 16:36:36.595 NOTICE: client_connect established [198.18.0.1]->45.77.216.140:443 (45-77-216-140.brdtnet.com)
+2025-10-27 16:36:36.595 ERR: perr tun_init_success {"servername":"45-77-216-140.brdtnet.com"}
+2025-10-27 16:36:36.595 NOTICE: detected interface tun0 for 198.18.0.1
+2025-10-27 16:36:36.595 NOTICE: js peer init from 198.18.0.1 tun0 unknown
+2025-10-27 16:36:36.598 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls8c1p443_161.8.172.169_302779228","old_cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w","ifname":"tun0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.160.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:36.641 NOTICE: agent WS: upgrade conn
+2025-10-27 16:36:36.641 NOTICE: agent WS (155.138.227.27): connected
+2025-10-27 16:36:36.641 NOTICE: client_connect established [198.18.0.1]->155.138.227.27:443 (155-138-227-27.brdtnet.com)
+2025-10-27 16:36:36.641 ERR: perr tun_init_success {"servername":"155-138-227-27.brdtnet.com"}
+2025-10-27 16:36:36.642 NOTICE: detected interface tun0 for 198.18.0.1
+2025-10-27 16:36:36.642 NOTICE: js peer init from 198.18.0.1 tun0 unknown
+2025-10-27 16:36:36.645 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls8c1p443_161.8.172.169_302779228","old_cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w","ifname":"tun0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.160.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:36.659 NOTICE: agent WS: upgrade conn
+2025-10-27 16:36:36.659 NOTICE: agent WS (192.241.154.26): connected
+2025-10-27 16:36:36.660 NOTICE: client_connect established [198.18.0.1]->192.241.154.26:443 (192-241-154-26.brdtnet.com)
+2025-10-27 16:36:36.660 ERR: perr tun_init_success {"servername":"192-241-154-26.brdtnet.com"}
+2025-10-27 16:36:36.660 NOTICE: detected interface tun0 for 198.18.0.1
+2025-10-27 16:36:36.660 NOTICE: js peer init from 198.18.0.1 tun0 unknown
+2025-10-27 16:36:36.661 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls8c1p443_161.8.172.169_302779228","old_cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w","ifname":"tun0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.160.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:36.733 NOTICE: agent WS: upgrade conn
+2025-10-27 16:36:36.733 NOTICE: agent WS (45.77.216.140): connected
+2025-10-27 16:36:36.733 NOTICE: client_connect established [192.168.160.2]->45.77.216.140:443 (45-77-216-140.brdtnet.com)
+2025-10-27 16:36:36.733 ERR: perr tun_init_success {"servername":"45-77-216-140.brdtnet.com"}
+2025-10-27 16:36:36.734 NOTICE: detected interface eth0 for 192.168.160.2
+2025-10-27 16:36:36.734 NOTICE: js peer init from 192.168.160.2 eth0 unknown
+2025-10-27 16:36:36.735 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","old_cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.160.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:36.740 NOTICE: agent WS: upgrade conn
+2025-10-27 16:36:36.741 NOTICE: agent WS (155.138.227.27): connected
+2025-10-27 16:36:36.741 NOTICE: client_connect established [192.168.160.2]->155.138.227.27:443 (155-138-227-27.brdtnet.com)
+2025-10-27 16:36:36.741 ERR: perr tun_init_success {"servername":"155-138-227-27.brdtnet.com"}
+2025-10-27 16:36:36.741 NOTICE: detected interface eth0 for 192.168.160.2
+2025-10-27 16:36:36.741 NOTICE: js peer init from 192.168.160.2 eth0 unknown
+2025-10-27 16:36:36.743 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","old_cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.160.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:36.806 NOTICE: agent WS: upgrade conn
+2025-10-27 16:36:36.806 NOTICE: agent WS (192.241.154.26): connected
+2025-10-27 16:36:36.806 NOTICE: client_connect established [192.168.160.2]->192.241.154.26:443 (192-241-154-26.brdtnet.com)
+2025-10-27 16:36:36.807 ERR: perr tun_init_success {"servername":"192-241-154-26.brdtnet.com"}
+2025-10-27 16:36:36.807 NOTICE: detected interface eth0 for 192.168.160.2
+2025-10-27 16:36:36.807 NOTICE: js peer init from 192.168.160.2 eth0 unknown
+2025-10-27 16:36:36.810 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","old_cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-lp2oct9eh0o4xcnhti2o18fxoy8pjk2w","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.160.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:36:36.853 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":36.66,"mem_usage_ts":1761582986814,"cpu_usage":3.69,"cpu_usage_ts":1761582987773},"bw":{}}
+2025-10-27 16:36:36.912 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":36.66,"mem_usage_ts":1761582986814,"cpu_usage":3.69,"cpu_usage_ts":1761582987773},"bw":{}}
+2025-10-27 16:36:36.928 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":36.66,"mem_usage_ts":1761582986814,"cpu_usage":3.69,"cpu_usage_ts":1761582987773},"bw":{}}
+2025-10-27 16:36:36.997 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":36.66,"mem_usage_ts":1761582986814,"cpu_usage":3.69,"cpu_usage_ts":1761582987773},"bw":{}}
+2025-10-27 16:36:37.010 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":36.66,"mem_usage_ts":1761582986814,"cpu_usage":3.69,"cpu_usage_ts":1761582987773},"bw":{}}
+2025-10-27 16:36:37.085 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":36.66,"mem_usage_ts":1761582986814,"cpu_usage":3.69,"cpu_usage_ts":1761582987773},"bw":{}}
+2025-10-27 16:36:45.637 NOTICE: idle_state_monitor run
+2025-10-27 16:36:48.256 ERR: perr heartbeat_proxy_js_conn_00_1min {}
+2025-10-27 16:36:48.256 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_00_1min proxy 
+2025-10-27 16:36:49.104 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_00_1min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-mmdx7tdyqlfwp1t8pu269c0bi673eue1 res 200
+2025-10-27 16:39:18.157 NOTICE: running PID: 30
+2025-10-27 16:39:18.161 ERR: perr 05_svc_init {}
+2025-10-27 16:39:18.164 ERR: perr init {}
+2025-10-27 16:39:18.165 NOTICE: idle_state_monitor run
+2025-10-27 16:39:18.171 NOTICE: run: E.start()
+2025-10-27 16:39:18.171 NOTICE: devs changed: found 1 devs
+2025-10-27 16:39:18.171 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-27 16:39:18.177 ERR: perr 10_show_dialog {}
+2025-10-27 16:39:18.179 ERR: perr display {}
+2025-10-27 16:39:18.181 NOTICE: run: E.update_consent(true)
+2025-10-27 16:39:18.181 ERR: perr 15_choose_peer {}
+2025-10-27 16:39:18.182 ERR: perr opt_in 
+2025-10-27 16:39:18.183 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-27 16:39:19.021 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-hvepcyucxt5svxq7x92gx0xdpviv1w86 res 200
+2025-10-27 16:39:19.022 ERR: perr perr_direct_success {}
+2025-10-27 16:39:19.038 NOTICE: ndt7 disabled
+2025-10-27 16:39:19.387 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-27 16:39:19.387 NOTICE: dev eth0 connected
+2025-10-27 16:39:19.388 NOTICE: device online: eth0, connecting...
+2025-10-27 16:39:19.388 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-27 16:39:19.431 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-27 16:39:19.431 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:39:19.433 ERR: restricted_domain: proxyjs.luminatinet.com failed 3.33.193.183
+2025-10-27 16:39:19.433 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:39:19.433 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-27 16:39:19.433 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-27 16:39:19.475 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:39:19.476 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:39:19.476 ERR: restricted_domain: proxyjs.lum-sdk.io failed 15.197.193.114
+2025-10-27 16:39:19.476 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:39:19.476 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-27 16:39:19.476 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-27 16:39:19.478 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-27 16:39:19.478 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-27 16:39:19.478 NOTICE: proxyjs_client_conn eth0 172.17.0.2 52.2.49.133:443(undefined) 
+2025-10-27 16:39:19.479 NOTICE: proxy_eth0 WS: connecting to wss://52.2.49.133:443
+2025-10-27 16:39:20.013 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 52.2.49.133 is not in the cert's list: 
+2025-10-27 16:39:20.014 NOTICE: proxy disconnected
+2025-10-27 16:39:21.015 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-27 16:39:21.016 NOTICE: proxyjs_client_conn eth0 172.17.0.2 52.201.188.167:443(p.l-conn.net) 
+2025-10-27 16:39:21.016 NOTICE: proxy_eth0 WS: connecting to wss://52.201.188.167:443
+2025-10-27 16:39:21.597 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-hvepcyucxt5svxq7x92gx0xdpviv1w86 res 200
+2025-10-27 16:39:21.812 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-27 16:39:21.813 NOTICE: proxy_eth0 WS (52.201.188.167): connected
+2025-10-27 16:39:21.813 NOTICE: proxy connected
+2025-10-27 16:39:21.813 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"52.201.188.167"}
+2025-10-27 16:39:21.813 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-27 16:39:21.816 ERR: perr 20_svc_connected {}
+2025-10-27 16:39:21.817 ERR: perr connected {}
+2025-10-27 16:39:21.819 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-27 16:39:21.819 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-27 16:39:21.823 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-hvepcyucxt5svxq7x92gx0xdpviv1w86","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-27 16:39:22.701 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-hvepcyucxt5svxq7x92gx0xdpviv1w86 res 200
+2025-10-27 16:40:19.168 NOTICE: idle_state_monitor run
+2025-10-27 16:40:21.815 ERR: perr heartbeat_proxy_js_conn_00_1min {}
+2025-10-27 16:40:21.816 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_00_1min proxy 
+2025-10-27 16:40:22.756 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_00_1min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-hvepcyucxt5svxq7x92gx0xdpviv1w86 res 200
+2025-10-27 16:41:20.171 NOTICE: idle_state_monitor run
+2025-10-27 16:41:22.759 ERR: perr heartbeat_proxy_js_conn_01_2min {}
+2025-10-27 16:41:22.760 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_01_2min proxy 
+2025-10-27 16:41:24.072 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_01_2min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-hvepcyucxt5svxq7x92gx0xdpviv1w86 res 200
+2025-10-27 16:42:21.172 NOTICE: idle_state_monitor run
+2025-10-27 16:43:09.494 NOTICE: running PID: 30
+2025-10-27 16:43:09.510 ERR: perr 05_svc_init {}
+2025-10-27 16:43:09.513 ERR: perr init {}
+2025-10-27 16:43:09.515 NOTICE: idle_state_monitor run
+2025-10-27 16:43:09.526 NOTICE: run: E.start()
+2025-10-27 16:43:09.527 NOTICE: devs changed: found 1 devs
+2025-10-27 16:43:09.527 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-27 16:43:09.530 ERR: perr 10_show_dialog {}
+2025-10-27 16:43:09.532 ERR: perr display {}
+2025-10-27 16:43:09.535 NOTICE: run: E.update_consent(true)
+2025-10-27 16:43:09.535 ERR: perr 15_choose_peer {}
+2025-10-27 16:43:09.537 ERR: perr opt_in 
+2025-10-27 16:43:09.538 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-27 16:43:10.395 NOTICE: ndt7 disabled
+2025-10-27 16:43:10.716 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-30pyiz386oe59avtgjc6jvgxemu5xu47 res 200
+2025-10-27 16:43:10.717 ERR: perr perr_direct_success {}
+2025-10-27 16:43:10.740 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-27 16:43:10.740 NOTICE: dev eth0 connected
+2025-10-27 16:43:10.740 NOTICE: device online: eth0, connecting...
+2025-10-27 16:43:10.741 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-27 16:43:10.785 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:43:10.786 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:43:10.799 ERR: restricted_domain: proxyjs.luminatinet.com failed 15.197.193.114
+2025-10-27 16:43:10.800 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:43:10.800 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-27 16:43:10.800 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-27 16:43:10.843 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-27 16:43:10.843 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:43:10.843 ERR: restricted_domain: proxyjs.lum-sdk.io failed 3.33.193.183
+2025-10-27 16:43:10.843 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:43:10.844 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-27 16:43:10.844 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-27 16:43:10.846 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-27 16:43:10.846 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-27 16:43:10.846 NOTICE: proxyjs_client_conn eth0 172.17.0.2 52.70.76.94:443(undefined) 
+2025-10-27 16:43:10.847 NOTICE: proxy_eth0 WS: connecting to wss://52.70.76.94:443
+2025-10-27 16:43:11.408 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 52.70.76.94 is not in the cert's list: 
+2025-10-27 16:43:11.408 NOTICE: proxy disconnected
+2025-10-27 16:43:11.924 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-30pyiz386oe59avtgjc6jvgxemu5xu47 res 200
+2025-10-27 16:43:12.410 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-27 16:43:12.410 NOTICE: proxyjs_client_conn eth0 172.17.0.2 34.197.217.233:443(p.l-conn.net) 
+2025-10-27 16:43:12.410 NOTICE: proxy_eth0 WS: connecting to wss://34.197.217.233:443
+2025-10-27 16:43:13.193 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-27 16:43:13.194 NOTICE: proxy_eth0 WS (34.197.217.233): connected
+2025-10-27 16:43:13.194 NOTICE: proxy connected
+2025-10-27 16:43:13.194 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"34.197.217.233"}
+2025-10-27 16:43:13.195 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-27 16:43:13.198 ERR: perr 20_svc_connected {}
+2025-10-27 16:43:13.208 ERR: perr connected {}
+2025-10-27 16:43:13.209 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-27 16:43:13.210 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-27 16:43:13.213 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-30pyiz386oe59avtgjc6jvgxemu5xu47","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-27 16:43:14.095 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-30pyiz386oe59avtgjc6jvgxemu5xu47 res 200
+2025-10-27 16:43:58.884 NOTICE: running PID: 30
+2025-10-27 16:43:58.890 ERR: perr 05_svc_init {}
+2025-10-27 16:43:58.897 ERR: perr init {}
+2025-10-27 16:43:58.899 NOTICE: idle_state_monitor run
+2025-10-27 16:43:58.909 NOTICE: run: E.start()
+2025-10-27 16:43:58.911 NOTICE: devs changed: found 1 devs
+2025-10-27 16:43:58.911 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-27 16:43:58.914 ERR: perr 10_show_dialog {}
+2025-10-27 16:43:58.916 ERR: perr display {}
+2025-10-27 16:43:58.918 NOTICE: run: E.update_consent(true)
+2025-10-27 16:43:58.918 ERR: perr 15_choose_peer {}
+2025-10-27 16:43:58.920 ERR: perr opt_in 
+2025-10-27 16:43:58.921 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-27 16:43:59.779 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-2375du3l1unakjsq60tz43ofz2h0izvf res 200
+2025-10-27 16:43:59.779 ERR: perr perr_direct_success {}
+2025-10-27 16:43:59.783 NOTICE: ndt7 disabled
+2025-10-27 16:44:00.111 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-27 16:44:00.111 NOTICE: dev eth0 connected
+2025-10-27 16:44:00.111 NOTICE: device online: eth0, connecting...
+2025-10-27 16:44:00.112 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-27 16:44:00.156 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:44:00.156 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:44:00.158 ERR: restricted_domain: proxyjs.luminatinet.com failed 15.197.193.114
+2025-10-27 16:44:00.158 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:44:00.158 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-27 16:44:00.158 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-27 16:44:00.200 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:44:00.200 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:44:00.200 ERR: restricted_domain: proxyjs.lum-sdk.io failed 15.197.193.114
+2025-10-27 16:44:00.201 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:44:00.201 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-27 16:44:00.201 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-27 16:44:00.202 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-27 16:44:00.202 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-27 16:44:00.203 NOTICE: proxyjs_client_conn eth0 172.17.0.2 52.72.235.189:443(undefined) 
+2025-10-27 16:44:00.204 NOTICE: proxy_eth0 WS: connecting to wss://52.72.235.189:443
+2025-10-27 16:44:00.768 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 52.72.235.189 is not in the cert's list: 
+2025-10-27 16:44:00.768 NOTICE: proxy disconnected
+2025-10-27 16:44:01.256 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-2375du3l1unakjsq60tz43ofz2h0izvf res 200
+2025-10-27 16:44:01.770 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-27 16:44:01.770 NOTICE: proxyjs_client_conn eth0 172.17.0.2 34.230.141.83:443(p.l-conn.net) 
+2025-10-27 16:44:01.770 NOTICE: proxy_eth0 WS: connecting to wss://34.230.141.83:443
+2025-10-27 16:44:02.561 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-27 16:44:02.562 NOTICE: proxy_eth0 WS (34.230.141.83): connected
+2025-10-27 16:44:02.562 NOTICE: proxy connected
+2025-10-27 16:44:02.562 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"34.230.141.83"}
+2025-10-27 16:44:02.562 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-27 16:44:02.565 ERR: perr 20_svc_connected {}
+2025-10-27 16:44:02.567 ERR: perr connected {}
+2025-10-27 16:44:02.569 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-27 16:44:02.569 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-27 16:44:02.573 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-2375du3l1unakjsq60tz43ofz2h0izvf","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-27 16:44:03.452 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-2375du3l1unakjsq60tz43ofz2h0izvf res 200
+2025-10-27 16:44:23.943 NOTICE: run: E.start()
+2025-10-27 16:44:28.054 NOTICE: running PID: 30
+2025-10-27 16:44:28.059 ERR: perr 05_svc_init {}
+2025-10-27 16:44:28.061 ERR: perr init {}
+2025-10-27 16:44:28.062 NOTICE: idle_state_monitor run
+2025-10-27 16:44:28.070 NOTICE: run: E.start()
+2025-10-27 16:44:28.071 NOTICE: devs changed: found 2 devs
+2025-10-27 16:44:28.071 NOTICE: interface detected: eth0 (192.168.176.2)
+2025-10-27 16:44:28.072 NOTICE: interface detected: tun0 (198.18.0.1)
+2025-10-27 16:44:28.074 ERR: perr 10_show_dialog {}
+2025-10-27 16:44:28.074 ERR: perr display {}
+2025-10-27 16:44:28.075 NOTICE: run: E.update_consent(true)
+2025-10-27 16:44:28.075 ERR: perr 15_choose_peer {}
+2025-10-27 16:44:28.075 ERR: perr opt_in 
+2025-10-27 16:44:28.076 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-27 16:44:29.857 NOTICE: ndt7 disabled
+2025-10-27 16:44:29.944 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36 res 200
+2025-10-27 16:44:29.944 ERR: perr perr_direct_success {}
+2025-10-27 16:44:30.843 NOTICE: tun0 matched http://www.google.com/blank.html
+2025-10-27 16:44:30.844 NOTICE: dev tun0 connected
+2025-10-27 16:44:30.844 NOTICE: device online: tun0, connecting...
+2025-10-27 16:44:30.845 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-27 16:44:30.889 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-27 16:44:30.889 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:44:30.889 ERR: restricted_domain: proxyjs.luminatinet.com failed 3.33.193.183
+2025-10-27 16:44:30.889 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:44:30.890 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-27 16:44:30.890 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-27 16:44:30.935 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:44:30.935 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:44:30.935 ERR: restricted_domain: proxyjs.lum-sdk.io failed 15.197.193.114
+2025-10-27 16:44:30.935 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:44:30.936 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-27 16:44:30.937 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-27 16:44:30.938 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-27 16:44:30.938 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-27 16:44:30.939 NOTICE: proxyjs_client_conn tun0 198.18.0.1 34.205.222.157:443(undefined) 
+2025-10-27 16:44:30.940 NOTICE: proxy_tun0 WS: connecting to wss://34.205.222.157:443
+2025-10-27 16:44:30.957 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-27 16:44:30.957 NOTICE: dev eth0 connected
+2025-10-27 16:44:30.957 NOTICE: device online: eth0, connecting...
+2025-10-27 16:44:30.957 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-27 16:44:31.002 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-27 16:44:31.002 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:44:31.002 ERR: restricted_domain: proxyjs.luminatinet.com failed 3.33.193.183
+2025-10-27 16:44:31.002 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:44:31.002 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-27 16:44:31.003 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-27 16:44:31.045 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:44:31.045 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:44:31.046 ERR: restricted_domain: proxyjs.lum-sdk.io failed 15.197.193.114
+2025-10-27 16:44:31.046 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:44:31.046 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-27 16:44:31.046 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-27 16:44:31.047 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-27 16:44:31.047 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-27 16:44:31.047 NOTICE: proxyjs_client_conn eth0 192.168.176.2 34.206.156.144:443(undefined) 
+2025-10-27 16:44:31.048 NOTICE: proxy_eth0 WS: connecting to wss://34.206.156.144:443
+2025-10-27 16:44:32.572 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 34.206.156.144 is not in the cert's list: 
+2025-10-27 16:44:32.573 NOTICE: proxy disconnected
+2025-10-27 16:44:33.025 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36 res 200
+2025-10-27 16:44:33.064 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36 res 200
+2025-10-27 16:44:33.114 ERR: proxy_tun0 WS: Hostname/IP does not match certificate's altnames: IP: 34.205.222.157 is not in the cert's list: 
+2025-10-27 16:44:33.114 NOTICE: proxy disconnected
+2025-10-27 16:44:33.574 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-27 16:44:33.574 NOTICE: proxyjs_client_conn eth0 192.168.176.2 35.168.34.151:443(p.l-conn.net) 
+2025-10-27 16:44:33.575 NOTICE: proxy_eth0 WS: connecting to wss://35.168.34.151:443
+2025-10-27 16:44:34.115 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-27 16:44:34.115 NOTICE: proxyjs_client_conn tun0 198.18.0.1 52.72.235.189:443(p.l-conn.net) 
+2025-10-27 16:44:34.115 NOTICE: proxy_tun0 WS: connecting to wss://52.72.235.189:443
+2025-10-27 16:44:35.106 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-27 16:44:35.107 NOTICE: proxy_eth0 WS (35.168.34.151): connected
+2025-10-27 16:44:35.107 NOTICE: proxy connected
+2025-10-27 16:44:35.107 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"35.168.34.151"}
+2025-10-27 16:44:35.107 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-27 16:44:35.110 ERR: perr 20_svc_connected {}
+2025-10-27 16:44:35.110 ERR: perr connected {}
+2025-10-27 16:44:35.110 NOTICE: detected interface eth0 for 192.168.176.2
+2025-10-27 16:44:35.110 NOTICE: js peer init from 192.168.176.2 eth0 unknown
+2025-10-27 16:44:35.113 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls8c7p443_161.8.172.169_3555468898","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.176.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:44:35.367 NOTICE: eth0 cid_set 161.8.172.168-79078a00/ls15c5p443_161.8.172.175_3409337804
+            session_key undefined
+2025-10-27 16:44:35.367 ERR: perr register_client {"msg":"ls15c5p443_161.8.172.175_3409337804","body":"{\"type\":\"eth0\"}"}
+2025-10-27 16:44:35.368 NOTICE: perr lum_sdk_node_register_client proxy 
+2025-10-27 16:44:35.580 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.1,"mem_usage_ts":1761583468101,"cpu_usage":0.88,"cpu_usage_ts":1761583469063},"bw":{}}
+2025-10-27 16:44:35.831 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:44:35.832 ERR: perr tun_ready {}
+2025-10-27 16:44:35.835 NOTICE: client_connect start [192.168.176.2]->104.236.243.147:443 (104-236-243-147.brdtnet.com)
+2025-10-27 16:44:35.835 NOTICE: agent WS: connecting to wss://104.236.243.147:443
+2025-10-27 16:44:35.836 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:44:35.836 ERR: perr tun_ready {}
+2025-10-27 16:44:35.836 NOTICE: client_connect start [192.168.176.2]->45.77.106.132:443 (45-77-106-132.brdtnet.com)
+2025-10-27 16:44:35.836 NOTICE: agent WS: connecting to wss://45.77.106.132:443
+2025-10-27 16:44:35.837 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:44:35.837 ERR: perr tun_ready {}
+2025-10-27 16:44:35.837 NOTICE: client_connect start [192.168.176.2]->192.248.189.194:443 (192-248-189-194.brdtnet.com)
+2025-10-27 16:44:35.837 NOTICE: agent WS: connecting to wss://192.248.189.194:443
+2025-10-27 16:44:35.839 NOTICE: proxy_tun0 WS: upgrade conn
+2025-10-27 16:44:35.839 NOTICE: proxy_tun0 WS (52.72.235.189): connected
+2025-10-27 16:44:35.839 NOTICE: proxy connected
+2025-10-27 16:44:35.839 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"52.72.235.189"}
+2025-10-27 16:44:35.840 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-27 16:44:35.841 ERR: perr 20_svc_connected {}
+2025-10-27 16:44:35.841 ERR: perr connected {}
+2025-10-27 16:44:35.841 NOTICE: detected interface tun0 for 198.18.0.1
+2025-10-27 16:44:35.841 NOTICE: js peer init from 198.18.0.1 tun0 unknown
+2025-10-27 16:44:35.845 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls15c5p443_161.8.172.175_3409337804","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36","ifname":"tun0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.176.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:44:36.101 NOTICE: tun0 cid_set 161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897
+            session_key undefined
+2025-10-27 16:44:36.101 ERR: perr register_client {"msg":"ls14c1p443_161.8.172.175_216276897","body":"{\"type\":\"tun0\"}"}
+2025-10-27 16:44:36.102 NOTICE: perr lum_sdk_node_register_client proxy 
+2025-10-27 16:44:36.315 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.1,"mem_usage_ts":1761583468101,"cpu_usage":0.88,"cpu_usage_ts":1761583469063},"bw":{}}
+2025-10-27 16:44:36.566 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:44:36.566 ERR: perr tun_ready {}
+2025-10-27 16:44:36.566 NOTICE: client_connect start [198.18.0.1]->104.236.243.147:443 (104-236-243-147.brdtnet.com)
+2025-10-27 16:44:36.567 NOTICE: agent WS: connecting to wss://104.236.243.147:443
+2025-10-27 16:44:36.567 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:44:36.567 ERR: perr tun_ready {}
+2025-10-27 16:44:36.568 NOTICE: client_connect start [198.18.0.1]->45.77.106.132:443 (45-77-106-132.brdtnet.com)
+2025-10-27 16:44:36.568 NOTICE: agent WS: connecting to wss://45.77.106.132:443
+2025-10-27 16:44:36.568 ERR: perr 21_svc_tun_ready {}
+2025-10-27 16:44:36.568 ERR: perr tun_ready {}
+2025-10-27 16:44:36.568 NOTICE: client_connect start [198.18.0.1]->192.248.189.194:443 (192-248-189-194.brdtnet.com)
+2025-10-27 16:44:36.569 NOTICE: agent WS: connecting to wss://192.248.189.194:443
+2025-10-27 16:44:36.851 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36 res 200
+2025-10-27 16:44:37.288 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_register_client&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36 res 200
+2025-10-27 16:44:37.412 NOTICE: agent WS: upgrade conn
+2025-10-27 16:44:37.412 NOTICE: agent WS (104.236.243.147): connected
+2025-10-27 16:44:37.413 NOTICE: client_connect established [192.168.176.2]->104.236.243.147:443 (104-236-243-147.brdtnet.com)
+2025-10-27 16:44:37.413 ERR: perr tun_init_success {"servername":"104-236-243-147.brdtnet.com"}
+2025-10-27 16:44:37.415 NOTICE: detected interface eth0 for 192.168.176.2
+2025-10-27 16:44:37.415 NOTICE: js peer init from 192.168.176.2 eth0 unknown
+2025-10-27 16:44:37.418 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls15c5p443_161.8.172.175_3409337804","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.176.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:44:37.687 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.1,"mem_usage_ts":1761583468101,"cpu_usage":0.88,"cpu_usage_ts":1761583469063},"bw":{}}
+2025-10-27 16:44:37.839 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36 res 200
+2025-10-27 16:44:37.851 NOTICE: agent WS: upgrade conn
+2025-10-27 16:44:37.851 NOTICE: agent WS (192.248.189.194): connected
+2025-10-27 16:44:37.851 NOTICE: client_connect established [192.168.176.2]->192.248.189.194:443 (192-248-189-194.brdtnet.com)
+2025-10-27 16:44:37.851 ERR: perr tun_init_success {"servername":"192-248-189-194.brdtnet.com"}
+2025-10-27 16:44:37.852 NOTICE: detected interface eth0 for 192.168.176.2
+2025-10-27 16:44:37.852 NOTICE: js peer init from 192.168.176.2 eth0 unknown
+2025-10-27 16:44:37.854 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls15c5p443_161.8.172.175_3409337804","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.176.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:44:37.918 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_register_client&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36 res 200
+2025-10-27 16:44:38.233 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.1,"mem_usage_ts":1761583468101,"cpu_usage":0.88,"cpu_usage_ts":1761583469063},"bw":{}}
+2025-10-27 16:44:38.302 NOTICE: agent WS: upgrade conn
+2025-10-27 16:44:38.302 NOTICE: agent WS (104.236.243.147): connected
+2025-10-27 16:44:38.302 NOTICE: client_connect established [198.18.0.1]->104.236.243.147:443 (104-236-243-147.brdtnet.com)
+2025-10-27 16:44:38.303 ERR: perr tun_init_success {"servername":"104-236-243-147.brdtnet.com"}
+2025-10-27 16:44:38.303 NOTICE: detected interface tun0 for 198.18.0.1
+2025-10-27 16:44:38.303 NOTICE: js peer init from 198.18.0.1 tun0 unknown
+2025-10-27 16:44:38.305 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36","ifname":"tun0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.176.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:44:38.360 NOTICE: agent WS: upgrade conn
+2025-10-27 16:44:38.361 NOTICE: agent WS (45.77.106.132): connected
+2025-10-27 16:44:38.361 NOTICE: client_connect established [198.18.0.1]->45.77.106.132:443 (45-77-106-132.brdtnet.com)
+2025-10-27 16:44:38.361 ERR: perr tun_init_success {"servername":"45-77-106-132.brdtnet.com"}
+2025-10-27 16:44:38.361 NOTICE: detected interface tun0 for 198.18.0.1
+2025-10-27 16:44:38.361 NOTICE: js peer init from 198.18.0.1 tun0 unknown
+2025-10-27 16:44:38.363 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36","ifname":"tun0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.176.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:44:38.559 NOTICE: agent WS: upgrade conn
+2025-10-27 16:44:38.559 NOTICE: agent WS (192.248.189.194): connected
+2025-10-27 16:44:38.560 NOTICE: client_connect established [198.18.0.1]->192.248.189.194:443 (192-248-189-194.brdtnet.com)
+2025-10-27 16:44:38.560 ERR: perr tun_init_success {"servername":"192-248-189-194.brdtnet.com"}
+2025-10-27 16:44:38.560 NOTICE: detected interface tun0 for 198.18.0.1
+2025-10-27 16:44:38.560 NOTICE: js peer init from 198.18.0.1 tun0 unknown
+2025-10-27 16:44:38.562 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36","ifname":"tun0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.176.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:44:38.564 NOTICE: agent WS: upgrade conn
+2025-10-27 16:44:38.565 NOTICE: agent WS (45.77.106.132): connected
+2025-10-27 16:44:38.565 NOTICE: client_connect established [192.168.176.2]->45.77.106.132:443 (45-77-106-132.brdtnet.com)
+2025-10-27 16:44:38.565 ERR: perr tun_init_success {"servername":"45-77-106-132.brdtnet.com"}
+2025-10-27 16:44:38.565 NOTICE: detected interface eth0 for 192.168.176.2
+2025-10-27 16:44:38.565 NOTICE: js peer init from 192.168.176.2 eth0 unknown
+2025-10-27 16:44:38.567 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","cid":"161.8.172.168-79078a00/ls15c5p443_161.8.172.175_3409337804","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-mo0z9ppct5fxrfhypqb0bl8oow4ohv36","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"192.168.176.2"},{"name":"tun0","addr":"198.18.0.1"}]}
+2025-10-27 16:44:38.568 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.1,"mem_usage_ts":1761583468101,"cpu_usage":0.88,"cpu_usage_ts":1761583469063},"bw":{}}
+2025-10-27 16:44:38.631 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.1,"mem_usage_ts":1761583468101,"cpu_usage":0.88,"cpu_usage_ts":1761583469063},"bw":{}}
+2025-10-27 16:44:38.825 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.1,"mem_usage_ts":1761583468101,"cpu_usage":0.88,"cpu_usage_ts":1761583469063},"bw":{}}
+2025-10-27 16:44:38.907 NOTICE: status_get: {"idle":true,"usage":{},"idle_state":{"mem_usage":33.1,"mem_usage_ts":1761583468101,"cpu_usage":0.88,"cpu_usage_ts":1761583469063},"bw":{}}
+2025-10-27 16:45:14.567 NOTICE: running PID: 30
+2025-10-27 16:45:14.573 ERR: perr 05_svc_init {}
+2025-10-27 16:45:14.576 ERR: perr init {}
+2025-10-27 16:45:14.577 NOTICE: idle_state_monitor run
+2025-10-27 16:45:14.583 NOTICE: run: E.start()
+2025-10-27 16:45:14.584 NOTICE: devs changed: found 1 devs
+2025-10-27 16:45:14.584 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-27 16:45:14.590 ERR: perr 10_show_dialog {}
+2025-10-27 16:45:14.591 ERR: perr display {}
+2025-10-27 16:45:14.593 NOTICE: run: E.update_consent(true)
+2025-10-27 16:45:14.593 ERR: perr 15_choose_peer {}
+2025-10-27 16:45:14.594 ERR: perr opt_in 
+2025-10-27 16:45:14.595 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-27 16:45:15.447 NOTICE: ndt7 disabled
+2025-10-27 16:45:15.904 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-i4ocsx56xccsj7n4tet495lidbklkh6a res 200
+2025-10-27 16:45:15.904 ERR: perr perr_direct_success {}
+2025-10-27 16:45:17.822 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-27 16:45:17.822 NOTICE: dev eth0 connected
+2025-10-27 16:45:17.822 NOTICE: device online: eth0, connecting...
+2025-10-27 16:45:17.823 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-27 16:45:17.866 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:45:17.866 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:45:17.868 ERR: restricted_domain: proxyjs.luminatinet.com failed 15.197.193.114
+2025-10-27 16:45:17.868 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:45:17.868 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-27 16:45:17.868 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-27 16:45:17.913 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-27 16:45:17.913 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:45:17.913 ERR: restricted_domain: proxyjs.lum-sdk.io failed 15.197.193.114
+2025-10-27 16:45:17.913 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-27 16:45:17.913 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-27 16:45:17.914 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-27 16:45:17.915 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-27 16:45:17.915 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-27 16:45:17.915 NOTICE: proxyjs_client_conn eth0 172.17.0.2 50.16.231.79:443(undefined) 
+2025-10-27 16:45:17.916 NOTICE: proxy_eth0 WS: connecting to wss://50.16.231.79:443
+2025-10-27 16:45:18.436 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 50.16.231.79 is not in the cert's list: 
+2025-10-27 16:45:18.436 NOTICE: proxy disconnected
+2025-10-27 16:45:18.970 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-i4ocsx56xccsj7n4tet495lidbklkh6a res 200
+2025-10-27 16:45:19.437 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-27 16:45:19.438 NOTICE: proxyjs_client_conn eth0 172.17.0.2 34.205.222.157:443(p.l-conn.net) 
+2025-10-27 16:45:19.438 NOTICE: proxy_eth0 WS: connecting to wss://34.205.222.157:443
+2025-10-27 16:45:20.260 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-27 16:45:20.261 NOTICE: proxy_eth0 WS (34.205.222.157): connected
+2025-10-27 16:45:20.261 NOTICE: proxy connected
+2025-10-27 16:45:20.261 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"34.205.222.157"}
+2025-10-27 16:45:20.262 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-27 16:45:20.264 ERR: perr 20_svc_connected {}
+2025-10-27 16:45:20.266 ERR: perr connected {}
+2025-10-27 16:45:20.268 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-27 16:45:20.268 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-27 16:45:20.272 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-i4ocsx56xccsj7n4tet495lidbklkh6a","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-27 16:45:21.450 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-i4ocsx56xccsj7n4tet495lidbklkh6a res 200
+2025-10-27 16:46:15.581 NOTICE: idle_state_monitor run
+2025-10-27 16:46:20.265 ERR: perr heartbeat_proxy_js_conn_00_1min {}
+2025-10-27 16:46:20.266 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_00_1min proxy 
+2025-10-27 16:46:21.338 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_00_1min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-i4ocsx56xccsj7n4tet495lidbklkh6a res 200
+2025-10-28 12:13:38.601 NOTICE: running PID: 30
+2025-10-28 12:13:38.609 ERR: perr 05_svc_init {}
+2025-10-28 12:13:38.613 ERR: perr init {}
+2025-10-28 12:13:38.615 NOTICE: idle_state_monitor run
+2025-10-28 12:13:38.631 NOTICE: run: E.start()
+2025-10-28 12:13:38.632 NOTICE: devs changed: found 1 devs
+2025-10-28 12:13:38.632 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-28 12:13:38.635 ERR: perr 10_show_dialog {}
+2025-10-28 12:13:38.636 ERR: perr display {}
+2025-10-28 12:13:38.638 NOTICE: run: E.update_consent(true)
+2025-10-28 12:13:38.638 ERR: perr 15_choose_peer {}
+2025-10-28 12:13:38.639 ERR: perr opt_in 
+2025-10-28 12:13:38.640 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-28 12:13:39.550 NOTICE: ndt7 disabled
+2025-10-28 12:13:39.873 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zm0jaorrcutp5zdcyjhqdw9hfoq3iwps res 200
+2025-10-28 12:13:39.873 ERR: perr perr_direct_success {}
+2025-10-28 12:13:40.858 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-28 12:13:40.858 NOTICE: dev eth0 connected
+2025-10-28 12:13:40.859 NOTICE: device online: eth0, connecting...
+2025-10-28 12:13:40.860 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-28 12:13:40.918 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-28 12:13:40.919 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 12:13:40.922 ERR: restricted_domain: proxyjs.luminatinet.com failed 15.197.193.114
+2025-10-28 12:13:40.922 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 12:13:40.927 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-28 12:13:40.927 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-28 12:13:40.976 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-28 12:13:40.976 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 12:13:40.977 ERR: restricted_domain: proxyjs.lum-sdk.io failed 15.197.193.114
+2025-10-28 12:13:40.978 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 12:13:40.979 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-28 12:13:40.979 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-28 12:13:40.981 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-28 12:13:40.981 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-28 12:13:40.982 NOTICE: proxyjs_client_conn eth0 172.17.0.2 107.20.155.97:443(undefined) 
+2025-10-28 12:13:40.984 NOTICE: proxy_eth0 WS: connecting to wss://107.20.155.97:443
+2025-10-28 12:13:41.576 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 107.20.155.97 is not in the cert's list: 
+2025-10-28 12:13:41.577 NOTICE: proxy disconnected
+2025-10-28 12:13:42.135 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zm0jaorrcutp5zdcyjhqdw9hfoq3iwps res 200
+2025-10-28 12:13:42.578 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-28 12:13:42.578 NOTICE: proxyjs_client_conn eth0 172.17.0.2 54.156.208.194:443(p.l-conn.net) 
+2025-10-28 12:13:42.579 NOTICE: proxy_eth0 WS: connecting to wss://54.156.208.194:443
+2025-10-28 12:13:43.435 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-28 12:13:43.436 NOTICE: proxy_eth0 WS (54.156.208.194): connected
+2025-10-28 12:13:43.436 NOTICE: proxy connected
+2025-10-28 12:13:43.436 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"54.156.208.194"}
+2025-10-28 12:13:43.437 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-28 12:13:43.440 ERR: perr 20_svc_connected {}
+2025-10-28 12:13:43.442 ERR: perr connected {}
+2025-10-28 12:13:43.443 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-28 12:13:43.443 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-28 12:13:43.447 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-zm0jaorrcutp5zdcyjhqdw9hfoq3iwps","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-28 12:13:44.981 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zm0jaorrcutp5zdcyjhqdw9hfoq3iwps res 200
+2025-10-28 12:14:43.840 NOTICE: running PID: 30
+2025-10-28 12:14:43.849 ERR: perr 05_svc_init {}
+2025-10-28 12:14:43.853 ERR: perr init {}
+2025-10-28 12:14:43.854 NOTICE: idle_state_monitor run
+2025-10-28 12:14:43.863 NOTICE: run: E.start()
+2025-10-28 12:14:43.872 NOTICE: devs changed: found 1 devs
+2025-10-28 12:14:43.872 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-28 12:14:43.877 ERR: perr 10_show_dialog {}
+2025-10-28 12:14:43.879 ERR: perr display {}
+2025-10-28 12:14:43.881 NOTICE: run: E.update_consent(true)
+2025-10-28 12:14:43.881 ERR: perr 15_choose_peer {}
+2025-10-28 12:14:43.883 ERR: perr opt_in 
+2025-10-28 12:14:43.885 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-28 12:14:44.834 NOTICE: ndt7 disabled
+2025-10-28 12:14:45.074 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-5zouls90t6af2lq7k8di2294d3qfoqt9 res 200
+2025-10-28 12:14:45.075 ERR: perr perr_direct_success {}
+2025-10-28 12:14:45.099 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-28 12:14:45.099 NOTICE: dev eth0 connected
+2025-10-28 12:14:45.100 NOTICE: device online: eth0, connecting...
+2025-10-28 12:14:45.101 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-28 12:14:45.153 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-28 12:14:45.153 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 12:14:45.154 ERR: restricted_domain: proxyjs.luminatinet.com failed 3.33.193.183
+2025-10-28 12:14:45.154 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 12:14:45.155 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-28 12:14:45.156 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-28 12:14:45.205 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-28 12:14:45.205 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 12:14:45.206 ERR: restricted_domain: proxyjs.lum-sdk.io failed 15.197.193.114
+2025-10-28 12:14:45.206 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 12:14:45.206 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-28 12:14:45.207 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-28 12:14:45.208 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-28 12:14:45.209 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-28 12:14:45.210 NOTICE: proxyjs_client_conn eth0 172.17.0.2 52.55.234.187:443(undefined) 
+2025-10-28 12:14:45.211 NOTICE: proxy_eth0 WS: connecting to wss://52.55.234.187:443
+2025-10-28 12:14:45.759 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 52.55.234.187 is not in the cert's list: 
+2025-10-28 12:14:45.759 NOTICE: proxy disconnected
+2025-10-28 12:14:46.226 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-5zouls90t6af2lq7k8di2294d3qfoqt9 res 200
+2025-10-28 12:14:46.761 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-28 12:14:46.761 NOTICE: proxyjs_client_conn eth0 172.17.0.2 3.93.139.27:443(p.l-conn.net) 
+2025-10-28 12:14:46.761 NOTICE: proxy_eth0 WS: connecting to wss://3.93.139.27:443
+2025-10-28 12:14:47.668 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-28 12:14:47.669 NOTICE: proxy_eth0 WS (3.93.139.27): connected
+2025-10-28 12:14:47.669 NOTICE: proxy connected
+2025-10-28 12:14:47.669 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"3.93.139.27"}
+2025-10-28 12:14:47.670 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-28 12:14:47.673 ERR: perr 20_svc_connected {}
+2025-10-28 12:14:47.674 ERR: perr connected {}
+2025-10-28 12:14:47.675 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-28 12:14:47.676 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-28 12:14:47.678 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-5zouls90t6af2lq7k8di2294d3qfoqt9","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-28 12:14:48.573 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-5zouls90t6af2lq7k8di2294d3qfoqt9 res 200
+2025-10-28 12:15:44.853 NOTICE: idle_state_monitor run
+2025-10-28 12:15:47.669 ERR: perr heartbeat_proxy_js_conn_00_1min {}
+2025-10-28 12:15:47.670 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_00_1min proxy 
+2025-10-28 12:15:49.057 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_00_1min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-5zouls90t6af2lq7k8di2294d3qfoqt9 res 200
+2025-10-28 12:16:45.853 NOTICE: idle_state_monitor run
+2025-10-28 12:16:49.054 ERR: perr heartbeat_proxy_js_conn_01_2min {}
+2025-10-28 12:16:49.055 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_01_2min proxy 
+2025-10-28 12:16:50.663 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_01_2min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-5zouls90t6af2lq7k8di2294d3qfoqt9 res 200
+2025-10-28 12:17:46.853 NOTICE: idle_state_monitor run
+2025-10-28 12:18:47.854 NOTICE: idle_state_monitor run
+2025-10-28 12:18:50.660 ERR: perr heartbeat_proxy_js_conn_02_4min {}
+2025-10-28 12:18:50.661 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_02_4min proxy 
+2025-10-28 12:18:51.844 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_02_4min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-5zouls90t6af2lq7k8di2294d3qfoqt9 res 200
+2025-10-28 12:19:48.853 NOTICE: idle_state_monitor run
+2025-10-28 12:20:49.854 NOTICE: idle_state_monitor run
+2025-10-28 12:21:50.851 NOTICE: idle_state_monitor run
+2025-10-28 12:22:51.834 ERR: perr heartbeat_proxy_js_conn_03_8min {}
+2025-10-28 12:22:51.834 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_03_8min proxy 
+2025-10-28 12:22:51.849 NOTICE: idle_state_monitor run
+2025-10-28 12:22:53.111 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_03_8min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-5zouls90t6af2lq7k8di2294d3qfoqt9 res 200
+2025-10-28 12:23:52.845 NOTICE: idle_state_monitor run
+2025-10-28 12:24:53.845 NOTICE: idle_state_monitor run
+2025-10-28 12:25:54.841 NOTICE: idle_state_monitor run
+2025-10-28 12:26:55.841 NOTICE: idle_state_monitor run
+2025-10-28 12:27:56.840 NOTICE: idle_state_monitor run
+2025-10-28 12:28:57.839 NOTICE: idle_state_monitor run
+2025-10-28 12:29:58.837 NOTICE: idle_state_monitor run
+2025-10-28 12:30:53.089 ERR: perr heartbeat_proxy_js_conn_04_16min {}
+2025-10-28 12:30:53.089 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_04_16min proxy 
+2025-10-28 12:30:54.626 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_04_16min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-5zouls90t6af2lq7k8di2294d3qfoqt9 res 200
+2025-10-28 12:30:59.837 NOTICE: idle_state_monitor run
+2025-10-28 12:32:00.837 NOTICE: idle_state_monitor run
+2025-10-28 12:33:01.835 NOTICE: idle_state_monitor run
+2025-10-28 12:34:02.835 NOTICE: idle_state_monitor run
+2025-10-28 12:35:05.304 NOTICE: running PID: 30
+2025-10-28 12:35:05.313 ERR: perr 05_svc_init {}
+2025-10-28 12:35:05.317 ERR: perr init {}
+2025-10-28 12:35:05.319 NOTICE: idle_state_monitor run
+2025-10-28 12:35:05.341 NOTICE: run: E.start()
+2025-10-28 12:35:05.343 NOTICE: devs changed: found 1 devs
+2025-10-28 12:35:05.343 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-28 12:35:05.347 ERR: perr 10_show_dialog {}
+2025-10-28 12:35:05.348 ERR: perr display {}
+2025-10-28 12:35:05.350 NOTICE: run: E.update_consent(true)
+2025-10-28 12:35:05.350 ERR: perr 15_choose_peer {}
+2025-10-28 12:35:05.352 ERR: perr opt_in 
+2025-10-28 12:35:05.353 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-28 12:56:33.199 NOTICE: running PID: 30
+2025-10-28 12:56:33.208 ERR: perr 05_svc_init {}
+2025-10-28 12:56:33.213 ERR: perr init {}
+2025-10-28 12:56:33.216 NOTICE: idle_state_monitor run
+2025-10-28 12:56:33.228 NOTICE: run: E.start()
+2025-10-28 12:56:33.230 NOTICE: devs changed: found 1 devs
+2025-10-28 12:56:33.230 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-28 12:56:33.242 ERR: perr 10_show_dialog {}
+2025-10-28 12:56:33.244 ERR: perr display {}
+2025-10-28 12:56:33.247 NOTICE: run: E.update_consent(true)
+2025-10-28 12:56:33.247 ERR: perr 15_choose_peer {}
+2025-10-28 12:56:33.248 ERR: perr opt_in 
+2025-10-28 12:56:33.250 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-28 12:56:34.263 NOTICE: ndt7 disabled
+2025-10-28 12:56:34.543 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-28 12:56:34.543 NOTICE: dev eth0 connected
+2025-10-28 12:56:34.544 NOTICE: device online: eth0, connecting...
+2025-10-28 12:56:34.545 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-28 12:56:34.609 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-28 12:56:34.609 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 12:56:34.611 ERR: restricted_domain: proxyjs.luminatinet.com failed 15.197.193.114
+2025-10-28 12:56:34.612 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 12:56:34.613 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-28 12:56:34.614 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-28 12:56:34.631 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-w2yufzh3mmflu8tfjyw1bsb6bkhaea58 res 200
+2025-10-28 12:56:34.632 ERR: perr perr_direct_success {}
+2025-10-28 12:56:34.681 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-28 12:56:34.682 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 12:56:34.686 ERR: restricted_domain: proxyjs.lum-sdk.io failed 3.33.193.183
+2025-10-28 12:56:34.686 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 12:56:34.688 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-28 12:56:34.689 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-28 12:56:34.691 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-28 12:56:34.691 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-28 12:56:34.694 NOTICE: proxyjs_client_conn eth0 172.17.0.2 52.55.234.187:443(undefined) 
+2025-10-28 12:56:34.698 NOTICE: proxy_eth0 WS: connecting to wss://52.55.234.187:443
+2025-10-28 12:56:35.296 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 52.55.234.187 is not in the cert's list: 
+2025-10-28 12:56:35.297 NOTICE: proxy disconnected
+2025-10-28 12:56:35.952 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-w2yufzh3mmflu8tfjyw1bsb6bkhaea58 res 200
+2025-10-28 12:56:36.298 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-28 12:56:36.298 NOTICE: proxyjs_client_conn eth0 172.17.0.2 52.55.234.187:443(p.l-conn.net) 
+2025-10-28 12:56:36.298 NOTICE: proxy_eth0 WS: connecting to wss://52.55.234.187:443
+2025-10-28 12:56:37.218 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-28 12:56:37.220 NOTICE: proxy_eth0 WS (52.55.234.187): connected
+2025-10-28 12:56:37.220 NOTICE: proxy connected
+2025-10-28 12:56:37.221 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"52.55.234.187"}
+2025-10-28 12:56:37.221 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-28 12:56:37.227 ERR: perr 20_svc_connected {}
+2025-10-28 12:56:37.237 ERR: perr connected {}
+2025-10-28 12:56:37.239 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-28 12:56:37.239 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-28 12:56:37.245 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-w2yufzh3mmflu8tfjyw1bsb6bkhaea58","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-28 12:56:38.443 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-w2yufzh3mmflu8tfjyw1bsb6bkhaea58 res 200
+2025-10-28 12:57:34.222 NOTICE: idle_state_monitor run
+2025-10-28 12:57:37.222 ERR: perr heartbeat_proxy_js_conn_00_1min {}
+2025-10-28 12:57:37.223 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_00_1min proxy 
+2025-10-28 12:57:38.137 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_00_1min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-w2yufzh3mmflu8tfjyw1bsb6bkhaea58 res 200
+2025-10-28 13:00:09.161 NOTICE: running PID: 30
+2025-10-28 13:00:09.170 ERR: perr 05_svc_init {}
+2025-10-28 13:00:09.173 ERR: perr init {}
+2025-10-28 13:00:09.174 NOTICE: idle_state_monitor run
+2025-10-28 13:00:09.187 NOTICE: run: E.start()
+2025-10-28 13:00:09.187 NOTICE: devs changed: found 1 devs
+2025-10-28 13:00:09.188 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-28 13:00:09.190 ERR: perr 10_show_dialog {}
+2025-10-28 13:00:09.191 ERR: perr display {}
+2025-10-28 13:00:09.192 NOTICE: run: E.update_consent(true)
+2025-10-28 13:00:09.193 ERR: perr 15_choose_peer {}
+2025-10-28 13:00:09.193 ERR: perr opt_in 
+2025-10-28 13:00:09.194 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-28 13:00:10.795 NOTICE: ndt7 disabled
+2025-10-28 13:00:11.217 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-28 13:00:11.217 NOTICE: dev eth0 connected
+2025-10-28 13:00:11.217 NOTICE: device online: eth0, connecting...
+2025-10-28 13:00:11.218 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-28 13:00:11.378 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-28 13:00:11.378 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 13:00:11.379 ERR: restricted_domain: proxyjs.luminatinet.com failed 3.33.193.183
+2025-10-28 13:00:11.379 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 13:00:11.380 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-28 13:00:11.380 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-28 13:00:11.549 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-28 13:00:11.549 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 13:00:11.550 ERR: restricted_domain: proxyjs.lum-sdk.io failed 15.197.193.114
+2025-10-28 13:00:11.550 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 13:00:11.550 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-28 13:00:11.551 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-28 13:00:11.552 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-28 13:00:11.552 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-28 13:00:11.553 NOTICE: proxyjs_client_conn eth0 172.17.0.2 34.230.141.83:443(undefined) 
+2025-10-28 13:00:11.554 NOTICE: proxy_eth0 WS: connecting to wss://34.230.141.83:443
+2025-10-28 13:00:11.903 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:00:11.904 ERR: perr perr_direct_success {}
+2025-10-28 13:00:12.520 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 34.230.141.83 is not in the cert's list: 
+2025-10-28 13:00:12.521 NOTICE: proxy disconnected
+2025-10-28 13:00:13.228 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:00:13.522 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-28 13:00:13.522 NOTICE: proxyjs_client_conn eth0 172.17.0.2 52.2.49.133:443(p.l-conn.net) 
+2025-10-28 13:00:13.523 NOTICE: proxy_eth0 WS: connecting to wss://52.2.49.133:443
+2025-10-28 13:00:14.849 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-28 13:00:14.851 NOTICE: proxy_eth0 WS (52.2.49.133): connected
+2025-10-28 13:00:14.851 NOTICE: proxy connected
+2025-10-28 13:00:14.852 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"52.2.49.133"}
+2025-10-28 13:00:14.852 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-28 13:00:14.856 ERR: perr 20_svc_connected {}
+2025-10-28 13:00:14.858 ERR: perr connected {}
+2025-10-28 13:00:14.859 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-28 13:00:14.859 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-28 13:00:14.863 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-28 13:00:17.133 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:00:57.233 NOTICE: running PID: 30
+2025-10-28 13:00:57.238 ERR: perr 05_svc_init {}
+2025-10-28 13:00:57.241 ERR: perr init {}
+2025-10-28 13:00:57.243 NOTICE: idle_state_monitor run
+2025-10-28 13:00:57.255 NOTICE: run: E.start()
+2025-10-28 13:00:57.257 NOTICE: devs changed: found 1 devs
+2025-10-28 13:00:57.257 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-28 13:00:57.260 ERR: perr 10_show_dialog {}
+2025-10-28 13:00:57.261 ERR: perr display {}
+2025-10-28 13:00:57.262 NOTICE: run: E.update_consent(true)
+2025-10-28 13:00:57.262 ERR: perr 15_choose_peer {}
+2025-10-28 13:00:57.267 ERR: perr opt_in 
+2025-10-28 13:00:57.268 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-28 13:00:58.687 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:00:58.687 ERR: perr perr_direct_success {}
+2025-10-28 13:00:58.840 NOTICE: ndt7 disabled
+2025-10-28 13:00:59.298 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-28 13:00:59.299 NOTICE: dev eth0 connected
+2025-10-28 13:00:59.299 NOTICE: device online: eth0, connecting...
+2025-10-28 13:00:59.299 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-28 13:00:59.495 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-28 13:00:59.495 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 13:00:59.497 ERR: restricted_domain: proxyjs.luminatinet.com failed 3.33.193.183
+2025-10-28 13:00:59.497 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 13:00:59.498 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-28 13:00:59.498 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-28 13:00:59.646 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 3.33.193.183
+2025-10-28 13:00:59.647 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 13:00:59.649 ERR: restricted_domain: proxyjs.lum-sdk.io failed 15.197.193.114
+2025-10-28 13:00:59.649 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 13:00:59.650 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-28 13:00:59.651 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-28 13:00:59.652 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-28 13:00:59.652 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-28 13:00:59.653 NOTICE: proxyjs_client_conn eth0 172.17.0.2 3.84.65.241:443(undefined) 
+2025-10-28 13:00:59.655 NOTICE: proxy_eth0 WS: connecting to wss://3.84.65.241:443
+2025-10-28 13:01:00.539 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 3.84.65.241 is not in the cert's list: 
+2025-10-28 13:01:00.540 NOTICE: proxy disconnected
+2025-10-28 13:01:01.541 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-28 13:01:01.541 NOTICE: proxyjs_client_conn eth0 172.17.0.2 52.87.130.182:443(p.l-conn.net) 
+2025-10-28 13:01:01.541 NOTICE: proxy_eth0 WS: connecting to wss://52.87.130.182:443
+2025-10-28 13:01:03.029 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-28 13:01:03.031 NOTICE: proxy_eth0 WS (52.87.130.182): connected
+2025-10-28 13:01:03.031 NOTICE: proxy connected
+2025-10-28 13:01:03.031 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"52.87.130.182"}
+2025-10-28 13:01:03.031 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-28 13:01:03.035 ERR: perr 20_svc_connected {}
+2025-10-28 13:01:03.037 ERR: perr connected {}
+2025-10-28 13:01:03.039 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-28 13:01:03.039 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-28 13:01:03.053 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-28 13:01:03.473 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:01:04.729 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:01:58.243 NOTICE: idle_state_monitor run
+2025-10-28 13:02:03.031 ERR: perr heartbeat_proxy_js_conn_00_1min {}
+2025-10-28 13:02:03.032 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_00_1min proxy 
+2025-10-28 13:02:04.241 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_00_1min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:02:59.242 NOTICE: idle_state_monitor run
+2025-10-28 13:03:04.239 ERR: perr heartbeat_proxy_js_conn_01_2min {}
+2025-10-28 13:03:04.240 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_01_2min proxy 
+2025-10-28 13:03:05.242 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_01_2min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:04:00.241 NOTICE: idle_state_monitor run
+2025-10-28 13:05:01.240 NOTICE: idle_state_monitor run
+2025-10-28 13:05:05.238 ERR: perr heartbeat_proxy_js_conn_02_4min {}
+2025-10-28 13:05:05.239 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_02_4min proxy 
+2025-10-28 13:05:06.623 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_02_4min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:06:02.240 NOTICE: idle_state_monitor run
+2025-10-28 13:06:24.877 NOTICE: running PID: 30
+2025-10-28 13:06:24.884 ERR: perr 05_svc_init {}
+2025-10-28 13:06:24.887 ERR: perr init {}
+2025-10-28 13:06:24.888 NOTICE: idle_state_monitor run
+2025-10-28 13:06:24.897 NOTICE: run: E.start()
+2025-10-28 13:06:24.898 NOTICE: devs changed: found 1 devs
+2025-10-28 13:06:24.898 NOTICE: interface detected: eth0 (172.17.0.2)
+2025-10-28 13:06:24.901 ERR: perr 10_show_dialog {}
+2025-10-28 13:06:24.902 ERR: perr display {}
+2025-10-28 13:06:24.903 NOTICE: run: E.update_consent(true)
+2025-10-28 13:06:24.904 ERR: perr 15_choose_peer {}
+2025-10-28 13:06:24.905 ERR: perr opt_in 
+2025-10-28 13:06:24.906 NOTICE: perr lum_sdk_node_opt_in proxy 
+2025-10-28 13:06:26.057 NOTICE: ndt7 disabled
+2025-10-28 13:06:26.419 NOTICE: eth0 matched http://www.google.com/blank.html
+2025-10-28 13:06:26.419 NOTICE: dev eth0 connected
+2025-10-28 13:06:26.419 NOTICE: device online: eth0, connecting...
+2025-10-28 13:06:26.420 NOTICE: conn_open_single proxyjs.luminatinet.com:443 
+2025-10-28 13:06:26.511 ERR: restricted_domain: proxyjs.luminatinet.com resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-28 13:06:26.512 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 13:06:26.513 ERR: restricted_domain: proxyjs.luminatinet.com failed 3.33.193.183
+2025-10-28 13:06:26.513 ERR: perr restricted_domain {"host":"proxyjs.luminatinet.com","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 13:06:26.515 ERR: conn_open_single failed resolve proxyjs.luminatinet.com
+2025-10-28 13:06:26.515 NOTICE: conn_open_single proxyjs.lum-sdk.io:443 
+2025-10-28 13:06:26.597 ERR: restricted_domain: proxyjs.lum-sdk.io resolved: [object Object],[object Object], failed 15.197.193.114
+2025-10-28 13:06:26.598 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"resolved: [object Object],[object Object], failed 15.197.193.114","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 13:06:26.602 ERR: restricted_domain: proxyjs.lum-sdk.io failed 3.33.193.183
+2025-10-28 13:06:26.603 ERR: perr restricted_domain {"host":"proxyjs.lum-sdk.io","details":"failed 3.33.193.183","allowed":["54.243.132.124","54.197.238.153","23.23.115.110","23.23.176.28","34.237.189.140","34.230.120.115","54.227.144.19","34.228.163.174","35.169.231.185","35.169.76.132","35.170.3.121","34.231.146.224","35.153.6.150","34.195.75.60","34.237.55.225","35.169.205.0","35.171.66.198","34.237.108.91","35.171.46.63","34.199.117.182","18.208.90.129","18.213.148.154","54.211.212.224","107.22.60.33","18.213.109.20","54.87.86.109","54.146.137.220","184.72.145.94","54.144.197.214","34.192.186.85"]}
+2025-10-28 13:06:26.604 ERR: perr proxyjs_dns_failed {"host":"proxyjs.lum-sdk.io","port":443}
+2025-10-28 13:06:26.605 NOTICE: perr lum_sdk_node_proxyjs_dns_failed proxy 
+2025-10-28 13:06:26.606 ERR: conn_open_single failed resolve proxyjs.lum-sdk.io
+2025-10-28 13:06:26.607 NOTICE: conn_open_single undefined:443 fallback_ip
+2025-10-28 13:06:26.607 NOTICE: proxyjs_client_conn eth0 172.17.0.2 3.93.139.27:443(undefined) 
+2025-10-28 13:06:26.609 NOTICE: proxy_eth0 WS: connecting to wss://3.93.139.27:443
+2025-10-28 13:06:27.056 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_opt_in&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:06:27.056 ERR: perr perr_direct_success {}
+2025-10-28 13:06:27.280 ERR: proxy_eth0 WS: Hostname/IP does not match certificate's altnames: IP: 3.93.139.27 is not in the cert's list: 
+2025-10-28 13:06:27.280 NOTICE: proxy disconnected
+2025-10-28 13:06:27.779 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_dns_failed&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:06:28.282 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-28 13:06:28.282 NOTICE: proxyjs_client_conn eth0 172.17.0.2 3.84.65.241:443(p.l-conn.net) 
+2025-10-28 13:06:28.283 NOTICE: proxy_eth0 WS: connecting to wss://3.84.65.241:443
+2025-10-28 13:06:29.529 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-28 13:06:29.530 NOTICE: proxy_eth0 WS (3.84.65.241): connected
+2025-10-28 13:06:29.531 NOTICE: proxy connected
+2025-10-28 13:06:29.531 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"3.84.65.241"}
+2025-10-28 13:06:29.531 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-28 13:06:29.535 ERR: perr 20_svc_connected {}
+2025-10-28 13:06:29.536 ERR: perr connected {}
+2025-10-28 13:06:29.538 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-28 13:06:29.538 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-28 13:06:29.546 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-28 13:06:30.686 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:07:25.889 NOTICE: idle_state_monitor run
+2025-10-28 13:07:29.532 ERR: perr heartbeat_proxy_js_conn_00_1min {}
+2025-10-28 13:07:29.532 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_00_1min proxy 
+2025-10-28 13:07:30.973 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_00_1min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:08:26.888 NOTICE: idle_state_monitor run
+2025-10-28 13:08:30.970 ERR: perr heartbeat_proxy_js_conn_01_2min {}
+2025-10-28 13:08:30.971 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_01_2min proxy 
+2025-10-28 13:08:32.321 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_01_2min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:09:27.888 NOTICE: idle_state_monitor run
+2025-10-28 13:10:28.888 NOTICE: idle_state_monitor run
+2025-10-28 13:10:32.316 ERR: perr heartbeat_proxy_js_conn_02_4min {}
+2025-10-28 13:10:32.316 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_02_4min proxy 
+2025-10-28 13:10:33.606 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_02_4min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:11:29.888 NOTICE: idle_state_monitor run
+2025-10-28 13:12:30.888 NOTICE: idle_state_monitor run
+2025-10-28 13:13:31.888 NOTICE: idle_state_monitor run
+2025-10-28 13:14:32.887 NOTICE: idle_state_monitor run
+2025-10-28 13:14:33.599 ERR: perr heartbeat_proxy_js_conn_03_8min {}
+2025-10-28 13:14:33.600 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_03_8min proxy 
+2025-10-28 13:14:34.471 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_03_8min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:15:33.887 NOTICE: idle_state_monitor run
+2025-10-28 13:16:34.886 NOTICE: idle_state_monitor run
+2025-10-28 13:17:35.886 NOTICE: idle_state_monitor run
+2025-10-28 13:18:36.883 NOTICE: idle_state_monitor run
+2025-10-28 13:19:37.883 NOTICE: idle_state_monitor run
+2025-10-28 13:20:38.880 NOTICE: idle_state_monitor run
+2025-10-28 13:21:39.879 NOTICE: idle_state_monitor run
+2025-10-28 13:22:34.451 ERR: perr heartbeat_proxy_js_conn_04_16min {}
+2025-10-28 13:22:34.451 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_04_16min proxy 
+2025-10-28 13:22:35.862 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_04_16min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:22:40.877 NOTICE: idle_state_monitor run
+2025-10-28 13:23:41.877 NOTICE: idle_state_monitor run
+2025-10-28 13:24:42.876 NOTICE: idle_state_monitor run
+2025-10-28 13:25:43.876 NOTICE: idle_state_monitor run
+2025-10-28 13:26:44.876 NOTICE: idle_state_monitor run
+2025-10-28 13:27:45.876 NOTICE: idle_state_monitor run
+2025-10-28 13:28:46.874 NOTICE: idle_state_monitor run
+2025-10-28 13:29:47.873 NOTICE: idle_state_monitor run
+2025-10-28 13:30:48.871 NOTICE: idle_state_monitor run
+2025-10-28 13:31:49.871 NOTICE: idle_state_monitor run
+2025-10-28 13:32:50.873 NOTICE: idle_state_monitor run
+2025-10-28 13:33:51.872 NOTICE: idle_state_monitor run
+2025-10-28 13:34:52.870 NOTICE: idle_state_monitor run
+2025-10-28 13:34:56.667 NOTICE: proxy_eth0 WS (3.84.65.241): closed by remote (1006)
+2025-10-28 13:34:56.667 NOTICE: proxy disconnected
+2025-10-28 13:35:06.668 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-28 13:35:06.668 NOTICE: proxyjs_client_conn eth0 172.17.0.2 3.84.65.241:443(p.l-conn.net) 
+2025-10-28 13:35:06.668 NOTICE: proxy_eth0 WS: connecting to wss://3.84.65.241:443
+2025-10-28 13:35:07.499 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-28 13:35:07.500 NOTICE: proxy_eth0 WS (3.84.65.241): connected
+2025-10-28 13:35:07.500 NOTICE: proxy connected
+2025-10-28 13:35:07.500 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"3.84.65.241"}
+2025-10-28 13:35:07.500 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-28 13:35:07.502 ERR: perr 20_svc_connected {}
+2025-10-28 13:35:07.504 ERR: perr connected {}
+2025-10-28 13:35:07.505 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-28 13:35:07.506 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-28 13:35:07.510 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-28 13:35:08.679 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:35:53.869 NOTICE: idle_state_monitor run
+2025-10-28 13:36:07.501 ERR: perr heartbeat_proxy_js_conn_00_1min {}
+2025-10-28 13:36:07.501 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_00_1min proxy 
+2025-10-28 13:36:09.009 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_00_1min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:36:40.734 NOTICE: proxy_eth0 WS (3.84.65.241): closed by remote (1006)
+2025-10-28 13:36:40.735 NOTICE: proxy disconnected
+2025-10-28 13:36:50.735 NOTICE: conn_open_single p.l-conn.net:443 fallback_ip
+2025-10-28 13:36:50.735 NOTICE: proxyjs_client_conn eth0 172.17.0.2 3.84.65.241:443(p.l-conn.net) 
+2025-10-28 13:36:50.735 NOTICE: proxy_eth0 WS: connecting to wss://3.84.65.241:443
+2025-10-28 13:36:52.009 NOTICE: proxy_eth0 WS: upgrade conn
+2025-10-28 13:36:52.009 NOTICE: proxy_eth0 WS (3.84.65.241): connected
+2025-10-28 13:36:52.009 NOTICE: proxy connected
+2025-10-28 13:36:52.009 ERR: perr proxyjs_conn_01_ip_success {"servername":"p.l-conn.net","port":443,"ip":"3.84.65.241"}
+2025-10-28 13:36:52.009 NOTICE: perr lum_sdk_node_proxyjs_conn_01_ip_success proxy 
+2025-10-28 13:36:52.010 ERR: perr 20_svc_connected {}
+2025-10-28 13:36:52.011 ERR: perr connected {}
+2025-10-28 13:36:52.013 NOTICE: detected interface eth0 for 172.17.0.2
+2025-10-28 13:36:52.013 NOTICE: js peer init from 172.17.0.2 eth0 unknown
+2025-10-28 13:36:52.015 NOTICE: tunnel_init resp: {"arch":"x64","release":"ubuntu_20.04_x64","platform":"node","sdk_version":"1.294.218","version":"1.294.218","idle":true,"confdir":"/etc/earnapp","old_cid":"161.8.172.168-79078a00/ls14c1p443_161.8.172.175_216276897","dca":false,"is_tv":false,"appid":"node_earnapp.com","partnerid":"luminati","uuid":"sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo","ifname":"eth0","usage":{},"ifs":[{"name":"eth0","addr":"172.17.0.2"}]}
+2025-10-28 13:36:54.021 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_proxyjs_conn_01_ip_success&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:36:54.868 NOTICE: idle_state_monitor run
+2025-10-28 13:37:52.009 ERR: perr heartbeat_proxy_js_conn_00_1min {}
+2025-10-28 13:37:52.009 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_00_1min proxy 
+2025-10-28 13:37:53.182 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_00_1min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:37:55.867 NOTICE: idle_state_monitor run
+2025-10-28 13:38:53.180 ERR: perr heartbeat_proxy_js_conn_01_2min {}
+2025-10-28 13:38:53.181 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_01_2min proxy 
+2025-10-28 13:38:55.246 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_01_2min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:38:56.866 NOTICE: idle_state_monitor run
+2025-10-28 13:39:57.865 NOTICE: idle_state_monitor run
+2025-10-28 13:40:55.243 ERR: perr heartbeat_proxy_js_conn_02_4min {}
+2025-10-28 13:40:55.244 NOTICE: perr lum_sdk_node_heartbeat_proxy_js_conn_02_4min proxy 
+2025-10-28 13:40:56.191 NOTICE: perr https://perr.l-err.biz/perr?id=lum_sdk_node_heartbeat_proxy_js_conn_02_4min&appid=node_earnapp.com&ver=1.294.218&ver_sdk=1.294.218&uuid=sdk-node-zuih5spmc5j4ogwvlgg4hv3msgcma0xo res 200
+2025-10-28 13:40:58.865 NOTICE: idle_state_monitor run
+2025-10-28 13:41:59.863 NOTICE: idle_state_monitor run
+2025-10-28 13:43:00.863 NOTICE: idle_state_monitor run
+2025-10-28 13:44:01.862 NOTICE: idle_state_monitor run

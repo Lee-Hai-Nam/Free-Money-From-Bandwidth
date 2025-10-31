@@ -1,0 +1,19 @@
+app_id: packetstream
+name: PacketStream
+docker_image: packetstream/psiphon:latest
+description: Share your bandwidth with PacketStream and earn passive income.
+proxy_support: true
+supported_platforms:
+  - linux
+  - windows
+environment_vars:
+  - key: PACKETSTREAM_PROXY_PORT
+    required: false
+    description: "Proxy port (optional)"
+network_mode: bridge
+ports:
+  - "8080:8080"
+resource_limits:
+  cpu: "0.5"
+  memory: "256m"
+

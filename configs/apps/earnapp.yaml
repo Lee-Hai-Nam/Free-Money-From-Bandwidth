@@ -1,0 +1,18 @@
+app_id: earnapp
+name: EarnApp
+docker_image: fareedkhandev/earnapp:latest
+description: Share your unused bandwidth to earn money with EarnApp.
+proxy_support: true
+supported_platforms:
+  - linux
+  - windows
+  - macos
+environment_vars:
+  - key: EARNAPP_UUID
+    required: true
+    description: "Your EarnApp UUID (found in your account)"
+network_mode: bridge
+resource_limits:
+  cpu: "0.5"
+  memory: "256m"
+

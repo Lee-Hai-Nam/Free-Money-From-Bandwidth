@@ -1,0 +1,52 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bandwidth-income-manager
+dist/
+
+# Test binaries
+*.test
+*.out
+
+# Build directories
+build/
+tmp/
+
+# Data files
+data/
+*.db
+*.sqlite
+
+# Environment files
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Frontend build
+frontend/dist/
+frontend/.vite/
+
+# Wails
+wails.json.bak
+
+GEMINI.md
+npm --prefix frontend ci.txt

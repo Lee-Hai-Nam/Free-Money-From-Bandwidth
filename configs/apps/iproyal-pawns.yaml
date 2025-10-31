@@ -1,0 +1,18 @@
+app_id: iproyal-pawns
+name: IPRoyal Pawns
+docker_image: iproyal/pawns-cli:latest
+description: Share your unused bandwidth and earn passive income with IPRoyal Pawns.
+proxy_support: true
+supported_platforms:
+  - linux
+  - windows
+  - macos
+environment_vars:
+  - key: PAWNS_TOKEN
+    required: true
+    description: "Your IPRoyal Pawns token"
+network_mode: bridge
+resource_limits:
+  cpu: "0.5"
+  memory: "256m"
+

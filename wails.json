@@ -1,0 +1,28 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "bandwidth-income-manager",
+  "outputfilename": "bandwidth-income-manager",
+  "frontend": {
+    "dir": "./frontend",
+    "install": "npm install",
+    "build": "npm run build",
+    "dev": "npm run dev",
+    "bridge": "../frontend/src/services/bridge.js",
+    "serve": ""
+  },
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  },
+  "info": {
+    "productName": "Bandwidth Income Manager",
+    "productVersion": "0.1.0",
+    "copyright": "Copyright...",
+    "comments": "Manage bandwidth sharing apps"
+  },
+  "nsisType": "multiple",
+  "obfuscated": false,
+  "garbleargs": "",
+  "devmode": false
+}
+

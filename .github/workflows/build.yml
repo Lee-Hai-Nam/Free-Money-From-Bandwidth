@@ -1,0 +1,55 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+      
+      - name: Setup Wails
+        run: |
+          if [ "${{ runner.os }}" == "Windows" ]; then
+            go install github.com/wailsapp/wails/v2/cmd/wails@latest
+          else
+            go install github.com/wailsapp/wails/v2/cmd/wails@latest
+          fi
+      
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install frontend dependencies
+        run: cd frontend && npm install
+      
+      - name: Build
+        run: |
+          if [ "${{ runner.os }}" == "Windows" ]; then
+            wails build -platform windows/amd64
+          elif [ "${{ runner.os }}" == "Linux" ]; then
+            wails build -platform linux/amd64,linux/arm64
+          else
+            wails build -platform darwin/universal
+          fi
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-${{ runner.os }}
+          path: build/bin/
+
