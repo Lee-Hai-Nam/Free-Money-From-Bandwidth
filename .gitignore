@@ -50,3 +50,5 @@ wails.json.bak
 
 GEMINI.md
 npm --prefix frontend ci.txt
+.gemini/
+gha-creds-*.json
