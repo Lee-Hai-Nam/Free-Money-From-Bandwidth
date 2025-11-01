@@ -45,6 +45,9 @@ yarn-error.log*
 frontend/dist/
 frontend/.vite/
 
+# Hidden data directory
+.data/
+
 # Wails
 wails.json.bak
 
