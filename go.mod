@@ -1,4 +1,4 @@
-module bandwidth-income-manager
+module free-income-from-bandwidth
 
 go 1.23.0
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Plus, RefreshCw, Trash2, CheckCircle, XCircle, Upload, X } from 'lucide-react'
 import { AddProxy, ListProxies, RemoveProxy, ConfirmRemoveProxy, TestProxy, GetConfiguredAppsForProxy, GetAppsRunningOnProxies, DeployAppWithProxy } from '../services/api';
+import { useError } from '../components/ErrorContext';
 
 interface Proxy {
   id: string
@@ -30,6 +31,8 @@ export default function Proxy() {
   const [selectedProxies, setSelectedProxies] = useState<string[]>([])
   const [showBulkActions, setShowBulkActions] = useState(false)
   const [runningAppsOnSelectedProxies, setRunningAppsOnSelectedProxies] = useState<string[]>([])
+  
+  const { showError } = useError();
 
   useEffect(() => {
     loadProxies()
@@ -100,7 +103,7 @@ export default function Proxy() {
       }
     } catch (error: any) {
       console.error('Failed to add proxy:', error)
-      alert(`Failed to add proxy: ${error.message || error}`)
+      showError(`Failed to add proxy: ${error.message || error}`, 'Proxy Error')
     } finally {
       setAdding(false)
     }
@@ -144,7 +147,7 @@ export default function Proxy() {
         setBulkProxyInput(text)
       } catch (error) {
         console.error('Failed to read file:', error)
-        alert('Failed to read file')
+        showError('Failed to read file', 'File Error')
       }
     }
     input.click()
@@ -191,7 +194,7 @@ export default function Proxy() {
       // Show results
       alert(`Added ${successCount} proxy/proxies successfully${failCount > 0 ? `, ${failCount} failed` : ''}`)
     } catch (error: any) {
-      alert(`Bulk import failed: ${error.message || error}`)
+      showError(`Bulk import failed: ${error.message || error}`, 'Bulk Import Error')
     } finally {
       setAdding(false)
     }
@@ -248,7 +251,7 @@ export default function Proxy() {
       
       alert(`Deleted ${successCount} proxy/proxies successfully${failCount > 0 ? `, ${failCount} failed` : ''}`)
     } catch (error: any) {
-      alert(`Bulk delete failed: ${error.message || error}`)
+      showError(`Bulk delete failed: ${error.message || error}`, 'Bulk Delete Error')
     } finally {
       setAdding(false)
     }
@@ -309,7 +312,7 @@ export default function Proxy() {
       
       alert(`Deployed ${successCount} app instances successfully${failCount > 0 ? `, ${failCount} failed` : ''}`)
     } catch (error: any) {
-      alert(`Deployment failed: ${error.message || error}`)
+      showError(`Deployment failed: ${error.message || error}`, 'Deployment Error')
     } finally {
       setAdding(false)
     }
@@ -352,7 +355,7 @@ export default function Proxy() {
       await loadProxies()
     } catch (error: any) {
       console.error('Failed to remove proxy:', error)
-      alert(`Failed to remove proxy: ${error.message || error}`)
+      showError(`Failed to remove proxy: ${error.message || error}`, 'Remove Proxy Error')
     }
   }
 

@@ -160,6 +160,7 @@ func (c *Client) ListContainers() ([]ContainerInfo, error) {
 
 			// Parse Ports field for published ports of format "0.0.0.0:5902->5900/tcp, ..."
 			cont.PublishedPorts = []string{}
+			cont.PortsDetail = []PortMapping{}
 			portsStr := cont.Ports
 			for _, pfrag := range strings.Split(portsStr, ",") {
 				pfrag = strings.TrimSpace(pfrag)
@@ -167,9 +168,27 @@ func (c *Client) ListContainers() ([]ContainerInfo, error) {
 					continue
 				}
 				if strings.Contains(pfrag, ":") && strings.Contains(pfrag, "->") {
-					hostSide := strings.Split(pfrag, "->")[0]
-					hostPort := hostSide[strings.LastIndex(hostSide, ":")+1:]
-					cont.PublishedPorts = append(cont.PublishedPorts, hostPort)
+					// Extract hostPort:containerPort format
+					parts := strings.Split(pfrag, "->")
+					if len(parts) == 2 {
+						hostSide := parts[0]
+						containerSide := parts[1] // e.g., "5900/tcp"
+						
+						hostPort := hostSide[strings.LastIndex(hostSide, ":")+1:]
+						containerPort := containerSide
+						if strings.Contains(containerSide, "/") {
+							containerPort = containerSide[:strings.Index(containerSide, "/")]
+						}
+						
+						portMapping := PortMapping{
+							HostPort:      hostPort,
+							ContainerPort: containerPort,
+						}
+						cont.PortsDetail = append(cont.PortsDetail, portMapping)
+						
+						// Still add for backward compatibility
+						cont.PublishedPorts = append(cont.PublishedPorts, fmt.Sprintf("%s:%s", hostPort, containerPort))
+					}
 				}
 			}
 			containers = append(containers, cont)
@@ -211,16 +230,23 @@ func (c *Client) parseCommand(cmd string, args ...string) []string {
 	return parts
 }
 
+// PortMapping represents a port mapping
+type PortMapping struct {
+	HostPort      string `json:"host_port"`
+	ContainerPort string `json:"container_port"`
+}
+
 // ContainerInfo represents container information (Docker CLI format)
 type ContainerInfo struct {
-	ID             string   `json:"ID"`
-	Name           string   // populated from Names field
-	Names          string   `json:"Names"`
-	Image          string   `json:"Image"`
-	Status         string   `json:"Status"`
-	State          string   `json:"State"`
-	Ports          string   `json:"Ports"`
-	PublishedPorts []string // host ports extracted from Ports field
+	ID             string        `json:"ID"`
+	Name           string        // populated from Names field
+	Names          string        `json:"Names"`
+	Image          string        `json:"Image"`
+	Status         string        `json:"Status"`
+	State          string        `json:"State"`
+	Ports          string        `json:"Ports"`
+	PublishedPorts []string      // host:container port mappings in format "host:container"
+	PortsDetail    []PortMapping // detailed port mapping information
 }
 
 // ContainerConfig represents container configuration

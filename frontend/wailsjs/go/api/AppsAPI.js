@@ -22,6 +22,10 @@ export function DeployAppWithProxyId(arg1, arg2, arg3) {
   return window['go']['api']['AppsAPI']['DeployAppWithProxyId'](arg1, arg2, arg3);
 }
 
+export function GetAllAppManifests() {
+  return window['go']['api']['AppsAPI']['GetAllAppManifests']();
+}
+
 export function GetAppCredentials(arg1) {
   return window['go']['api']['AppsAPI']['GetAppCredentials'](arg1);
 }
@@ -66,8 +70,16 @@ export function GetDashboardSummary() {
   return window['go']['api']['AppsAPI']['GetDashboardSummary']();
 }
 
+export function GetDockerInstallationURL() {
+  return window['go']['api']['AppsAPI']['GetDockerInstallationURL']();
+}
+
 export function GetRunningApps() {
   return window['go']['api']['AppsAPI']['GetRunningApps']();
+}
+
+export function IsDockerAvailable() {
+  return window['go']['api']['AppsAPI']['IsDockerAvailable']();
 }
 
 export function OnStartup(arg1) {

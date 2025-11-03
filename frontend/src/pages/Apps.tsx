@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { Play, Square, RefreshCw, Plus, Globe, Server, Trash2, Copy, Check, Loader2 } from 'lucide-react'
 import { GetRunningApps, StartApp, StopApp, RestartApp, RemoveApp } from '../services/api';
-import { BrowserOpenURL } from '../../wailsjs/runtime/runtime'
+import { BrowserOpenURL } from '../../wailsjs/runtime/runtime';
+import { useError } from '../components/ErrorContext';
 
 interface AppInstance {
   instance_id: string
@@ -12,6 +13,11 @@ interface AppInstance {
   status: string
   proxy_url: string
   dashboardLink?: string
+  published_ports?: string[]
+  ports_detail?: {
+    host_port: string
+    container_port: string
+  }[]
 }
 
 interface App {
@@ -30,6 +36,8 @@ export default function Apps({ onAddNew }: AppsProps) {
   const [loading, setLoading] = useState(true)
   const [copiedLink, setCopiedLink] = useState<string | null>(null)
   const [actionLoadingId, setActionLoadingId] = useState<string | null>(null)
+  
+  const { showError } = useError();
 
 
   useEffect(() => {
@@ -75,6 +83,8 @@ export default function Apps({ onAddNew }: AppsProps) {
         device_name: container.name,
         status: container.state === 'running' ? 'running' : 'stopped',
         proxy_url: isLocal ? 'Local' : `Proxy: ${instanceType.replace('proxy', '').substring(0, 8)}`,
+        published_ports: container.published_ports,
+        ports_detail: container.ports_detail,
         dashboardLink: instanceDashboardLink
       }
 
@@ -121,7 +131,7 @@ export default function Apps({ onAddNew }: AppsProps) {
       await loadApps()
     } catch (error) {
       console.error(`Failed to ${action}:`, error)
-      alert(`Failed to ${action}: ${error}`)
+      showError(`Failed to ${action}: ${error}`, 'Action Error')
     } finally {
       setActionLoadingId(null)
     }
@@ -227,6 +237,20 @@ export default function Apps({ onAddNew }: AppsProps) {
                         <div>
                           <p className="text-neutral-100 font-medium">{instance.device_name}</p>
                           <p className="text-neutral-400 text-sm">Container: {instance.container_id.substring(0, 12)}...</p>
+                          {instance.ports_detail && instance.ports_detail.length > 0 && (
+                            <div className="flex flex-wrap gap-2 mt-1">
+                              {instance.ports_detail.map((port, index) => (
+                                <button
+                                  key={index}
+                                  onClick={() => BrowserOpenURL(`http://localhost:${port.host_port}`)}
+                                  className="text-sm bg-brand-600/20 hover:bg-brand-600/30 text-brand-400 px-2 py-1 rounded border border-brand-500/30"
+                                  title={`Open http://localhost:${port.host_port}`}
+                                >
+                                  {port.host_port}:{port.container_port}
+                                </button>
+                              ))}
+                            </div>
+                          )}
                           {instance.dashboardLink && (
                             <div className="flex items-center gap-2 mt-1 text-xs">
                               <button

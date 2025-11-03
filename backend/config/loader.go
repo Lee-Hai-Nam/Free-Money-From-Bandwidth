@@ -109,6 +109,8 @@ func (l *Loader) WatchConfigs() error {
 type AppConfig struct {
 	AppID              string          `yaml:"app_id"`
 	Name               string          `yaml:"name"`
+	Link               string          `yaml:"link"`
+	DashboardURL       string          `yaml:"dashboard_url"`
 	DockerImage        string          `yaml:"docker_image"`
 	SupportedPlatforms []string        `yaml:"supported_platforms"`
 	EnvironmentVars    []EnvVar        `yaml:"environment_vars"`

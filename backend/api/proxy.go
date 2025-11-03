@@ -1,9 +1,9 @@
 package api
 
 import (
-	"bandwidth-income-manager/backend/apps"
-	"bandwidth-income-manager/backend/config"
-	"bandwidth-income-manager/backend/proxy"
+	"free-income-from-bandwidth/backend/apps"
+	"free-income-from-bandwidth/backend/config"
+	"free-income-from-bandwidth/backend/proxy"
 	"context"
 	"fmt"
 )

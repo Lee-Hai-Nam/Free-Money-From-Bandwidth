@@ -117,6 +117,31 @@ export async function DeployApp(appID: string, formData: any): Promise<void> {
   }
 }
 
+export async function IsDockerAvailable(): Promise<{ available: boolean, error?: string, status?: string }> {
+  if (window.wails) {
+    try {
+      const result = await wailsApps.IsDockerAvailable();
+      return { available: result.Available, error: result.Error, status: result.Status };
+    } catch (error) {
+      return { available: false, error: String(error), status: 'error' };
+    }
+  } else {
+    const response = await fetch('/api/apps/docker-available');
+    const data = await response.json();
+    return { available: data.available, error: data.error, status: data.status };
+  }
+}
+
+export async function GetDockerInstallationURL(): Promise<string> {
+  if (window.wails) {
+    return wailsApps.GetDockerInstallationURL();
+  } else {
+    const response = await fetch('/api/apps/docker-install-url');
+    const data = await response.json();
+    return data.url;
+  }
+}
+
 export async function GetDashboardSummary(): Promise<any> {
   if (window.wails) {
     return wailsApps.GetDashboardSummary();

@@ -8,14 +8,14 @@ import (
 	"os"
 	"path/filepath"
 
-	"bandwidth-income-manager/backend/api"
-	"bandwidth-income-manager/backend/apps"
-	"bandwidth-income-manager/backend/config"
-	"bandwidth-income-manager/backend/docker"
-	"bandwidth-income-manager/backend/monitor"
-	"bandwidth-income-manager/backend/notifications"
-	"bandwidth-income-manager/backend/orchestrator"
-	"bandwidth-income-manager/backend/proxy"
+	"free-income-from-bandwidth/backend/api"
+	"free-income-from-bandwidth/backend/apps"
+	"free-income-from-bandwidth/backend/config"
+	"free-income-from-bandwidth/backend/docker"
+	"free-income-from-bandwidth/backend/monitor"
+	"free-income-from-bandwidth/backend/notifications"
+	"free-income-from-bandwidth/backend/orchestrator"
+	"free-income-from-bandwidth/backend/proxy"
 
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
@@ -57,6 +57,8 @@ func main() {
 		fmt.Printf("Warning: Failed to load app configs: %v\n", err)
 	}
 
+
+
 	// Initialize monitor
 	monitorCollector, err := monitor.NewCollector(dbPath)
 	if err != nil {
@@ -96,7 +98,7 @@ func main() {
 	} else {
 		// Create application with options
 		err = wails.Run(&options.App{
-			Title:  "Bandwidth Income Manager",
+			Title:  "Free Income From Bandwidth",
 			Width:  1024,
 			Height: 768,
 			AssetServer: &assetserver.Options{

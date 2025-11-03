@@ -155,7 +155,7 @@ func (cs *CredentialStore) saveEncrypted(creds map[string]*AppCredentials) error
 func getOrCreateKey() []byte {
 	// In production, use a proper key derivation
 	// For now, use a simple derived key
-	const secret = "bandwidth-income-manager-secret-key-2024"
+	const secret = "free-income-from-bandwidth-secret-key-2024"
 	hash := sha256.Sum256([]byte(secret))
 	return hash[:]
 }

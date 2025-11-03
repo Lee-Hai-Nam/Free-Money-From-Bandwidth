@@ -1,14 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Plus, ChevronRight, ExternalLink, Edit, Power, PowerOff, CheckCircle, Copy } from 'lucide-react'
-import { GetConfiguredAppsForProxy, BrowserOpenURL, GetAppCredentials, DeployApp } from '../services/api';
-
-interface AvailableApp {
-  id: string
-  name: string
-  description: string
-  icon?: string
-  referralLink: string
-}
+import { BrowserOpenURL } from '../../wailsjs/runtime/runtime';
+import { GetConfiguredApps, GetAppCredentials, DeployApp, GetAllAppManifests } from '../../wailsjs/go/api/AppsAPI';
+import { useError } from '../components/ErrorContext';
+import { apps } from '../../wailsjs/go/models';
 
 interface ConfiguredApp {
   app_id: string
@@ -19,101 +14,17 @@ interface ConfiguredApp {
 
 export default function AppStore({ onSetup, onRefresh }: { onSetup: (appId: string) => void, onRefresh?: () => void }) {
   const [configuredApps, setConfiguredApps] = useState<ConfiguredApp[]>([])
-  const [apps] = useState<AvailableApp[]>([
-    {
-      id: 'earnapp',
-      name: 'EarnApp',
-      description: 'Make money by sharing your unused internet bandwidth',
-      referralLink: 'https://earnapp.com/i/vjLzkum6'
-    },
-    {
-      id: 'honeygain',
-      name: 'Honeygain',
-      description: 'Share your unused internet bandwidth and earn passive income',
-      referralLink: 'https://join.honeygain.com/VIETB3A80B'
-    },
-    {
-      id: 'iproyalpawns',
-      name: 'IPRoyal Pawns',
-      description: 'Share your unused bandwidth and earn passive income',
-      referralLink: 'https://pawns.app/?r=2651145'
-    },
-    {
-      id: 'packetstream',
-      name: 'PacketStream',
-      description: 'Share your bandwidth with PacketStream and earn income',
-      referralLink: 'https://packetstream.io/?psr=5pob'
-    },
-    {
-      id: 'traffmonetizer',
-      name: 'TraffMonetizer',
-      description: 'Monetize your unused bandwidth and earn passive income',
-      referralLink: 'https://traffmonetizer.com/?aff=1861891'
-    },
-    {
-      id: 'repocket',
-      name: 'Repocket',
-      description: 'Earn by sharing your unused network resources',
-      referralLink: 'https://link.repocket.com/U2fc'
-    },
-    {
-      id: 'earnfm',
-      name: 'EarnFM',
-      description: 'Monetize your bandwidth and earn passive income',
-      referralLink: 'https://earn.fm/ref/NAMLNPT0'
-    },
-    {
-      id: 'proxyrack',
-      name: 'ProxyRack',
-      description: 'Share your network and earn income',
-      referralLink: 'https://peer.proxyrack.com/ref/tazpyxdqauaa81inkwaug1qte5zkocvdt70g7syi'
-    },
-    {
-      id: 'proxylite',
-      name: 'ProxyLite',
-      description: 'Earn money by sharing your bandwidth',
-      referralLink: 'https://proxylite.ru/?r=VAAUXWXS'
-    },
-    {
-      id: 'bitping',
-      name: 'BitPing',
-      description: 'Earn by participating in their network',
-      referralLink: 'https://app.bitping.com/'
-    },
-    {
-      id: 'packetshare',
-      name: 'PacketShare',
-      description: 'Share your bandwidth and earn income',
-      referralLink: 'https://www.packetshare.io/?code=B6F61AADDD273776'
-    },
-    {
-      id: 'proxybase',
-      name: 'ProxyBase',
-      description: 'Earn by sharing your network',
-      referralLink: 'https://peer.proxybase.org?referral=ba5Zu4tnRH'
-    },
-    {
-      id: 'wipter',
-      name: 'Wipter',
-      description: 'Share bandwidth and get paid',
-      referralLink: 'https://wipter.com/register?via=09CED22425'
-    }
-    ,
-    {
-      id: 'mystnode',
-      name: 'MystNode',
-      description: 'Run a Myst node and earn',
-      referralLink: 'https://mystnodes.co/?referral_code=Tc7RaS7Fm12K3Xun6mlU9q9hbnjojjl9aRBW8ZA9'
-    }
-  ])
+  const { showError } = useError();
+  const [apps, setApps] = useState<Record<string, apps.AppManifest>>({});
 
   useEffect(() => {
     loadConfiguredApps()
+    GetAllAppManifests().then(setApps);
   }, [])
 
   const loadConfiguredApps = async () => {
     try {
-      const apps = await GetConfiguredAppsForProxy()
+      const apps = await GetConfiguredApps()
       setConfiguredApps(apps as ConfiguredApp[])
     } catch (error) {
       console.error('Failed to load configured apps:', error)
@@ -158,15 +69,15 @@ export default function AppStore({ onSetup, onRefresh }: { onSetup: (appId: stri
 
       {/* App List */}
       <div className="space-y-3">
-        {apps.map((app) => {
-          const isConfigured = isAppConfigured(app.id)
-          const configuredApp = getConfiguredApp(app.id)
+        {Object.entries(apps).map(([id, app]) => {
+          const isConfigured = isAppConfigured(id)
+          const configuredApp = getConfiguredApp(id)
           return (
-            <div key={app.id} className={`bg-neutral-900 rounded-lg p-4 transition border border-neutral-800 ${isConfigured ? 'border-l-4 border-success' : 'hover:bg-neutral-800'}`}>
+            <div key={id} className={`bg-neutral-900 rounded-lg p-4 transition border border-neutral-800 ${isConfigured ? 'border-l-4 border-success' : 'hover:bg-neutral-800'}`}>
               <div className="flex items-center justify-between">
                 <div className="flex-1">
                   <div className="flex items-center gap-3">
-                    <h3 className="text-lg font-semibold text-neutral-100">{app.name}</h3>
+                    <h3 className="text-lg font-semibold text-neutral-100">{app.Name}</h3>
                     {isConfigured && (
                       <div className="flex items-center gap-2">
                         <CheckCircle className="h-5 w-5 text-success" />
@@ -174,14 +85,14 @@ export default function AppStore({ onSetup, onRefresh }: { onSetup: (appId: stri
                       </div>
                     )}
                   </div>
-                  <p className="text-neutral-400 text-sm mt-1">{app.description}</p>
+                  <p className="text-neutral-400 text-sm mt-1">{app.Name}</p>
                 </div>
                 <div className="flex items-center gap-2">
                   {/* Register Button */}
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      handleRegister(app.referralLink);
+                      handleRegister(app.Link);
                     }}
                     className={`${isConfigured ? 'w-8 h-8 p-0 bg-neutral-700 hover:bg-neutral-600' : 'px-3 py-2 bg-green-600 hover:bg-green-700 text-sm'} text-white rounded-lg flex items-center justify-center`}
                     title={isConfigured ? 'Open referral link' : 'Register'}
@@ -199,16 +110,16 @@ export default function AppStore({ onSetup, onRefresh }: { onSetup: (appId: stri
                         // Load saved credentials
                         let formData = {};
                         try {
-                          const creds = await GetAppCredentials(app.id);
+                          const creds = await GetAppCredentials(id);
                           formData = { ...creds };
                         } catch {}
                         formData.DEVICE_NAME = `${Math.random().toString(36).slice(2, 10)}-${Date.now().toString().slice(-5)}`;
                         try {
-                          await DeployApp(app.id, formData);
+                          await DeployApp(id, formData);
                           if (typeof onRefresh === 'function') onRefresh();
-                          alert('Started new random container');
+                          // Showing success is optional; can be handled differently if desired
                         } catch (err) {
-                          alert('Error starting random container: ' + err);
+                          showError('Error starting random container: ' + err, 'Start Container Error');
                         }
                       }}
                     >
@@ -218,12 +129,33 @@ export default function AppStore({ onSetup, onRefresh }: { onSetup: (appId: stri
                   {/* Setup/Edit Button */}
                   <button
                     onClick={(e) => {
-                      e.stopPropagation();
-                      handleEdit(app.id);
+                      if (!app.Disabled) {
+                        e.stopPropagation();
+                        handleEdit(id);
+                      }
                     }}
-                    className={`px-4 py-2 rounded-lg flex items-center gap-2 text-sm ${isConfigured ? 'bg-neutral-700 hover:bg-neutral-600 text-white' : 'bg-brand-600 hover:bg-brand-700 text-white'}`}
+                    disabled={app.Disabled}
+                    className={`px-4 py-2 rounded-lg flex items-center gap-2 text-sm ${
+                      app.Disabled 
+                        ? 'bg-neutral-800 text-gray-500 cursor-not-allowed' 
+                        : isConfigured 
+                          ? 'bg-neutral-700 hover:bg-neutral-600 text-white' 
+                          : 'bg-brand-600 hover:bg-brand-700 text-white'
+                    }`}
                   >
-                    {isConfigured ? (<><Edit className="h-4 w-4" />Edit</>) : (<>Setup<ChevronRight className="h-4 w-4" /></>)}
+                    {isConfigured ? (
+                      <>
+                        <Edit className="h-4 w-4" /> Edit
+                      </>
+                    ) : app.Disabled ? (
+                      <>
+                        Setup <ChevronRight className="h-4 w-4" /> <span className="ml-1 text-xs">[Not Working]</span>
+                      </>
+                    ) : (
+                      <>
+                        Setup <ChevronRight className="h-4 w-4" />
+                      </>
+                    )}
                   </button>
                 </div>
               </div>

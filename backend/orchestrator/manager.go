@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"bandwidth-income-manager/backend/docker"
+	"free-income-from-bandwidth/backend/docker"
 )
 
 // Manager manages multiple Docker hosts (local + remote)

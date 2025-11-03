@@ -8,15 +8,16 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"runtime"
 	"strconv"
 	"strings"
 	"time"
 
-	"bandwidth-income-manager/backend/apps"
-	"bandwidth-income-manager/backend/config"
-	"bandwidth-income-manager/backend/docker"
-	"bandwidth-income-manager/backend/monitor"
-	"bandwidth-income-manager/backend/proxy"
+	"free-income-from-bandwidth/backend/apps"
+	"free-income-from-bandwidth/backend/config"
+	"free-income-from-bandwidth/backend/docker"
+	"free-income-from-bandwidth/backend/monitor"
+	"free-income-from-bandwidth/backend/proxy"
 )
 
 type wailsRuntime interface {
@@ -153,6 +154,15 @@ func (a *AppsAPI) GetRunningApps() ([]map[string]interface{}, error) {
 			"state":  container.State,
 		}
 
+		// Add published ports information
+		if len(container.PublishedPorts) > 0 {
+			containerData["published_ports"] = container.PublishedPorts
+		}
+		// Add detailed ports information
+		if len(container.PortsDetail) > 0 {
+			containerData["ports_detail"] = container.PortsDetail
+		}
+
 		// Get SDK node ID from instance manager or from container environment
 		if sdkNodeID, exists := instanceMap[container.ID]; exists {
 			containerData["sdkNodeID"] = sdkNodeID
@@ -243,8 +253,113 @@ func (a *AppsAPI) GetAppStats(appID string) (map[string]interface{}, error) {
 	return result, nil
 }
 
+// IsDockerAvailableResult represents the result of checking Docker availability
+type IsDockerAvailableResult struct {
+	Available bool   `json:"available"`
+	Error     string `json:"error,omitempty"`
+	Status    string `json:"status"` // "not_installed", "not_running", or "running"
+}
+
+// IsDockerAvailable checks if Docker is available and running
+func (a *AppsAPI) IsDockerAvailable() (*IsDockerAvailableResult, error) {
+	// First check if Docker is installed
+	isInstalled := IsDockerInstalled()
+	
+	if !isInstalled {
+		return &IsDockerAvailableResult{
+			Available: false, 
+			Error:     "Docker is not installed", 
+			Status:    "not_installed",
+		}, nil
+	}
+	
+	// Docker is installed, now check if the daemon is running
+	// If a.docker is nil, try to initialize it
+	if a.docker == nil {
+		// Try to create a new Docker client to test if daemon is running
+		client, err := docker.NewDockerClient("")
+		if err != nil {
+			// Could not initialize Docker client - daemon likely not running
+			return &IsDockerAvailableResult{
+				Available: false, 
+				Error:     "Docker daemon is not running", 
+				Status:    "not_running",
+			}, nil
+		}
+		
+		// Test if the daemon is responsive
+		testErr := client.TestConnection()
+		if testErr != nil {
+			return &IsDockerAvailableResult{
+				Available: false, 
+				Error:     "Docker daemon is not running", 
+				Status:    "not_running",
+			}, nil
+		}
+		
+		// If we get here, Docker is running but wasn't initialized during app startup
+		// For this check we just need to confirm it's available, so return success
+		return &IsDockerAvailableResult{
+			Available: true, 
+			Error:     "", 
+			Status:    "running",
+		}, nil
+	}
+	
+	// Docker client exists, test the connection
+	err := a.docker.TestConnection()
+	if err != nil {
+		// Docker daemon is not responsive
+		return &IsDockerAvailableResult{
+			Available: false, 
+			Error:     "Docker daemon is not running", 
+			Status:    "not_running",
+		}, nil
+	}
+	
+	// Docker is running and available
+	return &IsDockerAvailableResult{
+		Available: true, 
+		Error:     "", 
+		Status:    "running",
+	}, nil
+}
+
 // DeployApp deploys a new app with proper Docker configuration
 func (a *AppsAPI) DeployApp(appID string, formData map[string]string) error {
+	// Check if Docker is available before attempting deployment
+	result, err := a.IsDockerAvailable()
+	if err != nil {
+		return fmt.Errorf("docker availability check failed: %w", err)
+	}
+	if !result.Available {
+		if result.Status == "not_installed" {
+			return fmt.Errorf("1. Please install Docker")
+		} else if result.Status == "not_running" {
+			return fmt.Errorf("1. Please start Docker")
+		} else if result.Error != "" {
+			// Check if the error contains specific Docker messages to reformat
+			if strings.Contains(result.Error, "Docker daemon is not running") {
+				return fmt.Errorf("1. Please start Docker")
+			} else if strings.Contains(result.Error, "Docker is not installed") {
+				return fmt.Errorf("1. Please install Docker")
+			} else {
+				return fmt.Errorf("docker is not available: %s", result.Error)
+			}
+		}
+		return fmt.Errorf("1. Please install and start Docker")
+	}
+	
+	// If Docker is available but a.docker is nil (not initialized during startup), 
+	// try to initialize it now if needed for deployment
+	if a.docker == nil {
+		dockerClient, err := docker.NewDockerClient("")
+		if err != nil {
+			return fmt.Errorf("failed to initialize Docker client: %w", err)
+		}
+		a.docker = dockerClient
+	}
+	
 	return a.DeployAppWithProxyId(appID, formData, "")
 }
 
@@ -288,12 +403,7 @@ func (a *AppsAPI) DeployAppWithProxyId(appID string, formData map[string]string,
 
 	// Add environment variables from manifest
 	for key, value := range manifest.Environment {
-		// Handle placeholders ($VARIABLE_NAME) that will be filled by auto-generation
-		if strings.HasPrefix(value, "$") {
-			// Skip placeholders, they'll be handled by auto-generation below
-			continue
-		}
-		// Add static environment variables from manifest
+		// Add all manifest environment variables (including those with placeholders)
 		if value != "" {
 			env = append(env, fmt.Sprintf("%s=%s", key, value))
 		}
@@ -734,6 +844,21 @@ func (a *AppsAPI) RemoveApp(containerID string) error {
 	if err == nil {
 		a.addActivity("Removed container " + containerID)
 	}
+	
+	// Also remove the instance from the instance manager if it exists
+	// Find instance by container ID and remove it
+	allInstances := a.instanceManager.GetAllInstances()
+	for _, instance := range allInstances {
+		if instance.ContainerID == containerID {
+			// Remove the instance from manager
+			removeErr := a.instanceManager.RemoveInstance(instance.InstanceID)
+			if removeErr != nil {
+				fmt.Printf("failed to remove instance %s from manager: %v\n", instance.InstanceID, removeErr)
+			}
+			break // Found and attempted to remove, break the loop
+		}
+	}
+	
 	return err
 }
 
@@ -806,6 +931,102 @@ func (a *AppsAPI) DeployAppWithProxiesSelective(proxyID string, proxyURL string,
 	return results, nil
 }
 
+// GetDockerInstallationURL returns the appropriate Docker installation URL based on the OS
+func (a *AppsAPI) GetDockerInstallationURL() (string, error) {
+	// Determine the OS and return appropriate Docker installation URL
+	goos := os.Getenv("GOOS")
+	if goos == "" {
+		goos = runtime.GOOS
+	}
+
+	switch goos {
+	case "windows":
+		return "https://www.docker.com/products/docker-desktop", nil
+	case "darwin": // macOS
+		return "https://www.docker.com/products/docker-desktop", nil
+	case "linux":
+		return "https://docs.docker.com/engine/install/", nil
+	default:
+		return "", fmt.Errorf("unsupported OS: %s", goos)
+	}
+}
+
+// IsDockerInstalled checks if Docker is installed on the system by looking for common installation locations
+func IsDockerInstalled() bool {
+	switch runtime.GOOS {
+	case "windows":
+		// Check common Windows Docker installation locations
+		possiblePaths := []string{
+			"C:\\Program Files\\Docker\\Docker\\Docker Desktop.exe",
+			"C:\\Program Files\\Docker\\Docker.exe",
+			"C:\\Docker\\Docker.exe",
+		}
+		
+		        for _, path := range possiblePaths {
+		            if _, err := os.Stat(path); err == nil {
+		                return true
+		            }
+		        }
+		        
+		        // Also check if docker command is in PATH
+		        cmd := exec.Command("docker", "--version")
+		        hideConsoleWindow(cmd)
+		        if err := cmd.Run(); err == nil {
+		            return true
+		        }		
+	case "darwin": // macOS
+		// Check common macOS Docker installation locations
+		possiblePaths := []string{
+			"/Applications/Docker.app",
+			"/usr/local/bin/docker",
+			"/opt/homebrew/bin/docker", // For Apple Silicon Macs
+		}
+		
+		for _, path := range possiblePaths {
+			if _, err := os.Stat(path); err == nil {
+				// For Docker.app directory, just checking if the directory exists is sufficient
+				if strings.HasSuffix(path, ".app") {
+					return true
+				}
+				// For executable files, try to run version command
+				if strings.Contains(path, "docker") {
+					if err := exec.Command(path, "--version").Run(); err == nil {
+						return true
+					}
+				}
+			}
+		}
+		
+		// Also check if docker command is in PATH
+		if err := exec.Command("docker", "--version").Run(); err == nil {
+			return true
+		}
+		
+	case "linux":
+		// Check common Linux Docker installation locations
+		possiblePaths := []string{
+			"/usr/bin/docker",
+			"/usr/local/bin/docker",
+		}
+		
+		for _, path := range possiblePaths {
+			if _, err := os.Stat(path); err == nil {
+				// For executable files, try to run version command
+				if err := exec.Command(path, "--version").Run(); err == nil {
+					return true
+				}
+			}
+		}
+		
+		// Also check if docker command is in PATH
+		if err := exec.Command("docker", "--version").Run(); err == nil {
+			return true
+		}
+	}
+	
+	return false
+}
+
 // GetContainerEnvironmentVars gets environment variables from a container
 func (a *AppsAPI) GetContainerEnvironmentVars(containerID string) (map[string]string, error) {
 	cmd := exec.Command("docker", "inspect", "--format", "{{json .Config.Env}}", containerID)
@@ -856,4 +1077,9 @@ func generateUUID(length int, charset string) string {
 		result[i] = chars[rand.Intn(len(chars))]
 	}
 	return string(result)
+}
+
+// GetAllAppManifests returns all app manifests
+func (a *AppsAPI) GetAllAppManifests() (map[string]*apps.AppManifest, error) {
+	return apps.GetAllManifests(), nil
 }

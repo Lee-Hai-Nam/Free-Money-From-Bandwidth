@@ -14,6 +14,7 @@ type AppManifest struct {
 	NetworkMode        string
 	ResourceLimits     *ResourceLimits
 	AutoGenerateFields map[string]*AutoGenerateConfig
+	Disabled           bool // Flag to mark if the app is currently not working
 }
 
 // ResourceLimits represents resource constraints
@@ -40,7 +41,7 @@ func GetAppManifest(appID string) *AppManifest {
 func GetAllManifests() map[string]*AppManifest {
 	return map[string]*AppManifest{
 		"earnapp": {
-			Name:      "EARNAPP",
+			Name:      "EarnApp",
 			Dashboard: "https://earnapp.com/dashboard",
 			Link:      "https://earnapp.com/i/3zulx7k",
 			Image:     "fazalfarhan01/earnapp:lite",
@@ -66,7 +67,7 @@ func GetAllManifests() map[string]*AppManifest {
 			},
 		},
 		"honeygain": {
-			Name:      "HONEYGAIN",
+			Name:      "Honeygain",
 			Dashboard: "https://dashboard.honeygain.com/",
 			Link:      "https://r.honeygain.me/MINDL15721",
 			Image:     "honeygain/honeygain:latest",
@@ -86,7 +87,7 @@ func GetAllManifests() map[string]*AppManifest {
 			},
 		},
 		"iproyalpawns": {
-			Name:      "IPROYALPAWNS",
+			Name:      "IPRoyal Pawns",
 			Dashboard: "https://dashboard.pawns.app/",
 			Link:      "https://pawns.app?r=MiNe",
 			Image:     "iproyal/pawns-cli:latest",
@@ -106,7 +107,7 @@ func GetAllManifests() map[string]*AppManifest {
 			},
 		},
 		"packetstream": {
-			Name:      "PACKETSTREAM",
+			Name:      "PacketStream",
 			Dashboard: "https://packetstream.io/dashboard",
 			Link:      "https://packetstream.io/?psr=3zSD",
 			Image:     "packetstream/psclient:latest",
@@ -124,7 +125,7 @@ func GetAllManifests() map[string]*AppManifest {
 			},
 		},
 		"traffmonetizer": {
-			Name:      "TRAFFMONETIZER",
+			Name:      "TraffMonetizer",
 			Dashboard: "https://app.traffmonetizer.com/dashboard",
 			Link:      "https://traffmonetizer.com/?aff=366499",
 			Image:     "traffmonetizer/cli_v2:latest",
@@ -144,7 +145,7 @@ func GetAllManifests() map[string]*AppManifest {
 		},
 		// Additional apps
 		"repocket": {
-			Name:      "REPOCKET",
+			Name:      "Repocket",
 			Dashboard: "https://app.repocket.co/#home",
 			Link:      "https://link.repocket.co/hr8i",
 			Image:     "repocket/repocket:latest",
@@ -160,7 +161,7 @@ func GetAllManifests() map[string]*AppManifest {
 			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "128m", MemoryLimit: "512m"},
 		},
 		"earnfm": {
-			Name:      "EARNFM",
+			Name:      "EarnFM",
 			Dashboard: "https://app.earn.fm/",
 			Link:      "https://earn.fm/ref/MATTTAV6",
 			Image:     "earnfm/earnfm-client:latest",
@@ -174,7 +175,7 @@ func GetAllManifests() map[string]*AppManifest {
 			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "128m", MemoryLimit: "512m"},
 		},
 		"proxyrack": {
-			Name:      "PROXYRACK",
+			Name:      "ProxyRack",
 			Dashboard: "https://peer.proxyrack.com/dashboard",
 			Link:      "https://peer.proxyrack.com/ref/myoas6qttvhuvkzh8ffx90ns1ouhwgilfgamo5ex",
 			Image:     "proxyrack/pop:latest",
@@ -191,7 +192,7 @@ func GetAllManifests() map[string]*AppManifest {
 			ResourceLimits: &ResourceLimits{CPUs: "2.0", MemoryReservation: "256m", MemoryLimit: "1g"},
 		},
 		"proxylite": {
-			Name:      "PROXYLITE",
+			Name:      "ProxyLite",
 			Dashboard: "https://proxylite.ru/",
 			Link:      "https://proxylite.ru/?r=PJTKXWN3",
 			Image:     "proxylite/proxyservice:latest",
@@ -205,7 +206,7 @@ func GetAllManifests() map[string]*AppManifest {
 			ResourceLimits: &ResourceLimits{CPUs: "2.0", MemoryReservation: "256m", MemoryLimit: "1g"},
 		},
 		"bitping": {
-			Name:      "BITPING",
+			Name:      "Bitping",
 			Dashboard: "https://app.bitping.com/earnings",
 			Link:      "https://app.bitping.com?r=qm7mIuX3",
 			Image:     "bitping/bitpingd:latest",
@@ -222,7 +223,7 @@ func GetAllManifests() map[string]*AppManifest {
 			ResourceLimits: &ResourceLimits{CPUs: "2.0", MemoryReservation: "256m", MemoryLimit: "1g"},
 		},
 		"packetshare": {
-			Name:      "PACKETSHARE",
+			Name:      "PacketShare",
 			Dashboard: "https://packetshare.io/ucenter.html",
 			Link:      "https://www.packetshare.io/?code=A260871CFD822E35",
 			Image:     "packetshare/packetshare:latest",
@@ -240,7 +241,7 @@ func GetAllManifests() map[string]*AppManifest {
 			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "128m", MemoryLimit: "512m"},
 		},
 		"grass": {
-			Name:      "GRASS",
+			Name:      "Grass",
 			Dashboard: "https://app.getgrass.io/dashboard",
 			Link:      "https://app.getgrass.io/register/?referralCode=qyvJmxgNUhcLo2f",
 			Image:     "mrcolorrain/grass-node:latest",
@@ -255,9 +256,10 @@ func GetAllManifests() map[string]*AppManifest {
 			},
 			Volumes:        []string{".data/.grass:/app/chrome_user_data"},
 			ResourceLimits: &ResourceLimits{CPUs: "2.0", MemoryReservation: "256m", MemoryLimit: "1g"},
+			Disabled:       true,
 		},
 		"gradient": {
-			Name:      "GRADIENT",
+			Name:      "Gradient",
 			Dashboard: "https://app.gradient.network/dashboard",
 			Link:      "https://app.gradient.network/signup?code=9WOBKP",
 			Image:     "carbon2029/dockweb:latest",
@@ -272,9 +274,10 @@ func GetAllManifests() map[string]*AppManifest {
 			},
 			Volumes:        []string{".data/.gradient:/app/chrome_user_data"},
 			ResourceLimits: &ResourceLimits{CPUs: "2.0", MemoryReservation: "256m", MemoryLimit: "1g"},
+			Disabled:       true,
 		},
 		"dawn": {
-			Name:      "DAWN",
+			Name:      "Dawn",
 			Dashboard: "https://dawninternet.com",
 			Link:      "https://dawninternet.com?code=xo23vynw",
 			Image:     "carbon2029/dockweb:latest",
@@ -290,9 +293,10 @@ func GetAllManifests() map[string]*AppManifest {
 			},
 			Volumes:        []string{".data/.dawn:/app/chrome_user_data"},
 			ResourceLimits: &ResourceLimits{CPUs: "2.0", MemoryReservation: "256m", MemoryLimit: "1g"},
+			Disabled:       true,
 		},
 		"teneo": {
-			Name:      "TENEO",
+			Name:      "Teneo",
 			Dashboard: "https://dashboard.teneo.pro/",
 			Link:      "https://dashboard.teneo.pro/?code=qPgLn",
 			Image:     "carbon2029/dockweb:latest",
@@ -307,9 +311,10 @@ func GetAllManifests() map[string]*AppManifest {
 			},
 			Volumes:        []string{".data/.teneo:/app/chrome_user_data"},
 			ResourceLimits: &ResourceLimits{CPUs: "2.0", MemoryReservation: "256m", MemoryLimit: "1g"},
+			Disabled:       true,
 		},
 		"proxybase": {
-			Name:      "PROXYBASE",
+			Name:      "Proxybase",
 			Dashboard: "https://dash.proxybase.org/",
 			Link:      "http://dash.proxybase.org/signup?ref=XfOz3zeURm",
 			Image:     "proxybase/proxybase:latest",
@@ -324,10 +329,10 @@ func GetAllManifests() map[string]*AppManifest {
 			ResourceLimits: &ResourceLimits{CPUs: "2.0", MemoryReservation: "256m", MemoryLimit: "1g"},
 		},
 		"wipter": {
-			Name:      "WIPTER",
+			Name:      "Wipter",
 			Dashboard: "https://wipter.com/dashboard",
 			Link:      "https://wipter.com/signup?ref=money4band",
-			Image:     "ghcr.io/techroy23/docker-wipter:latest",
+			Image:     "ghcr.io/adfly8470/wipter/wipter@sha256:9b1a7742bfbbd68e86eea1719f606c7d10c884e2578a4fb35f109eed387619cd",
 			Environment: map[string]string{
 				"WIPTER_EMAIL":    "$WIPTER_EMAIL",
 				"WIPTER_PASSWORD": "$WIPTER_PASSWORD",
@@ -340,9 +345,145 @@ func GetAllManifests() map[string]*AppManifest {
 			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "128m", MemoryLimit: "512m"},
 			Ports:          []string{"${WIPTER_PORT_1}:5900", "${WIPTER_PORT_2}:6080"},
 		},
+		"ebesucher_chrome": {
+			Name:      "Ebesucher Chrome",
+			Dashboard: "",
+			Link:      "",
+			Image:     "lscr.io/linuxserver/chromium:latest",
+			Environment: map[string]string{
+				"CHROME_CLI":   "https://www.ebesucher.com/surfbar/$EBESUCHER_USERNAME",
+				"CUSTOM_USER":  "fmfb",
+				"PASSWORD":     "fmfb",
+			},
+			RequiredFields: map[string]bool{
+				"DEVICE_NAME":        true,
+				"EBESUCHER_USERNAME": true,
+			},
+			Volumes:        []string{".data/.ebesucher_chrome:/config"},
+			Ports:          []string{"3000:3000"},
+			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "256m", MemoryLimit: "1g"},
+			Disabled:       true,
+		},
+		"ebesucher_firefox": {
+			Name:      "Ebesucher Firefox",
+			Dashboard: "",
+			Link:      "",
+			Image:     "jlesage/firefox",
+			Environment: map[string]string{
+				"FF_OPEN_URL":      "https://www.ebesucher.com/surfbar/$EBESUCHER_USERNAME",
+				"VNC_LISTENING_PORT": "-1",
+				"VNC_PASSWORD":     "fmfb",
+			},
+			RequiredFields: map[string]bool{
+				"DEVICE_NAME":        true,
+				"EBESUCHER_USERNAME": true,
+			},
+			Volumes:        []string{".data/.ebesucher_firefox:/config:rw"},
+			Ports:          []string{"5800:5800"},
+			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "256m", MemoryLimit: "1g"},
+			Disabled:       true,
+		},
+		"adnade": {
+			Name:      "AdnAde",
+			Dashboard: "",
+			Link:      "",
+			Image:     "jlesage/firefox",
+			Environment: map[string]string{
+				"FF_OPEN_URL":        "https://adnade.net/view.php?user=$ADNADE_USERNAME&multi=4",
+				"VNC_LISTENING_PORT": "-1",
+				"WEB_LISTENING_PORT": "5900",
+				"VNC_PASSWORD":       "fmfb",
+			},
+			RequiredFields: map[string]bool{
+				"DEVICE_NAME":     true,
+				"ADNADE_USERNAME": true,
+			},
+			Volumes:        []string{".data/.adnade:/config:rw"},
+			Ports:          []string{"5900:5900"},
+			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "256m", MemoryLimit: "1g"},
+		},
+		"packetsdk": {
+			Name:      "PacketSDK",
+			Dashboard: "",
+			Link:      "",
+			Image:     "packetsdk/packetsdk",
+			Command:   "-appkey=$PACKET_SDK_APP_KEY",
+			RequiredFields: map[string]bool{
+				"DEVICE_NAME":           true,
+				"PACKET_SDK_APP_KEY": true,
+			},
+			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "128m", MemoryLimit: "512m"},
+		},
+		"gaganode": {
+			Name:      "Gaganode",
+			Dashboard: "",
+			Link:      "",
+			Image:     "xterna/gaga-node",
+			Environment: map[string]string{
+				"TOKEN": "$GAGANODE_TOKEN",
+			},
+			RequiredFields: map[string]bool{
+				"DEVICE_NAME":     true,
+				"GAGANODE_TOKEN": true,
+			},
+			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "128m", MemoryLimit: "512m"},
+		},
+		"castarsdk": {
+			Name:      "CastarSDK",
+			Dashboard: "",
+			Link:      "",
+			Image:     "ghcr.io/adfly8470/castarsdk/castarsdk@sha256:30d7e9830c0144165b86dbb053eaea11e36d1b9f7ee0837fd4eda71cc6b48125",
+			Environment: map[string]string{
+				"KEY": "$CASTAR_SDK_KEY",
+			},
+			RequiredFields: map[string]bool{
+				"DEVICE_NAME":      true,
+				"CASTAR_SDK_KEY": true,
+			},
+			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "128m", MemoryLimit: "512m"},
+		},
+		"peer2profit": {
+			Name:      "Peer2Profit",
+			Dashboard: "",
+			Link:      "",
+			Image:     "enwaiax/peer2profit",
+			Environment: map[string]string{
+				"email": "$PEER2PROFIT_EMAIL",
+			},
+			RequiredFields: map[string]bool{
+				"DEVICE_NAME":       true,
+				"PEER2PROFIT_EMAIL": true,
+			},
+			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "128m", MemoryLimit: "512m"},
+		},
+		"urnetwork": {
+			Name:      "UrNetwork",
+			Dashboard: "",
+			Link:      "",
+			Image:     "bringyour/community-provider:latest",
+			Command:   "provide",
+			RequiredFields: map[string]bool{
+				"DEVICE_NAME":   true,
+				"UR_AUTH_TOKEN": true,
+			},
+			Volumes:        []string{".data/.urnetwork:/root/.urnetwork"},
+			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "128m", MemoryLimit: "512m"},
+		},
+		"titan": {
+			Name:      "Titan",
+			Dashboard: "",
+			Link:      "",
+			Image:     "nezha123/titan-edge",
+			RequiredFields: map[string]bool{
+				"DEVICE_NAME": true,
+				"TITAN_HASH":  true,
+			},
+			Volumes:        []string{".data/.titanedge:/root/.titanedge"},
+			ResourceLimits: &ResourceLimits{CPUs: "1.0", MemoryReservation: "128m", MemoryLimit: "512m"},
+		},
 		// Extra app: mystnode
 		"mystnode": {
-			Name:      "MYSTNODE",
+			Name:      "MystNode",
 			Dashboard: "https://mystnodes.com/nodes",
 			Link:      "https://mystnodes.co/?referral_code=Tc7RaS7Fm12K3Xun6mlU9q9hbnjojjl9aRBW8ZA9",
 			Image:     "mysteriumnetwork/myst:latest",

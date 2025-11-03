@@ -51,6 +51,7 @@ frontend/.vite/
 # Wails
 wails.json.bak
 
+QWEN.md
 GEMINI.md
 npm --prefix frontend ci.txt
 .gemini/

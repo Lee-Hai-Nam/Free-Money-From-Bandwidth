@@ -1,7 +1,7 @@
 {
   "$schema": "https://wails.io/schemas/config.v2.json",
-  "name": "bandwidth-income-manager",
-  "outputfilename": "bandwidth-income-manager",
+  "name": "free-income-from-bandwidth",
+  "outputfilename": "free-income-from-bandwidth",
   "frontend": {
     "dir": "./frontend",
     "install": "npm install",
@@ -15,10 +15,10 @@
     "email": "your.email@example.com"
   },
   "info": {
-    "productName": "Bandwidth Income Manager",
+    "productName": "Free Income From Bandwidth",
     "productVersion": "0.1.0",
     "copyright": "Copyright...",
-    "comments": "Manage bandwidth sharing apps"
+    "comments": "Manage bandwidth sharing apps to earn passive income"
   },
   "nsisType": "multiple",
   "obfuscated": false,

@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"bandwidth-income-manager/backend/monitor"
+	"free-income-from-bandwidth/backend/monitor"
 )
 
 // Handler manages notifications and alerts

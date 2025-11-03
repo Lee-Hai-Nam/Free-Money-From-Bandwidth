@@ -1,6 +1,6 @@
 # Installation and Execution Instructions
 
-This document provides instructions on how to install and run the Bandwidth Income Manager on different platforms.
+This document provides instructions on how to install and run the Free Income From Bandwidth on different platforms.
 
 ## GUI Application
 
@@ -8,44 +8,44 @@ The GUI application provides a user-friendly interface to manage your bandwidth-
 
 ### Windows
 
-1.  Download the `bandwidth-income-manager.exe` file from the latest release.
+1.  Download the `free-income-from-bandwidth.exe` file from the latest release.
 2.  Place the executable in a directory of your choice.
-3.  Double-click the `bandwidth-income-manager.exe` file to run the application.
+3.  Double-click the `free-income-from-bandwidth.exe` file to run the application.
 
 ### macOS
 
-1.  Download the `bandwidth-income-manager.dmg` file from the latest release.
-2.  Open the `.dmg` file and drag the `Bandwidth Income Manager.app` to your `Applications` folder.
+1.  Download the `free-income-from-bandwidth.dmg` file from the latest release.
+2.  Open the `.dmg` file and drag the `Free Income From Bandwidth.app` to your `Applications` folder.
 3.  Double-click the application in your `Applications` folder to run it.
 
 ### Linux
 
-1.  Download the `bandwidth-income-manager` binary for your architecture (amd64 or arm64) from the latest release.
+1.  Download the `free-income-from-bandwidth` binary for your architecture (amd64 or arm64) from the latest release.
 2.  Make the binary executable:
     ```bash
-    chmod +x bandwidth-income-manager
+    chmod +x free-income-from-bandwidth
     ```
 3.  Run the application:
     ```bash
-    ./bandwidth-income-manager
+    ./free-income-from-bandwidth
     ```
 
 ## Headless Server (Linux)
 
 The headless server mode allows you to run the application on a server without a graphical user interface. You can manage the application through a web interface or an HTTP API.
 
-1.  Download the `bandwidth-income-manager` binary for your architecture (amd64 or arm64) from the latest release.
+1.  Download the `free-income-from-bandwidth` binary for your architecture (amd64 or arm64) from the latest release.
 2.  Make the binary executable:
     ```bash
-    chmod +x bandwidth-income-manager
+    chmod +x free-income-from-bandwidth
     ```
 3.  Run the application in headless mode:
     ```bash
-    ./bandwidth-income-manager --headless
+    ./free-income-from-bandwidth --headless
     ```
     You can specify a port with the `--port` flag. The default port is `8080`.
     ```bash
-    ./bandwidth-income-manager --headless --port 8081
+    ./free-income-from-bandwidth --headless --port 8081
     ```
 
 ### Web Interface

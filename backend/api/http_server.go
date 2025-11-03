@@ -470,6 +470,26 @@ func StartHeadlessServer(port int, appsAPI *AppsAPI, proxyAPI *ProxyAPI, setting
 		jsonResponse(w, map[string]string{"status": "ok"}, http.StatusOK)
 	})
 
+	// Docker availability check
+	mux.HandleFunc("/api/apps/docker-available", func(w http.ResponseWriter, r *http.Request) {
+		result, err := appsAPI.IsDockerAvailable()
+		if err != nil {
+			jsonResponse(w, map[string]interface{}{"available": false, "error": err.Error(), "status": "error"}, http.StatusOK)
+			return
+		}
+		jsonResponse(w, result, http.StatusOK)
+	})
+
+	// Docker installation URL
+	mux.HandleFunc("/api/apps/docker-install-url", func(w http.ResponseWriter, r *http.Request) {
+		url, err := appsAPI.GetDockerInstallationURL()
+		if err != nil {
+			jsonResponse(w, map[string]string{"error": err.Error()}, http.StatusInternalServerError)
+			return
+		}
+		jsonResponse(w, map[string]string{"url": url}, http.StatusOK)
+	})
+
 	server := &http.Server{
 		Addr:    fmt.Sprintf(":%d", port),
 		Handler: mux,

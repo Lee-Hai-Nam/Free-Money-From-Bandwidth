@@ -1,37 +1,12 @@
 import { useState, useEffect } from 'react'
 import { ArrowLeft, CheckCircle, AlertCircle, Loader } from 'lucide-react'
-import { DeployApp, GetAppCredentials } from '../services/api';
-
-interface AppConfig {
-  appId: string
-  name: string
-  fields: Array<{
-    key: string
-    label: string
-    required: boolean
-    description: string
-    type?: string
-  }>
-}
-
-// Special apps that need different setup flows
-const SPECIAL_APPS = {
-  earnapp: {
-    autoGenerate: true,
-    generateURL: (deviceName: string) => {
-      // Generate a UUID for the device
-      const chars = 'abcdefghijklmnopqrstuvwxyz0123456789'
-      let uuid = ''
-      for (let i = 0; i < 32; i++) {
-        uuid += chars[Math.floor(Math.random() * chars.length)]
-      }
-      return `https://earnapp.com/r/sdk-node-${uuid}`
-    }
-  }
-}
+import { DeployApp, GetAppCredentials } from '../../wailsjs/go/api/AppsAPI';
+import { useError } from '../components/ErrorContext';
+import { apps } from '../../wailsjs/go/models';
 
 interface AppSetupProps {
-  appConfig: AppConfig
+  appId: string
+  appManifest: apps.AppManifest
   onBack: () => void
   onComplete: () => void
 }
@@ -46,15 +21,16 @@ function generateDeviceName(): string {
   return `${randAdj}-${randNoun}-${num}`
 }
 
-export default function AppSetup({ appConfig, onBack, onComplete }: AppSetupProps) {
+export default function AppSetup({ appId, appManifest, onBack, onComplete }: AppSetupProps) {
   const [formData, setFormData] = useState<Record<string, string>>({
     DEVICE_NAME: generateDeviceName()
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [loading, setLoading] = useState(false)
   const [completed, setCompleted] = useState(false)
-  const [generatedUUID, setGeneratedUUID] = useState<string | null>(null)
   const [claimURL, setClaimURL] = useState<string | null>(null)
+  
+  const { showError } = useError();
 
   const handleChange = (key: string, value: string) => {
     setFormData({ ...formData, [key]: value })
@@ -67,11 +43,13 @@ export default function AppSetup({ appConfig, onBack, onComplete }: AppSetupProp
   const validate = (): boolean => {
     const newErrors: Record<string, string> = {}
     
-    appConfig.fields.forEach(field => {
-      if (field.required && !formData[field.key]) {
-        newErrors[field.key] = `${field.label} is required`
+    if (appManifest.RequiredFields) {
+      for (const field in appManifest.RequiredFields) {
+        if (appManifest.RequiredFields[field] && !formData[field]) {
+          newErrors[field] = `${field} is required`
+        }
       }
-    })
+    }
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -81,7 +59,7 @@ export default function AppSetup({ appConfig, onBack, onComplete }: AppSetupProp
   useEffect(() => {
     const loadExisting = async () => {
       try {
-        const creds = await GetAppCredentials(appConfig.appId)
+        const creds = await GetAppCredentials(appId)
         if (creds) {
           setFormData(prev => ({ DEVICE_NAME: prev.DEVICE_NAME, ...creds }))
         }
@@ -90,27 +68,16 @@ export default function AppSetup({ appConfig, onBack, onComplete }: AppSetupProp
       }
     }
     loadExisting()
-  }, [appConfig.appId])
+  }, [appId])
 
   const handleSubmit = async () => {
     if (!validate()) return
-
-    // For EarnApp, generate UUID first
-    if (appConfig.appId === 'earnapp' && formData.DEVICE_NAME) {
-      const specialApp = SPECIAL_APPS.earnapp
-      const url = specialApp.generateURL(formData.DEVICE_NAME)
-      setClaimURL(url)
-      // Extract UUID from URL (last 32 chars before the final part)
-      const uuid = url.split('sdk-node-')[1]
-      setGeneratedUUID(uuid)
-      formData.EARNAPP_UUID = uuid
-    }
 
     setLoading(true)
     
     try {
       // Call backend API to deploy app
-      await DeployApp(appConfig.appId, formData)
+      await DeployApp(appId, formData)
       
       setLoading(false)
       setCompleted(true)
@@ -121,7 +88,13 @@ export default function AppSetup({ appConfig, onBack, onComplete }: AppSetupProp
     } catch (error) {
       setLoading(false)
       console.error('Failed to deploy app:', error)
-      alert(`Failed to deploy app: ${error}`)
+      const errorMessage = String(error)
+      // If it's a Docker-related error, show specific Docker error
+      if (errorMessage.includes('Please start Docker') || errorMessage.includes('Please install Docker')) {
+        showError(errorMessage, 'Docker Issue')
+      } else {
+        showError(`Failed to deploy app: ${errorMessage}`, 'Deployment Error')
+      }
     }
   }
 
@@ -168,7 +141,7 @@ export default function AppSetup({ appConfig, onBack, onComplete }: AppSetupProp
       </button>
 
       <div className="mb-6">
-        <h1 className="text-3xl font-bold text-neutral-100 mb-2">Setup {appConfig.name}</h1>
+        <h1 className="text-3xl font-bold text-neutral-100 mb-2">Setup {appManifest.Name}</h1>
         <p className="text-neutral-400">Enter your credentials to get started</p>
       </div>
 
@@ -192,53 +165,27 @@ export default function AppSetup({ appConfig, onBack, onComplete }: AppSetupProp
         </div>
 
         {/* App-specific fields */}
-        {appConfig.fields.map((field) => (
-          <div key={field.key}>
+        {appManifest.RequiredFields && Object.keys(appManifest.RequiredFields).filter(field => field !== 'DEVICE_NAME').map((field) => (
+          <div key={field}>
             <label className="block text-neutral-300 mb-2">
-              {field.label}
-              {field.required && <span className="text-danger ml-1">*</span>}
+              {field}
+              {appManifest.RequiredFields[field] && <span className="text-danger ml-1">*</span>}
             </label>
             <input
-              type={field.type || 'text'}
-              value={formData[field.key] || ''}
-              onChange={(e) => handleChange(field.key, e.target.value)}
+              type="text"
+              value={formData[field] || ''}
+              onChange={(e) => handleChange(field, e.target.value)}
               className="w-full bg-neutral-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500 border border-neutral-700"
-              placeholder={field.description}
+              placeholder={`Your ${field}`}
             />
-            {errors[field.key] && (
+            {errors[field] && (
               <p className="text-danger text-sm mt-1 flex items-center gap-1">
                 <AlertCircle className="h-4 w-4" />
-                {errors[field.key]}
+                {errors[field]}
               </p>
-            )}
-            {!errors[field.key] && field.description && (
-              <p className="text-neutral-500 text-sm mt-1">{field.description}</p>
             )}
           </div>
         ))}
-
-        {/* App-specific info boxes */}
-        {appConfig.appId === 'earnapp' && (
-          <div className="bg-blue-900/20 border border-blue-700 rounded-lg p-4 space-y-2">
-            <p className="text-blue-200 text-sm font-medium">
-              💡 How EarnApp Works:
-            </p>
-            <ul className="text-blue-100 text-sm space-y-1 list-disc list-inside ml-2">
-              <li>UUID will be auto-generated when you deploy</li>
-              <li>After deployment, you'll get a claim URL</li>
-              <li>Visit the claim URL to activate your device</li>
-              <li>Check the EarnApp dashboard: https://earnapp.com/dashboard</li>
-            </ul>
-          </div>
-        )}
-
-        {appConfig.appId === 'honeygain' && (
-          <div className="bg-amber-900/20 border border-amber-700 rounded-lg p-4">
-            <p className="text-amber-200 text-sm">
-              💰 Honeygain pays you for sharing unused bandwidth. Make sure your Honeygain account is active.
-            </p>
-          </div>
-        )}
 
         <div className="pt-4">
           <button
@@ -264,7 +211,7 @@ export default function AppSetup({ appConfig, onBack, onComplete }: AppSetupProp
       {/* Info Box */}
       <div className="bg-neutral-900 rounded-lg p-4 mt-6 border border-neutral-800">
         <p className="text-neutral-300 text-sm">
-          🔒 Your credentials are encrypted and stored locally. They are only used to authenticate with {appConfig.name}.
+          🔒 Your credentials are encrypted and stored locally. They are only used to authenticate with {appManifest.Name}.
         </p>
       </div>
     </div>

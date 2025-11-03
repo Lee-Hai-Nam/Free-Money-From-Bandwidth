@@ -46,9 +46,33 @@ func DeployApp(deployment *AppDeployment) (string, error) {
 		args = append(args, "--restart", "always")
 	}
 
-	// Add environment variables
+	// Add environment variables after substituting any placeholders
+	// Build a map of environment variables to use for substitution
+	envMap := make(map[string]string)
 	for _, env := range deployment.Environment {
-		args = append(args, "-e", env)
+		parts := strings.SplitN(env, "=", 2)
+		if len(parts) == 2 {
+			envMap[parts[0]] = parts[1]
+		}
+	}
+	
+	// Process environment variables to substitute placeholders
+	processedEnvs := make(map[string]string)
+	for envName, envValue := range envMap {
+		// Substitute any placeholders in the environment variable value
+		processedValue := envValue
+		for subEnvName, subEnvValue := range envMap {
+			// Only substitute if it's not the same variable (to avoid infinite loops)
+			if envName != subEnvName {
+				processedValue = strings.ReplaceAll(processedValue, "$"+subEnvName, subEnvValue)
+			}
+		}
+		processedEnvs[envName] = processedValue
+	}
+	
+	// Add the processed environment variables to the docker arguments
+	for envName, envValue := range processedEnvs {
+		args = append(args, "-e", envName+"="+envValue)
 	}
 
 	// Add proxy environment variables if proxy is configured
@@ -73,10 +97,30 @@ func DeployApp(deployment *AppDeployment) (string, error) {
 		args = append(args, "--network", deployment.NetworkMode)
 	}
 
-	// Add command
+	// Add command after substituting environment variables in the command string
 	if deployment.Command != "" {
 		args = append(args, deployment.Image)
-		args = append(args, strings.Split(deployment.Command, " ")...)
+		
+		// Create a map of environment variables for easier lookup
+		envMap := make(map[string]string)
+		for _, env := range deployment.Environment {
+			parts := strings.SplitN(env, "=", 2)
+			if len(parts) == 2 {
+				envMap[parts[0]] = parts[1]
+			}
+		}
+		
+		// Process the command string to substitute environment variables
+		processedCommand := deployment.Command
+		for envName, envValue := range envMap {
+			processedCommand = strings.ReplaceAll(processedCommand, "$"+envName, envValue)
+		}
+		
+		// Split the processed command and add each part
+		cmdParts := strings.Split(processedCommand, " ")
+		for _, part := range cmdParts {
+			args = append(args, part)
+		}
 	} else {
 		args = append(args, deployment.Image)
 	}
