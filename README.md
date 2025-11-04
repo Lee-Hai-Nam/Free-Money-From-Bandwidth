@@ -73,8 +73,8 @@ Here are the apps we currently support. Using our referral links helps support t
 | **[PacketShare](https://www.packetshare.io/?code=A260871CFD822E35)** | ✅ | ✅ | 1 | 10 | Paypal |
 | **[Grass](https://app.getgrass.io/register/?referralCode=qyvJmxgNUhcLo2f)** | ✅ | ❌ | 1 | No limit | Crypto |
 | **[Gradient](https://app.gradient.network/signup?code=9WOBKP)** | ✅ | ❌ | 1 | No limit | Rewards |
-| **[Dawn](https://dawninternet.com?code=xo23vynw)** | [Fill In] | [Fill In] | [Fill In] | [Fill In] | [Fill In] |
-| **[Teneo](https://dashboard.teneo.pro/?code=qPgLn)** | [Fill In] | [Fill In] | [Fill In] | [Fill In] | [Fill In] |
+| **[Dawn](https://dawninternet.com?code=xo23vynw)** | ✅ | ❌ | 1 | No limit | Rewards, Crypto |
+| **[Teneo](https://dashboard.teneo.pro/?code=qPgLn)** | ✅ | ❌ | 1 | No limit | Rewards, Crypto |
 | **[Proxybase](http://dash.proxybase.org/signup?ref=XfOz3zeURm)** | ✅ | ✅ | 1 | No limit | Crypto |
 | **[Wipter](https://wipter.com/signup?ref=money4band)** | ✅ | ❌ | 1 | No limit | Crypto |
 | **[MystNode](https://mystnodes.co/?referral_code=Tc7RaS7Fm12K3Xun6mlU9q9hbnjojjl9aRBW8ZA9)** | ✅ | ✅ | 1 | No limit | Crypto |
