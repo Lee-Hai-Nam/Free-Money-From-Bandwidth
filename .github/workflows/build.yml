@@ -72,14 +72,14 @@ jobs:
         run: |
           wails build -platform windows/amd64
           # Rename the output file to include platform details
-          mv build/bin/free-income-from-bandwidth.exe build/bin/free-income-from-bandwidth-windows-amd64.exe
+          move build\bin\free-income-from-bandwidth.exe build\bin\free-income-from-bandwidth-windows-amd64.exe
 
       - name: Build App for macOS
         if: runner.os == 'macOS'
         run: |
           wails build -platform darwin/universal
-          # Rename the output file to include platform details
-          mv build/bin/free-income-from-bandwidth build/bin/free-income-from-bandwidth-macos-universal
+          # Create a zip file of the .app bundle for macOS
+          cd build/bin && zip -r free-income-from-bandwidth-macos-universal.zip free-income-from-bandwidth.app
 
       # Build headless versions for Linux
       - name: Build Headless Linux Server (amd64)
