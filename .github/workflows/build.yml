@@ -49,9 +49,13 @@ jobs:
 
       
 
-      - name: Build Linux
+      - name: Build Linux AMD64
         if: runner.os == 'Linux'
-        run: CGO_ENABLED=1 GOARCH=arm64 wails build -platform linux/amd64,linux/arm64 -tags webkit2_41 CC=aarch64-linux-gnu-gcc
+        run: CGO_ENABLED=1 GOOS=linux GOARCH=amd64 wails build -platform linux -tags webkit2_41
+
+      - name: Build Linux ARM64
+        if: runner.os == 'Linux'
+        run: CGO_ENABLED=1 GOOS=linux GOARCH=arm64 CC=aarch64-linux-gnu-gcc wails build -platform linux -tags webkit2_41
 
       - name: Build macOS
         if: runner.os == 'macOS'
