@@ -32,6 +32,10 @@ jobs:
       - name: Install frontend dependencies
         run: cd frontend && npm install
 
+      - name: Show OS release
+        if: runner.os == 'Linux'
+        run: cat /etc/os-release
+
       - name: Install Linux dependencies
         if: runner.os == 'Linux'
         run: |
