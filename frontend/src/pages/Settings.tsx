@@ -1,30 +1,8 @@
 import { useEffect, useState } from 'react'
-import { GetSettings, SetAutoStart, SetShowInTray } from '../services/api';
+import { GetSettings } from '../services/api';
 
 export default function Settings() {
-  const [autoStart, setAutoStart] = useState(false)
-  const [showInTray, setShowInTray] = useState(true)
-
-  useEffect(() => {
-    const load = async () => {
-      try {
-        const cfg: any = await (GetSettings as any)()
-        setAutoStart(!!cfg?.auto_start)
-        setShowInTray(cfg?.show_in_tray !== false)
-      } catch {}
-    }
-    load()
-  }, [])
-
-  const onToggleAutoStart = async (val: boolean) => {
-    setAutoStart(val)
-    try { await (SetAutoStart as any)(val) } catch {}
-  }
-
-  const onToggleShowInTray = async (val: boolean) => {
-    setShowInTray(val)
-    try { await (SetShowInTray as any)(val) } catch {}
-  }
+ 
 
   return (
     <div className="p-6 space-y-6">
@@ -34,22 +12,7 @@ export default function Settings() {
       </div>
 
       <div className="space-y-6">
-        {/* General Settings */}
-        <div className="bg-neutral-900 rounded-lg p-6 border border-neutral-800">
-          <h2 className="text-xl font-semibold text-neutral-100 mb-4">General</h2>
-          
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <label className="block text-neutral-300">Auto-start on boot</label>
-              <input type="checkbox" className="w-5 h-5 rounded-md bg-neutral-800 border-neutral-700 text-brand-600 focus:ring-brand-500" checked={autoStart} onChange={e => onToggleAutoStart(e.target.checked)} />
-            </div>
-            
-            <div className="flex items-center justify-between">
-              <label className="block text-neutral-300">Show in system tray</label>
-              <input type="checkbox" className="w-5 h-5 rounded-md bg-neutral-800 border-neutral-700 text-brand-600 focus:ring-brand-500" checked={showInTray} onChange={e => onToggleShowInTray(e.target.checked)} />
-            </div>
-          </div>
-        </div>
+ 
 
         {/* Docker Settings */}
         <div className="bg-neutral-900 rounded-lg p-6 border border-neutral-800">

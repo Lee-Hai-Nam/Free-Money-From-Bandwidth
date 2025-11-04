@@ -136,9 +136,21 @@ func (c *Client) RestartContainer(name string) error {
 	return cmd.Run()
 }
 
-// ListContainers lists all containers
 func (c *Client) ListContainers() ([]ContainerInfo, error) {
+	return c.listContainersWithFilter("")
+}
+
+// ListContainersByLabel lists all containers with a given label
+func (c *Client) ListContainersByLabel(label string) ([]ContainerInfo, error) {
+	return c.listContainersWithFilter(fmt.Sprintf("label=%s", label))
+}
+
+// listContainersWithFilter is a helper to list containers with an optional filter
+func (c *Client) listContainersWithFilter(filter string) ([]ContainerInfo, error) {
 	args := c.parseCommand("ps", "-a", "--format", "{{json .}}")
+	if filter != "" {
+		args = append(args, "--filter", filter)
+	}
 	cmd := exec.CommandContext(c.ctx, args[0], args[1:]...)
 	hideConsoleWindow(cmd)
 
@@ -264,18 +276,20 @@ func ParsePort(port string) string {
 	return port
 }
 
-type DockerStats struct {
-	RxBytes int64
-	TxBytes int64
+type DockerContainerStats struct {
+	RxBytes     int64
+	TxBytes     int64
+	CPUUsage    float64
+	MemoryUsage int64
 }
 
-func (c *Client) GetContainersNetworkStats(containerIDs []string) (map[string]DockerStats, error) {
-	result := map[string]DockerStats{}
+func (c *Client) GetContainersStats(containerIDs []string) (map[string]DockerContainerStats, error) {
+	result := map[string]DockerContainerStats{}
 	if len(containerIDs) == 0 {
 		return result, nil
 	}
 	args := c.parseCommand("stats", "--no-stream", "--format",
-		"{{.Container}}|{{.NetIO}}")
+		"{{.Container}}|{{.NetIO}}|{{.CPUPerc}}|{{.MemUsage}}")
 	args = append(args, containerIDs...)
 	cmd := exec.CommandContext(c.ctx, args[0], args[1:]...)
 	hideConsoleWindow(cmd)
@@ -289,10 +303,11 @@ func (c *Client) GetContainersNetworkStats(containerIDs []string) (map[string]Do
 			continue
 		}
 		parts := strings.Split(line, "|")
-		if len(parts) != 2 {
+		if len(parts) != 4 {
 			continue
 		}
-		cid, netio := parts[0], parts[1]
+		cid, netio, cpu, mem := parts[0], parts[1], parts[2], parts[3]
+
 		// netio is "2.14kB / 1.23kB"
 		nets := strings.Split(netio, "/")
 		if len(nets) != 2 {
@@ -301,15 +316,15 @@ func (c *Client) GetContainersNetworkStats(containerIDs []string) (map[string]Do
 		parseBytes := func(s string) int64 {
 			s = strings.TrimSpace(s)
 			mult := int64(1)
-			if strings.HasSuffix(s, "kB") {
+			if strings.HasSuffix(s, "KiB") {
 				mult = 1024
-				s = strings.TrimSuffix(s, "kB")
-			} else if strings.HasSuffix(s, "MB") {
+				s = strings.TrimSuffix(s, "KiB")
+			} else if strings.HasSuffix(s, "MiB") {
 				mult = 1024 * 1024
-				s = strings.TrimSuffix(s, "MB")
-			} else if strings.HasSuffix(s, "GB") {
+				s = strings.TrimSuffix(s, "MiB")
+			} else if strings.HasSuffix(s, "GiB") {
 				mult = 1024 * 1024 * 1024
-				s = strings.TrimSuffix(s, "GB")
+				s = strings.TrimSuffix(s, "GiB")
 			} else if strings.HasSuffix(s, "B") {
 				mult = 1
 				s = strings.TrimSuffix(s, "B")
@@ -317,9 +332,20 @@ func (c *Client) GetContainersNetworkStats(containerIDs []string) (map[string]Do
 			val, _ := strconv.ParseFloat(strings.TrimSpace(s), 64)
 			return int64(val * float64(mult))
 		}
-		result[cid] = DockerStats{
-			RxBytes: parseBytes(nets[0]),
-			TxBytes: parseBytes(nets[1]),
+
+		cpuUsage, _ := strconv.ParseFloat(strings.TrimRight(strings.TrimSpace(cpu), "%"), 64)
+
+		memParts := strings.Split(mem, "/")
+		memUsed := int64(0)
+		if len(memParts) > 0 {
+			memUsed = parseBytes(memParts[0])
+		}
+
+		result[cid] = DockerContainerStats{
+			RxBytes:     parseBytes(nets[0]),
+			TxBytes:     parseBytes(nets[1]),
+			CPUUsage:    cpuUsage,
+			MemoryUsage: memUsed,
 		}
 	}
 	return result, nil

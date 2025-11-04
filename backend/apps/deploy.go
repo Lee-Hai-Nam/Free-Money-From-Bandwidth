@@ -21,6 +21,7 @@ type AppDeployment struct {
 	RestartPolicy string
 	NetworkMode   string
 	ContainerName string
+	Labels        map[string]string
 }
 
 // DeployApp deploys an app using Docker CLI
@@ -38,6 +39,11 @@ func DeployApp(deployment *AppDeployment) (string, error) {
 
 	// Build docker run command
 	args := []string{"run", "-d", "--name", containerName}
+
+	// Add labels
+	for key, value := range deployment.Labels {
+		args = append(args, "--label", fmt.Sprintf("%s=%s", key, value))
+	}
 
 	// Add restart policy
 	if deployment.RestartPolicy != "" {

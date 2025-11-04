@@ -60,50 +60,48 @@ func (a *AppsAPI) addActivity(entry string) {
 	}
 }
 
-// GetDashboardSummary returns active containers, uptime and recent activity
+	// GetDashboardSummary returns active containers, uptime and recent activity
 func (a *AppsAPI) GetDashboardSummary() (map[string]interface{}, error) {
-	containers, err := a.docker.ListContainers()
+	containers, err := a.docker.ListContainersByLabel("com.free-income-from-bandwidth.managed=true")
 	if err != nil {
 		return nil, err
 	}
 
-	appInstanceContainers := map[string]struct{}{}
-	allInstances := a.instanceManager.GetAllInstances()
-	for _, inst := range allInstances {
-		appInstanceContainers[inst.ContainerID] = struct{}{}
-	}
-
 	var runningIDs []string
 	for _, c := range containers {
-		if _, ok := appInstanceContainers[c.ID]; ok && strings.ToLower(c.State) == "running" {
+		if strings.ToLower(c.State) == "running" {
 			runningIDs = append(runningIDs, c.ID)
-		}
-	}
-
-	netStats, _ := a.docker.GetContainersNetworkStats(runningIDs)
-	startTimes, _ := a.docker.GetContainersStartTimes(runningIDs)
-	totalNet := int64(0)
-	var oldestStart *time.Time
-	for cid, stats := range netStats {
-		totalNet += stats.RxBytes + stats.TxBytes
-		if t, ok := startTimes[cid]; ok {
-			if oldestStart == nil || t.Before(*oldestStart) {
-				oldestStart = &t
+				}
 			}
-		}
-	}
-
-	uptimeSec := int64(0)
-	if oldestStart != nil {
-		uptimeSec = int64(time.Since(*oldestStart).Seconds())
-	}
-
-	summary := map[string]interface{}{
-		"active_apps":     len(runningIDs),
-		"bandwidth_used":  totalNet,
-		"uptime_seconds":  uptimeSec,
-		"recent_activity": a.recentActivity,
-	}
+		
+			stats, _ := a.docker.GetContainersStats(runningIDs)
+			startTimes, _ := a.docker.GetContainersStartTimes(runningIDs)
+			totalCPU := 0.0
+			totalRAM := int64(0)
+			var oldestStart *time.Time
+			for cid, stat := range stats {
+				totalCPU += stat.CPUUsage
+				totalRAM += stat.MemoryUsage
+				if t, ok := startTimes[cid]; ok {
+					if oldestStart == nil || t.Before(*oldestStart) {
+						oldestStart = &t
+					}
+				}
+			}
+		
+			uptimeSec := int64(0)
+			if oldestStart != nil {
+				uptimeSec = int64(time.Since(*oldestStart).Seconds())
+			}
+		
+			summary := map[string]interface{}{
+				"active_apps":     len(runningIDs),
+				"cpu_usage":       totalCPU,
+				"ram_usage":       totalRAM,
+				"uptime_seconds":  uptimeSec,
+				"recent_activity": a.recentActivity,
+			}
+	fmt.Printf("Dashboard Summary: %+v\n", summary)
 	return summary, nil
 }
 
@@ -473,6 +471,7 @@ func (a *AppsAPI) DeployAppWithProxyId(appID string, formData map[string]string,
 		Ports:         ports,
 		Command:       manifest.Command,
 		RestartPolicy: "always",
+		Labels:        map[string]string{"com.free-income-from-bandwidth.managed": "true"},
 	}
 
 	// Deploy the app

@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import { Activity, TrendingUp, Server, Clock } from 'lucide-react'
+import { Activity, Server, Clock, Cpu, MemoryStick } from 'lucide-react'
 import { GetDashboardSummary } from '../services/api';
 
 export default function Dashboard() {
   const [activeApps, setActiveApps] = useState(0)
-  const [bandwidth, setBandwidth] = useState('0 MB')
+  const [cpuUsage, setCpuUsage] = useState('0.0')
+  const [ramUsage, setRamUsage] = useState('0')
   const [uptime, setUptime] = useState('0h 0m')
   const [recent, setRecent] = useState<string[]>([])
 
@@ -13,8 +14,10 @@ export default function Dashboard() {
       try {
         const data: any = await (GetDashboardSummary as any)()
         setActiveApps(data?.active_apps ?? 0)
-        const bw = data?.bandwidth_used ?? 0
-        setBandwidth(`${bw} MB`)
+        const cpu = data?.cpu_usage ?? 0
+        setCpuUsage(cpu.toFixed(1))
+        const ram = data?.ram_usage ?? 0
+        setRamUsage(Math.floor(ram / 1024 / 1024).toString())
         const secs = data?.uptime_seconds ?? 0
         const h = Math.floor(secs / 3600)
         const m = Math.floor((secs % 3600) / 60)
@@ -23,7 +26,7 @@ export default function Dashboard() {
       } catch {}
     }
     load()
-    const id = setInterval(load, 5000)
+    const id = setInterval(load, 2000)
     return () => clearInterval(id)
   }, [])
 
@@ -35,7 +38,7 @@ export default function Dashboard() {
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="bg-neutral-900 rounded-lg p-6 border border-neutral-800">
           <div className="flex items-center justify-between">
             <div>
@@ -49,10 +52,20 @@ export default function Dashboard() {
         <div className="bg-neutral-900 rounded-lg p-6 border border-neutral-800">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-neutral-400 text-sm font-medium">Bandwidth Used</p>
-              <p className="text-brand-500 text-2xl font-bold mt-2">{bandwidth}</p>
+              <p className="text-neutral-400 text-sm font-medium">CPU Usage</p>
+              <p className="text-brand-500 text-2xl font-bold mt-2">{cpuUsage}%</p>
             </div>
-            <TrendingUp className="h-12 w-12 text-brand-500 opacity-30" />
+            <Cpu className="h-12 w-12 text-brand-500 opacity-30" />
+          </div>
+        </div>
+
+        <div className="bg-neutral-900 rounded-lg p-6 border border-neutral-800">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-neutral-400 text-sm font-medium">RAM Usage</p>
+              <p className="text-brand-500 text-2xl font-bold mt-2">{ramUsage} MB</p>
+            </div>
+            <MemoryStick className="h-12 w-12 text-brand-500 opacity-30" />
           </div>
         </div>
 
