@@ -1,4 +1,4 @@
-<img src="https://i.ibb.co/NgpkjxNx/image.png" alt="image" border="0">
+<img src="https://i.ibb.co/MkB7JnCS/2.png" alt="2" border="0">
 
 # Welcome to Free Money From Bandwidth! 👋
 
@@ -69,8 +69,7 @@ Once the headless server is running, you can access the web interface from any d
 The web interface provides the same functionality as the desktop application.
 
 ### Showcase
-
-<img src="https://i.ibb.co/MkB7JnCS/2.png" alt="2" border="0">
+<img src="https://i.ibb.co/NgpkjxNx/image.png" alt="image" border="0">
 
 <img src="https://i.ibb.co/YBW47vvC/3.png" alt="3" border="0">
 
