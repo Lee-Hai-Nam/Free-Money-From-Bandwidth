@@ -31,6 +31,12 @@ jobs:
       
       - name: Install frontend dependencies
         run: cd frontend && npm install
+
+      - name: Install Linux dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev
       
       - name: Build
         run: |
@@ -41,6 +47,14 @@ jobs:
           else
             wails build -platform darwin/universal
           fi
+
+      - name: Build Headless Linux Server (amd64)
+        if: runner.os == 'Linux'
+        run: GOOS=linux GOARCH=amd64 go build -o build/bin/free-money-from-bandwidth-headless-linux-amd64 ./app.go
+
+      - name: Build Headless Linux Server (arm64)
+        if: runner.os == 'Linux'
+        run: GOOS=linux GOARCH=arm64 go build -o build/bin/free-money-from-bandwidth-headless-linux-arm64 ./app.go
       
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

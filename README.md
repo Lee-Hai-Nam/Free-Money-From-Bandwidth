@@ -46,6 +46,28 @@ Ready to start earning? You can grab the latest version of Free Money From Bandw
 3.  For `.deb`, install it with your package manager (`sudo dpkg -i *.deb`).
 4.  Look for the app in your applications menu.
 
+**Headless Server (Linux)**
+
+The headless server mode allows you to run the application on a server without a graphical user interface. You can manage the application through a web interface or an HTTP API.
+
+1.  Download the `free-income-from-bandwidth` binary for your architecture (amd64 or arm64) from the latest release.
+2.  Make the binary executable:
+    ```bash
+    chmod +x free-income-from-bandwidth
+    ```
+3.  Run the application in headless mode:
+    ```bash
+    ./free-income-from-bandwidth --headless
+    ```
+    You can specify a port with the `--port` flag. The default port is `8080`.
+    ```bash
+    ./free-income-from-bandwidth --headless --port 8080
+    ```
+
+Once the headless server is running, you can access the web interface from any device on the same network by navigating to `http://<server_ip>:<port>` in your web browser (e.g., `http://192.168.1.100:8080`).
+
+The web interface provides the same functionality as the desktop application.
+
 ### Showcase
 
 <img src="https://i.ibb.co/MkB7JnCS/2.png" alt="2" border="0">
