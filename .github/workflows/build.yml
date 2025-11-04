@@ -43,6 +43,8 @@ jobs:
           sudo apt-get update
           # Install the needed libraries for Wails application
           sudo apt-get install -y build-essential pkg-config libgtk-3-dev libwebkit2gtk-4.1-dev libsoup-3.0-dev
+          # Install ARM64 cross-compilation libraries
+          sudo apt-get install -y gcc-aarch64-linux-gnu libc6-dev-arm64-cross
           
       # On Linux, we'll also build for AMD64
       - name: Build App for Linux AMD64
@@ -50,12 +52,15 @@ jobs:
         run: |
           wails build -platform linux/amd64 -tags webkit2_41
 
-      # Install ARM64 cross-compilation tools and build ARM64 version
-      - name: Install ARM64 cross-compilation tools and build ARM64
+      # Build ARM64 version with specific configurations to handle cross-compilation issues
+      - name: Build App for Linux ARM64
         if: runner.os == 'Linux'
         run: |
-          sudo apt-get install -y gcc-aarch64-linux-gnu
-          CC=aarch64-linux-gnu-gcc CGO_ENABLED=1 GOOS=linux GOARCH=arm64 wails build -ldflags="-linkmode external -extldflags -static" -platform linux/arm64 -tags webkit2_41
+          # Set up environment for cross-compilation
+          export CC=aarch64-linux-gnu-gcc
+          export PKG_CONFIG_PATH="/usr/lib/aarch64-linux-gnu/pkgconfig"
+          export PKG_CONFIG_LIBDIR="$PKG_CONFIG_PATH"
+          CGO_ENABLED=1 GOOS=linux GOARCH=arm64 CC=aarch64-linux-gnu-gcc wails build -ldflags="-linkmode external -extldflags -static" -platform linux/arm64 -tags webkit2_41
 
       - name: Build App for Windows
         if: runner.os == 'Windows'
