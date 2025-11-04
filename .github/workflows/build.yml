@@ -43,15 +43,19 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.1-dev
       
-      - name: Build
-        run: |
-          if [ "${{ runner.os }}" == "Windows" ]; then
-            wails build -platform windows/amd64
-          elif [ "${{ runner.os }}" == "Linux" ]; then
-            wails build -platform linux/amd64,linux/arm64 -tags webkit2_41
-          else
-            wails build -platform darwin/universal
-          fi
+
+
+      - name: Build Windows
+        if: runner.os == 'Windows'
+        run: wails build -platform windows/amd64
+
+      - name: Build Linux
+        if: runner.os == 'Linux'
+        run: wails build -platform linux/amd64,linux/arm64 -tags webkit2_41
+
+      - name: Build macOS
+        if: runner.os == 'macOS'
+        run: wails build -platform darwin/universal
 
       - name: Build Headless Linux Server (amd64)
         if: runner.os == 'Linux'
