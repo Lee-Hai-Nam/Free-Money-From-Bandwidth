@@ -57,13 +57,27 @@ jobs:
           wails build -platform linux/amd64 -tags webkit2_41
           # Rename the output file to include platform details
           mv build/bin/free-income-from-bandwidth build/bin/free-income-from-bandwidth-linux-amd64
+          
+          # Also build a .deb package for easier installation on Debian-based systems
+          mkdir -p package-root/opt/free-income-from-bandwidth
+          cp build/bin/free-income-from-bandwidth-linux-amd64 package-root/opt/free-income-from-bandwidth/free-income-from-bandwidth
+          mkdir -p package-root/usr/share/applications
+          # Create desktop entry file
+          echo -e '[Desktop Entry]\nVersion=1.0\nType=Application\nName=Free Income From Bandwidth\nComment=Manage bandwidth sharing apps to earn passive income\nExec=/opt/free-income-from-bandwidth/free-income-from-bandwidth\nIcon=\nCategories=Utility;\nTerminal=false' > package-root/usr/share/applications/free-income-from-bandwidth.desktop
+          
+          # Create basic control file for the .deb
+          mkdir -p package-root/DEBIAN
+          echo -e "Package: free-income-from-bandwidth\nVersion: 0.1.0\nSection: utils\nPriority: optional\nArchitecture: amd64\nDepends: libgtk-3-0, libwebkit2gtk-4.1-0\nMaintainer: Bandwidth Income Manager <support@example.com>\nDescription: Manage bandwidth sharing apps to earn passive income\n This application helps manage multiple bandwidth-sharing services." > package-root/DEBIAN/control
+          
+          # Build the .deb package
+          dpkg-deb --build --root-owner-group package-root build/bin/free-income-from-bandwidth-linux-amd64.deb
 
-      # Build ARM64 version with specific configurations to handle cross-compilation issues
-      - name: Build App for Linux ARM64
+      # Build ARM64 version - GUI not possible due to unavailable cross-compilation libraries
+      # So we only build the headless version for ARM64
+      - name: Build Headless App for Linux ARM64
         if: runner.os == 'Linux'
         run: |
-          # Since we can't install ARM64 GUI libraries in the repository, we'll skip GUI build for ARM64
-          # and instead build a headless version only
+          # Since we can't install ARM64 GUI libraries for cross-compilation, we only build the headless version
           echo "Building headless version for ARM64 only, as GUI libraries are unavailable for cross-compilation"
           CC=aarch64-linux-gnu-gcc GOOS=linux GOARCH=arm64 CGO_ENABLED=0 CGO_LDFLAGS="-static" go build -o build/bin/free-income-from-bandwidth-linux-arm64-headless ./app.go
 

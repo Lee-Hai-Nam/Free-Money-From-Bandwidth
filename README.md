@@ -29,20 +29,20 @@ Ready to start earning? You can grab the latest version of Free Money From Bandw
 
 **Windows:**
 
-1.  Download the `.exe` installer ([direct link here]('[YOUR_WINDOWS_DOWNLOAD_LINK]')).
+1.  Download the `.exe` from ([Releases](https://github.com/Lee-Hai-Nam/Free-Money-From-Bandwidth/releases)).
 2.  Run it and follow the simple on-screen steps.
 3.  Find Free Money From Bandwidth in your Start Menu and you're good to go!
 
 **macOS:**
 
-1.  Download the `.dmg` file ([direct link here]('[YOUR_MACOS_DOWNLOAD_LINK]')).
+1.  Download the `.dmg` file from ([Releases](https://github.com/Lee-Hai-Nam/Free-Money-From-Bandwidth/releases)).
 2.  Open it and drag the app icon to your Applications folder.
 3.  That's it! You'll find it in your Applications.
 
 **Linux:**
 
-1.  Download the `.AppImage` or `.deb` file ([direct link here]('[YOUR_LINUX_DOWNLOAD_LINK]')).
-2.  For `.AppImage`, make it executable (`chmod +x *.AppImage`) and run it.
+1.  Download the Linux AMD64 or ARM64 file base on your OS from ([Releases](https://github.com/Lee-Hai-Nam/Free-Money-From-Bandwidth/releases)).
+2.  For Headless Linux, please follow the bellow tutorial.
 3.  For `.deb`, install it with your package manager (`sudo dpkg -i *.deb`).
 4.  Look for the app in your applications menu.
 
