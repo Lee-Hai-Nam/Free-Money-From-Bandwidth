@@ -43,8 +43,8 @@ jobs:
           sudo apt-get update
           # Install the needed libraries for Wails application
           sudo apt-get install -y build-essential pkg-config libgtk-3-dev libwebkit2gtk-4.1-dev libsoup-3.0-dev
-          # Install ARM64 cross-compilation libraries and ARM64 versions of required packages
-          sudo apt-get install -y gcc-aarch64-linux-gnu libc6-dev-arm64-cross libgtk-3-dev:arm64 libwebkit2gtk-4.1-dev:arm64 libsoup-3.0-dev:arm64
+          # Install ARM64 cross-compilation tools
+          sudo apt-get install -y gcc-aarch64-linux-gnu libc6-dev-arm64-cross
           
       # On Linux, we'll also build for AMD64
       - name: Build App for Linux AMD64
@@ -56,17 +56,10 @@ jobs:
       - name: Build App for Linux ARM64
         if: runner.os == 'Linux'
         run: |
-          # Set up environment for cross-compilation
-          export CC=aarch64-linux-gnu-gcc
-          # Ensure pkg-config can find ARM64 libraries
-          export PKG_CONFIG_PATH="/usr/lib/aarch64-linux-gnu/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig"
-          export PKG_CONFIG_LIBDIR="/usr/lib/aarch64-linux-gnu/pkgconfig"
-          # Verify ARM64 libraries are available
-          echo "Available GTK ARM64 pkg-config files:"
-          find /usr/lib/aarch64-linux-gnu/pkgconfig -name "*gtk*"
-          echo "Available WebKit ARM64 pkg-config files:"
-          find /usr/lib/aarch64-linux-gnu/pkgconfig -name "*webkit*"
-          CGO_ENABLED=1 GOOS=linux GOARCH=arm64 CC=aarch64-linux-gnu-gcc wails build -ldflags="-linkmode external -extldflags -static" -platform linux/arm64 -tags webkit2_41
+          # Since we can't install ARM64 GUI libraries in the repository, we'll skip GUI build for ARM64
+          # and instead build a headless version only
+          echo "Building headless version for ARM64 only, as GUI libraries are unavailable for cross-compilation"
+          CC=aarch64-linux-gnu-gcc GOOS=linux GOARCH=arm64 CGO_ENABLED=0 CGO_LDFLAGS="-static" go build -o build/bin/free-income-from-bandwidth-linux-arm64-headless ./app.go
 
       - name: Build App for Windows
         if: runner.os == 'Windows'
@@ -82,10 +75,7 @@ jobs:
         run: |
           GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o build/bin/free-income-from-bandwidth-headless-linux-amd64 ./app.go
 
-      - name: Build Headless Linux Server (arm64)
-        if: runner.os == 'Linux'
-        run: |
-          CC=aarch64-linux-gnu-gcc GOOS=linux GOARCH=arm64 CGO_ENABLED=0 CGO_LDFLAGS="-static" go build -o build/bin/free-income-from-bandwidth-headless-linux-arm64 ./app.go
+      # ARM64 headless build is handled separately due to cross-compilation constraints
       
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
