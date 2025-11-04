@@ -430,45 +430,6 @@ func StartHeadlessServer(port int, appsAPI *AppsAPI, proxyAPI *ProxyAPI, setting
 		jsonResponse(w, settings, http.StatusOK)
 	})
 
-	mux.HandleFunc("/api/settings/autostart", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodPost {
-			jsonResponse(w, map[string]string{"error": "Method not allowed"}, http.StatusMethodNotAllowed)
-			return
-		}
-		var data struct {
-			Enabled bool `json:"enabled"`
-		}
-		if err := json.NewDecoder(r.Body).Decode(&data); err != nil {
-			jsonResponse(w, map[string]string{"error": "Invalid request body"}, http.StatusBadRequest)
-			return
-		}
-		_, err := settingsAPI.SetAutoStart(data.Enabled)
-		if err != nil {
-			jsonResponse(w, map[string]string{"error": err.Error()}, http.StatusInternalServerError)
-			return
-		}
-		jsonResponse(w, map[string]string{"status": "ok"}, http.StatusOK)
-	})
-
-	mux.HandleFunc("/api/settings/showintray", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodPost {
-			jsonResponse(w, map[string]string{"error": "Method not allowed"}, http.StatusMethodNotAllowed)
-			return
-		}
-		var data struct {
-			Enabled bool `json:"enabled"`
-		}
-		if err := json.NewDecoder(r.Body).Decode(&data); err != nil {
-			jsonResponse(w, map[string]string{"error": "Invalid request body"}, http.StatusBadRequest)
-			return
-		}
-		_, err := settingsAPI.SetShowInTray(data.Enabled)
-		if err != nil {
-			jsonResponse(w, map[string]string{"error": err.Error()}, http.StatusInternalServerError)
-			return
-		}
-		jsonResponse(w, map[string]string{"status": "ok"}, http.StatusOK)
-	})
 
 	// Docker availability check
 	mux.HandleFunc("/api/apps/docker-available", func(w http.ResponseWriter, r *http.Request) {

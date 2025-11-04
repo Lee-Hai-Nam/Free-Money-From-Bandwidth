@@ -9,11 +9,3 @@ export function GetSettings() {
 export function OnStartup(arg1) {
   return window['go']['api']['SettingsAPI']['OnStartup'](arg1);
 }
-
-export function SetAutoStart(arg1) {
-  return window['go']['api']['SettingsAPI']['SetAutoStart'](arg1);
-}
-
-export function SetShowInTray(arg1) {
-  return window['go']['api']['SettingsAPI']['SetShowInTray'](arg1);
-}

@@ -6,7 +6,3 @@ import {context} from '../models';
 export function GetSettings():Promise<api.AppSettings>;
 
 export function OnStartup(arg1:context.Context):Promise<void>;
-
-export function SetAutoStart(arg1:boolean):Promise<boolean>;
-
-export function SetShowInTray(arg1:boolean):Promise<boolean>;

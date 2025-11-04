@@ -3,15 +3,11 @@ package api
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"os"
 	"path/filepath"
-	"runtime"
 )
 
 type AppSettings struct {
-	AutoStart  bool `json:"auto_start"`
-	ShowInTray bool `json:"show_in_tray"`
 }
 
 type SettingsAPI struct {
@@ -41,11 +37,11 @@ func (s *SettingsAPI) GetSettings() (*AppSettings, error) {
 	data, err := os.ReadFile(path)
 	if err != nil {
 		// defaults
-		return &AppSettings{AutoStart: false, ShowInTray: true}, nil
+		return &AppSettings{}, nil
 	}
 	var cfg AppSettings
 	if err := json.Unmarshal(data, &cfg); err != nil {
-		return &AppSettings{AutoStart: false, ShowInTray: true}, nil
+		return &AppSettings{}, nil
 	}
 	return &cfg, nil
 }
@@ -56,25 +52,4 @@ func (s *SettingsAPI) saveSettings(cfg *AppSettings) error {
 	return os.WriteFile(s.settingsPath(), b, 0644)
 }
 
-func (s *SettingsAPI) SetAutoStart(enabled bool) (bool, error) {
-	cfg, _ := s.GetSettings()
-	cfg.AutoStart = enabled
-	if err := s.saveSettings(cfg); err != nil {
-		return false, err
-	}
-	if runtime.GOOS == "windows" {
-		if err := setWindowsAutoStart(enabled); err != nil {
-			return false, fmt.Errorf("autostart failed: %w", err)
-		}
-	}
-	return true, nil
-}
 
-func (s *SettingsAPI) SetShowInTray(enabled bool) (bool, error) {
-	cfg, _ := s.GetSettings()
-	cfg.ShowInTray = enabled
-	if err := s.saveSettings(cfg); err != nil {
-		return false, err
-	}
-	return true, nil
-}
