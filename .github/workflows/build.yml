@@ -49,11 +49,9 @@ jobs:
 
       
 
-            - name: Build Linux
-
-              if: runner.os == 'Linux'
-
-              run: wails build -platform linux/amd64,linux/arm64 -tags webkit2_41 CC=aarch64-linux-gnu-gcc
+      - name: Build Linux
+        if: runner.os == 'Linux'
+        run: wails build -platform linux/amd64,linux/arm64 -tags webkit2_41 CC=aarch64-linux-gnu-gcc
 
       - name: Build macOS
         if: runner.os == 'macOS'
